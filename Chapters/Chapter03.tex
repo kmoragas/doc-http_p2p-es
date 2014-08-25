@@ -1,0 +1,74 @@
+% Chapter X
+
+\chapter{Protoloco P2P} % Chapter title
+
+\label{ch:protocolo_p2p} % For referencing the chapter elsewhere, use \autoref{ch:name} 
+
+Una red peer-to-peer (P2P) o red de pares, es una red de computadoras en la que todos o algunos aspectos de ésta funcionan sin clientes ni servidores fijos, sino una serie de nodos que se comportan como iguales entre sí. Es decir, actúan simultáneamente como clientes y servidores respecto a los demás nodos de la red.\cite{wiki_p2p}
+
+Las redes peer-to-peer aprovechan, administran y optimizan el uso del ancho de banda de los demás usuarios de la red por medio de la conectividad entre los mismos, obteniendo más rendimiento en las conexiones y transferencias que con algunos métodos centralizados convencionales, donde una cantidad relativamente pequeña de servidores provee el total del ancho de banda y recursos compartidos para un servicio o aplicación.
+Alfredo F. nos dice que de forma simple puede verse como la comunicación entre pares o iguales utilizando un sistema de intercambio \cite{bordignon:2005}.
+
+Los sistemas compañero a compañero (o P2P por sus siglas en inglés) permiten que computadoras de usuario final se conecten directamente para formar comunidades, cuya finalidad sea el compartir recursos y servicios computacionales. En este modelo, se toma ventaja de recursos existentes en los extremos de la red, tales como tiempo de CPU y espacio de almacenamiento. Las primeras aplicaciones  emergentes se orientaban a compartir archivos y a la mensajería \cite{bordignon:2005}.
+
+
+%----------------------------------------------------------------------------------------
+
+\section{Clasificación}
+
+\subsection{Directorio Centralizado}
+
+Esta primera visión se puso en práctica para el año 1997 con la red Napster. Bajo este modelo los clientes o peers realizan el descubrimiento y búsqueda de los otros miembros mediante un servidor central, luego el mismo servidor se encarga de negocia la conexión entre ambos clientes.
+
+Este tipo de red P2P se basa en una arquitectura monolítica en la que todas las transacciones se hacen a través de un único servidor que sirve de punto de enlace entre dos nodos y que, a la vez, almacena y distribuye los nodos donde se almacenan los contenidos. Poseen una administración muy dinámica y una disposición más permanente de contenido. Sin embargo, está muy limitada en la privacidad de los usuarios y en la falta de escalabilidad de un sólo servidor, además de ofrecer problemas en puntos únicos de fallo, situaciones legales y enormes costos en el mantenimiento así como el consumo de ancho de banda. \cite{wiki_p2p}
+
+El principal problema presentado en este modelo es que el servidor P2P Central es un posible punto de quiebre que pueda atentar contra la estabilidad de la red.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=1]{gfx/p2p_central}
+  \caption{Directorio Centralizado}
+  \label{conexionhttp}
+\end{figure}
+
+%------------------------------------------------
+
+\subsection{Solución Distribuida}
+
+Las redes P2P de este tipo son las más comunes, siendo las más versátiles al no requerir de un gestiona miento central de ningún tipo, lo que permite una reducción de la necesidad de usar un servidor central, por lo que se opta por los mismos usuarios como nodos de esas conexiones y también como almacenistas de esa información. En otras palabras, todas las comunicaciones son directamente de usuario a usuario con ayuda de un nodo (que es otro usuario) quien permite enlazar esas comunicaciones \cite{wiki_p2p}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=1]{gfx/p2p_distribuido}
+  \caption{Solución Distribuida}
+  \label{conexionhttp}
+\end{figure}
+
+%------------------------------------------------
+
+\subsection{Directorio Descentralizado }
+
+En este tipo de red, se puede observar la interacción entre un servidor central que sirve como hub y administra los recursos de banda ancha, enrutamientos y comunicación entre nodos pero sin saber la identidad de cada nodo y sin almacenar información alguna, por lo que el servidor no comparte archivos de ningún tipo a ningún nodo. Tiene la peculiaridad de funcionar (en algunos casos como en Torrent) de ambas maneras, es decir, puede incorporar más de un servidor que gestione los recursos compartidos, pero también en caso de que el o los servidores que gestionan todo caigan, el grupo de nodos sigue en contacto a través de una conexión directa entre ellos mismos con lo que es posible seguir compartiendo y descargando más información en ausencia de los servidores \cite{wiki_p2p}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=1]{gfx/p2p_dir_centralizado}
+  \caption{Directorio Descentralizado}
+  \label{conexionhttp}
+\end{figure}
+
+%----------------------------------------------------------------------------------------
+
+\section{Mecanismos de búsqueda en Redes P2P}
+
+\begin{description}
+\item[Centralizados: ]
+Un repositorio central almacena un índice de todos los recursos en la red, junto con la localización de dichos recursos (qué nodos los ofrecen). Todos los miembros de la red registran sus recursos y dirigen sus búsquedas a este repositorio. Un ejemplo es la red Napster. En realidad, a los sistemas de este tipo no se les considera como P2P puros, ya que ese repositorio es un servicio centralizado, con los inconvenientes típicos: representa un punto único de fallo, y compromete la escalabilidad del sistema.
+
+\item[Descentralizados: ]
+No existe ningún repositorio centralizado. Para encontrar un recurso, los nodos lanzan mensajes de búsqueda que son encaminados por la red. Las redes descentralizadas son clasificadas a su vez en: Redes no estructuradas y Redes estructuradas.
+
+\item[Redes Estructuradas: ]
+Las redes estructuradas tienen importantes ventajas. Proporcionan un mecanismo determinista de localización, de tal forma que se asegura que un recurso será encontrado siempre que esté en la red. Además, los mensajes de búsqueda son encaminados de forma eficiente, de tal forma que el recurso es encontrado en $O(\log n)$ saltos, donde $n$ es el tamaño de la red.
+
+\end{description}

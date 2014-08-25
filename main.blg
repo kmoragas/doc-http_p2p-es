@@ -1,0 +1,75 @@
+This is BibTeX, Version 0.99d (TeX Live 2013)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: main.aux
+A level-1 auxiliary file: FrontBackMatter/Titlepage.aux
+A level-1 auxiliary file: FrontBackMatter/Titleback.aux
+A level-1 auxiliary file: FrontBackMatter/Dedication.aux
+A level-1 auxiliary file: FrontBackMatter/Abstract.aux
+A level-1 auxiliary file: FrontBackMatter/Publication.aux
+A level-1 auxiliary file: FrontBackMatter/Acknowledgments.aux
+A level-1 auxiliary file: FrontBackMatter/Contents.aux
+A level-1 auxiliary file: Chapters/Chapter01.aux
+A level-1 auxiliary file: Chapters/Chapter02.aux
+A level-1 auxiliary file: Chapters/Chapter03.aux
+A level-1 auxiliary file: Chapters/Chapter04.aux
+A level-1 auxiliary file: Chapters/Chapter05.aux
+A level-1 auxiliary file: Chapters/Chapter06.aux
+A level-1 auxiliary file: Chapters/Chapter07.aux
+A level-1 auxiliary file: Chapters/Chapter08.aux
+A level-1 auxiliary file: Chapters/Chapter09.aux
+A level-1 auxiliary file: Chapters/Chapter10.aux
+A level-1 auxiliary file: Chapters/Chapter11.aux
+A level-1 auxiliary file: Chapters/Chapter0A.aux
+A level-1 auxiliary file: FrontBackMatter/Bibliography.aux
+The style file: plainnat.bst
+A level-1 auxiliary file: FrontBackMatter/Colophon.aux
+A level-1 auxiliary file: FrontBackMatter/Declaration.aux
+Database file #1: Bibliography.bib
+Warning--entry type for "wiki_cacheweb" isn't style-file defined
+--line 129 of file Bibliography.bib
+Warning--entry type for "wiki_p2p" isn't style-file defined
+--line 139 of file Bibliography.bib
+Warning--entry type for "wiki_cdn" isn't style-file defined
+--line 149 of file Bibliography.bib
+You've used 11 entries,
+            2773 wiz_defined-function locations,
+            677 strings with 7057 characters,
+and the built_in function-call counts, 4140 in all, are:
+= -- 373
+> -- 181
+< -- 10
++ -- 67
+- -- 54
+* -- 272
+:= -- 644
+add.period$ -- 37
+call.type$ -- 11
+change.case$ -- 51
+chr.to.int$ -- 9
+cite$ -- 22
+duplicate$ -- 220
+empty$ -- 373
+format.name$ -- 67
+if$ -- 878
+int.to.chr$ -- 3
+int.to.str$ -- 1
+missing$ -- 9
+newline$ -- 67
+num.names$ -- 44
+pop$ -- 114
+preamble$ -- 1
+purify$ -- 40
+quote$ -- 0
+skip$ -- 167
+stack$ -- 0
+substring$ -- 85
+swap$ -- 31
+text.length$ -- 2
+text.prefix$ -- 0
+top$ -- 0
+type$ -- 116
+warning$ -- 0
+while$ -- 39
+width$ -- 0
+write$ -- 152
+(There were 3 warnings)

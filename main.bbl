@@ -1,0 +1,77 @@
+\begin{thebibliography}{11}
+\providecommand{\natexlab}[1]{#1}
+\providecommand{\url}[1]{\texttt{#1}}
+\expandafter\ifx\csname urlstyle\endcsname\relax
+  \providecommand{\doi}[1]{doi: #1}\else
+  \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
+
+\bibitem[Antony~Rowstron(2001)]{rowstron:2001}
+Sitaram~Iyer Antony~Rowstron, Peter~Druschel.
+\newblock Squirrel: A decentralized peer-to-peer web cache.
+\newblock \emph{21th ACM Symposium on Principles of Distributed Computing},
+  2001.
+
+\bibitem[Bordignon(2005)]{bordignon:2005}
+Fernando Ra{\'u}l~Alfredo Bordignon.
+\newblock Dise{\~n}o de una plataforma de computaci{\'o}n distribuida
+  cooperativa, utilizando servicios de una red compa{\~n}ero a compa{\~n}ero.
+\newblock \emph{Universidad Nacional de La Plata}, 2005.
+
+\bibitem[Freedman et~al.(2004)Freedman, Freudenthal, and
+  Mazi{\'e}res]{freedman:2004}
+Michael~J. Freedman, Eric Freudenthal, and David Mazi{\'e}res.
+\newblock Democratizing content publication with coral.
+\newblock \emph{New York University}, 2004.
+
+\bibitem[Knuth(1974)]{knuth:1974}
+Donald~E. Knuth.
+\newblock {C}omputer {P}rogramming as an {A}rt.
+\newblock \emph{Communications of the ACM}, 17\penalty0 (12):\penalty0
+  667--673, December 1974.
+
+\bibitem[Lamport(September 1979)]{lamport:1979}
+Leslie Lamport.
+\newblock How to make a multiprocessor computer that correctly executes
+  multiprocess programs.
+\newblock \emph{IEEE Transactionson Computers}, pages 690--691, September 1979.
+
+\bibitem[Liang et~al.(2001)Liang, Hassanein, and Martin]{liang:2001}
+Zhengang Liang, Hossam Hassanein, and Patrick Martin.
+\newblock Transparent distributed web caching.
+\newblock \emph{26th Annual IEEE International Conference on Local Computer
+  Networks}, page 225, 2001.
+
+\bibitem[Tanenbaum and Wetherall(2011)]{Tanenbaum:2011}
+Andrew~S. Tanenbaum and D~Wetherall.
+\newblock \emph{Computer networks}.
+\newblock Pearson Prentice Hall, Boston, 5th ed edition, 2011.
+\newblock ISBN 9780132126953 (alk. paper).
+
+\bibitem[Vithanage et~al.(2009)Vithanage, Gunaratne, and
+  Sirisena]{wathsala:2009}
+Wathsala Vithanage, Nuwan Gunaratne, and Nishshanka Sirisena.
+\newblock Dalesa cache: A peer -- to -- peer web cache.
+\newblock \emph{Lanka Software Fundation}, 2009.
+
+\bibitem[Wikipedia(2013{\natexlab{a}})]{wiki_cacheweb}
+Wikipedia.
+\newblock Cach{\'e} web.
+\newblock \url{http://es.wikipedia.org/wiki/Cach%C3%A9_web},
+  2013{\natexlab{a}}.
+\newblock URL \url{http://es.wikipedia.org/wiki/Cach%C3%A9_web}.
+
+\bibitem[Wikipedia(2013{\natexlab{b}})]{wiki_cdn}
+Wikipedia.
+\newblock Content delivery network.
+\newblock \url{http://en.wikipedia.org/wiki/Content_delivery_network},
+  2013{\natexlab{b}}.
+\newblock URL \url{http://en.wikipedia.org/wiki/Content_delivery_network}.
+
+\bibitem[Wikipedia(2013{\natexlab{c}})]{wiki_p2p}
+Wikipedia.
+\newblock P2p.
+\newblock \url{http://es.wikipedia.org/wiki/P2P#Redes_P2P_centralizadas},
+  2013{\natexlab{c}}.
+\newblock URL \url{http://es.wikipedia.org/wiki/P2P#Redes_P2P_centralizadas}.
+
+\end{thebibliography}

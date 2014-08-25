@@ -1,0 +1,96 @@
+% Chapter X
+
+\chapter{Modelos de Cosistencia} % Chapter title
+
+\label{ch:modelos_consistencia} % For referencing the chapter elsewhere, use \autoref{ch:name}
+
+Un requerimiento importante en los sistemas distribuidos es la replicación de datos, lo datos por lo general se replican para mejorar fiabilidad y incrementar el rendimiento, uno de los problemas más importantes es, mantener todas las replicas consistentes, esto quiere decir que cuando una copia se actualiza, necesitamos asegurar que las otras copias se actualizan también.  
+
+%----------------------------------------------------------------------------------------
+
+\section{Razones para Replicar}
+
+\begin{enumerate}
+\item Los datos se replican para incrementar la fiabilidad del sistema, esto quiere decir que si el sistema ha sido replicado este puede seguir trabajando después de alguno de sus nodos falle, mediante el cambio a uno que si funcione. Al mantener muchas copias es posible proporcionar una mejor protección contra datos corruptos. 
+\item Los datos se replican para incrementar el rendimiento, es importante cuando un sistema distribuido necesita ser escalado en números y áreas geográficas. En el caso de números, cuando un sistema necesita procesar mucha información, este se escala agregando otro nodo al sistema y replicando los datos, para dividir el trabajo. En el caso de área geográfica se coloca una copia cerca del proceso que lo necesita, para reducir el tiempo de acceso a los datos.
+
+\end{enumerate}
+
+%------------------------------------------------
+
+\section{Modelos de Consistencia sin Sincronización}
+
+\begin{description}
+
+\item[Linearizability o Consistencia Estricta: ]
+Linearizability es la condición correcta para objetos concurrentes. Las operaciones write que se ejecutan en cualquiera de los sitios de un sistema, se ejecutan simultáneamente en todas las copias de los datos, ose es la condición ideal siempre las copias son coherentes. 
+En pocas palabras es la consistencia más estricta, esta establece que cualquier operación de lectura en el sistema, debe devolver el valor con la última actualización antes de realizar la lectura. Lo cual quiere decir que el tiempo máximo para propagar una actualización al resto de sitios en el sistema es cero. 
+
+\item[Consistencia Secuencial: ]
+Es un modelo de consistencia un poco más débil, que la consistencia estricta. Básicamente Lamoprt lo define mediante:
+
+"El resultado de cualquier ejecución es el mismo que si las operaciones de todos los procesos fueran ejecutadas en algún orden secuencial, y las operaciones de cada proceso individual aparecen en esta secuencia en el orden especificado por su programa"\cite{lamport:1979}
+
+La consistencia secuencial no garantiza que una operación de lectura devuelva el valor escrito por otro proceso. Lo único que asegura es que todos los sitios vean todas las operaciones en el mismo orden.
+
+\item[Consistencia Causal: ]
+En un sistema se da consistencia causal si las escrituras parcialmente relacionadas de forma causal (sobre el mismo objeto concurrente) son vistas por todos los procesos en el mismo orden, las escrituras concurrentes pueden ser vistas en un orden diferente en maquinas diferentes.
+
+Este modelo es aun más débil que la consistencia secuencial, la cual requiere que todos sitios vean las escrituras en el mismo orden.
+
+Cuando un sitio realiza una lectura seguida de una escritura, aun en diferentes objetos concurrentes, se dice que la primera operación esta causalmente ordenada antes que la segunda, debido a que el valor almacenado por la escritura puede haber sido dependiente del resultado de la lectura. De manera similar una operación de lectura puede estar causalmente ordenada después de una escritura previa en el mismo objeto concurrente que almacena lo que fue leído. De la misma manera dos operaciones de escritura en el mismo sitio se encuentran causalmente ordenadas en el mismo orden que fueron realizadas. 
+
+Si existen operaciones que no están causalmente relacionadas se dice que son concurrentes.
+
+\item[Consistencia FIFO: ]
+Este modelo es aun más débil que la consistencia causal, esta consiste en eliminar el requisito de que las operaciones relacionadas se vean en orden por parte de todos los sitios en un sistema. Para esto las escrituras por un sitio son recibidas por otros procesos en el orden en que son realizadas, pero las escrituras de sitios diferentes pueden verse en un orden distinto en sitios diferentes.
+
+Este tipo de consistencia es fácil de implementar, ya que no existe garantía del orden en que los diferentes sitios vean las escrituras, más que dos o más escrituras por parte de un proceso llegan en orden, como si estuvieran entubadas. Remontándonos a la definición de consistencia causal, podemos decir que en consistencia FIFO todas las escrituras y lecturas locales (realizadas en el mismo sitio) están causalmente relacionadas, mientras que todas las que suceden en sitios diferentes son concurrentes.
+
+
+\end{description}
+
+%------------------------------------------------
+
+\section{Modelos de Consistencia con Sincronización}
+
+\begin{description}
+
+\item[Consistencia Débil:]
+
+La consistencia débil utiliza variables de sincronización para propagar las escrituras a todo el sistema, mediante esto una operación de escritura en un sitio, tomara un candado el cual evitara que otros puedan leer o escribir hasta que la operación termine y se propague al resto de los sitios que conforman el sistema. A este mecanismo se le llama exclusión mutua.
+
+El modelo tiene las siguientes condiciones:
+
+\begin{itemize}
+\item Los accesos a las variables de sincronización son secuencialmente consistentes.
+\item No se permite ingresar a una variable de sincronización hasta que todas las operaciones de escritura hayan terminado en el resto de los sitios.
+\item No se permite realizar un acceso a los datos (operaciones de lectura y escritura) hasta realizar todos los accesos a las variables de sincronización. 
+\end{itemize}
+
+
+\item[Consistencia Release:]
+Es muy parecida a la consistencia débil, lo que hace es dar solución a un problema de rendimientos que tiene esta, cuando se acceda a una variable de sincronización, el objeto concurrente no sabe si se debe a que el sitio a terminado de escribir en el objeto concurrente o está a punto de iniciar su lectura. Para una implementación más eficiente de la consistencia débil se crean dos variables de sincronización que diferencien estos casos. Estas operaciones se llaman release y acquire, antes de realizar una operación de escritura a un objeto concurrente un sitio debe adquirir el objeto mediante la operación acquire y más tarde liberarlo mediante release.
+
+Para contar con consistencia release se debe cumplir:
+
+\begin{itemize}
+\item Antes de realizar una operación  a un objeto concurrente, deben terminar con éxito todas las adquisiciones anteriores del sitio en cuestión.
+\item Antes de realizar un release, se deben terminar todas las escrituras y lectura del sitio.
+\item Los accesos a release y acquire deben de ser consistentes con el procesador.
+\end{itemize}
+
+
+\item[Consistencia de Entrada: ]
+Utiliza las mismas operaciones de sincronización mencionadas anteriormente acquire y release. La diferencia radica en que requiere que cada objeto concurrente se asocie con alguna variable de sincronización, como en un modelo de exclusión barrier o tree.
+
+La consistencia de entrada debe cumplir:
+\begin{itemize}
+\item No se permite a unos sitios realizar un acquire a un objeto concurrente con respecto a un sitio hasta que se realicen todas las actualizaciones de los datos compartidos protegidos con respecto a este sitio.
+\item Antes de permitir el acceso de modo exclusivo a una variable de sincronización por un sitio, ningún otro sitio debe poseer la variable de sincronización, ni siquiera en modo no exclusivo.
+\item Después de realizar un acceso en modo exclusivo a una variable de sincronización, no se puede realizar el siguiente acceso en modo no exclusivo de otro sitio a esta variable de sincronización hasta haber sido realizado con respecto al propietario de esa variable.
+\end{itemize}
+
+\end{description}
+
+%----------------------------------------------------------------------------------------
