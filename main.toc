@@ -3,7 +3,7 @@
 \select@language {spanish}
 \contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Introducci\IeC {\'o}n}}{1}{part.1}
 \contentsline {chapter}{\numberline {1}\spacedlowsmallcaps {Introducci\IeC {\'o}n}}{3}{chapter.1}
-\contentsline {section}{\numberline {1.1}Comunidad Web Chach\IeC {\'e}}{5}{section.1.1}
+\contentsline {section}{\numberline {1.1}Comunidad Web Cach\IeC {\'e}}{5}{section.1.1}
 \contentsline {part}{ii\hspace {1em}\spacedlowsmallcaps {Marco Te\IeC {\'o}rico}}{7}{part.2}
 \contentsline {chapter}{\numberline {2}\spacedlowsmallcaps {Protocolo HTTP}}{9}{chapter.2}
 \contentsline {section}{\numberline {2.1}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja?}{9}{section.2.1}
