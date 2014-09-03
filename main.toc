@@ -30,7 +30,7 @@
 \contentsline {section}{\numberline {6.1}Definici\IeC {\'o}n de una Comunidad Virtual}{29}{section.6.1}
 \contentsline {section}{\numberline {6.2}Caracter\IeC {\'\i }sticas de una Comunidad Virtual}{29}{section.6.2}
 \contentsline {section}{\numberline {6.3}Tipos de Comunidades Vituales}{30}{section.6.3}
-\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o del CWC}}{35}{part.3}
+\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o de la CWC}}{35}{part.3}
 \contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Chapter Title}}{37}{chapter.7}
 \contentsline {section}{\numberline {7.1}Section Title}{37}{section.7.1}
 \contentsline {subsection}{\numberline {7.1.1}Subsection Title}{37}{subsection.7.1.1}
