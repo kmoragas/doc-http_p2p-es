@@ -5,25 +5,41 @@
 \label{ch:introduction} % For referencing the chapter elsewhere, use \autoref{ch:introduction} 
 
 %----------------------------------------------------------------------------------------
-Durante los últimos años el incremento en el uso de Internet ha sido se podría decir, exponencial. Diariamente nacen cientos de sitios web ofreciendo información de todos los posibles temas, desde el estado del clima hasta la imagen más reciente de nuestro vecino planeta rojo. El acceso a Internet pasó de estar en una cuantas manos, a ser usado diariamente por la mayoría de las personas en el mundo.
+Durante los últimos años el incremento en el uso de Internet ha sido, se podría decir, exponencial. Diariamente nacen cientos de sitios web ofreciendo información de todos los posibles temas, desde el estado del clima hasta la imagen más reciente de nuestro vecino planeta rojo. El acceso a Internet pasó de estar en una cuantas manos, a ser usado diariamente por la mayoría de las personas en el mundo.
 
-Uno de los principales aportes, que ayudó sin duda a la consolidación del Internet como fenómeno mundial, en la década de los noventas, fue la creación del protocolo HTTP, este protocolo vino a establecer una forma universal para intercambiar información. El protocolo se basó en la arquitectura cliente-servidor, donde un cliente realiza una petición de algún recurso al servidor y el servidor satisface esta petición mediante el envió del recurso solicitado.
+\marginpar{HTTP: Hypertext Transfer Protocol. Este protocolo se define por primera vez en el RFC 1945 \cite{rfc1945}}
+Uno de los principales aportes, que ayudó sin duda a la consolidación del Internet como fenómeno mundial, en la década de los noventas, fue la creación del protocolo HTTP, el cual vino a establecer una forma universal para intercambiar información. Este protocolo utiliza una arquitectura cliente-servidor, donde un cliente realiza una petición de algún recurso al servidor y el servidor satisface esta petición mediante el envió del recurso solicitado. 
 
-El crecimiento de Internet también implicó cierta evolución en la tecnología, pues actualmente podemos acceder a gran cantidad de información instantáneamente y la mayoría de los usuarios de Internet ignoran todo lo que esto implica. Detrás de este uso intensivo se esconde, una enmarañada red tejida de conexiones redundantes, encargadas de transportar las conexiones desde los usuarios hasta los servidores que poseen la información. 
+Una consecuencia directa de la aceptación del protocolo HTTP en el mercado mundial fue el crecimiento de Internet. Pero esto también implicó una marcada evolución en la tecnología, pues actualmente se puede acceder a gran cantidad de información instantáneamente y la mayoría de los usuarios de Internet ignoran todo lo que esto implica. Detrás de este uso intensivo se esconde, una enmarañada red tejida de conexiones redundantes, encargadas de transportar las conexiones desde los usuarios hasta los servidores que poseen la información. 
 
-Y es que Internet se nos divide en dos mundos totalmente diferenciados, uno donde desde su concepción hecha en DARPAnet fue con la idea de soportar cualquier desventura, y su fin es el transporte de información (capa de transporte). Y el otro mundo reside en el contenido per sé, el cual corresponde precisamente a la capa de aplicación, en nuestro caso a HTTP. 
+\marginpar{ARPANET fue una de las primeras redes de conmutación de paquetes operacional producto de la guerra fría, cuando Estados Unidos quería una red de comando y control que pudiera sobrevivir una guerra nuclear. \cite{Tanenbaum:2011}} 
+Por otro lado, es posible dividir Internet en dos mundos totalmente diferenciados, el primero desde su concepción, hecha en ARPANET, que fue con la idea principal de soportar cualquier desventura, y su fin es el transporte de información (capa de transporte). Y el otro mundo reside en el contenido per sé, el cual corresponde precisamente a la capa de aplicación, donde el protocolo HTTP nuevamente se hace presente como uno de los principales mecanismos de acceso a la información.
 
-Ahora bien ¿Qué justifica esta evolución en la tecnología tanto desde el punto de vista de protocolo así como dispositivos involucrados? La respuesta es muy sencilla. Al ser HTTP un protocolo tan versátil, un lenguaje universal para el intercambio de datos, se comenzó a utilizar para diferentes aplicaciones, se pasó de un simple intercambio de información, a ser la piedra angular por la cual se mueve la mayoría de las actividades humanas. Hoy en día tenemos muchos usos, con la aparición de la multimedia los requerimientos de todas las partes involucradas (cliente, servidor y medio de comunicación) se ha incrementado. Actualmente se comparten videos de gran tamaño, se transmite televisión en alta definición, se comparte música, documentos, en fin un gran número de archivos que utilizan grandes anchos de banda, que hasta hace unos años para nuestra conexión de 56Kbps parecía imposible.
+Ahora bien ¿Qué justifica esta evolución en la tecnología tanto desde el punto de vista de protocolo como de dispositivos involucrados? La respuesta es muy sencilla. Al ser HTTP un protocolo tan versátil, un lenguaje universal para el intercambio de datos, se comenzó a utilizar para diferentes aplicaciones. Se pasó de un simple intercambio de información, a ser la piedra angular por la cual se mueve la mayoría de las actividades humanas. Hoy en día tenemos muchos usos, con la aparición de la multimedia los requerimientos de todas las partes involucradas (cliente, servidor y medio de comunicación) se han incrementado. Actualmente se comparten videos de gran tamaño, se transmite televisión en alta definición, se comparte música, documentos; en fin un gran número de archivos que utilizan grandes anchos de banda, que hasta hace unos años para una conexión de 56Kbps parecía imposible.
 
-Pero ¿Acaso esta maravilla tecnológica es gratuita?, y la respuesta es no. Como se mencionó anteriormente cada parte involucrada requiere adquirir la nueva tecnología, en el caso de un cliente imaginamos a una persona en su casa la cual paga su conexión a Internet de banda ancha para compartir archivos, revisar su correo electrónico, escuchar música, podemos hablar de ver películas, participar de algún juego en línea, participar en video conferencias; con estos requerimientos el equipo requerido es bastante costoso, pero digamos que no inaccesible, ahora pensemos en el otro extremo, el servidor, supongamos un servidor que hace transmisión de videos, los cuales son aportados por los usuarios del sitio que se encuentra hospedado en este servidor, imaginemos que el sitio recibe un gran número de visitas, hablemos de más de 10000 visitas diarias, ya es un numero grande, ahora usted como lector y experto se dirá, resuelvo fácilmente este problema, compro un gran número de servidores, con los cuales utilizando una solución de balanceo de carga, puedo hacer frente a este gran número de usuarios, pensemos por un momento en nuestras palabras tomemos el tiempo e investigamos el precio de un servidor, de una solución de NLB y de una conexión de Internet lo suficientemente buena como para servir videos, ya los números son bastante grandes, lo más preocupante es que nunca es suficiente, siempre tendremos que estar actualizándonos ya que lo único constante es que la tecnología es cambiante.
+Pero ¿Acaso esta maravilla tecnológica es gratuita? y la respuesta es no. Como se mencionó anteriormente cada parte involucrada requiere adquirir una nueva tecnología. Y es por ello que se analizará cada una de las partes involucradas en el intercambio de información, por separado. 
 
-Por otro lado, cubrir la necesidad de nuestros usuarios es una cosa, pero además de esto hay que pensar en que nuestros sitios pueden verse atacados por Denegaciones de Servicio Distribuidas (DDoS), una caída de nuestro proveedor de servicios o simplemente un incremento inesperado de usuarios. Son muchas las variables que cubrir, y en todas ellas se podría decir que existen soluciones ya conocidas, pero todas implican una alta inversión por parte del individuo que desea publicar el contenido. 
+En el caso del cliente, es posible imaginar a una persona en su casa que renta una conexión a Internet de banda ancha para compartir archivos, revisar su correo electrónico, escuchar música, ver películas, interactuar en algún juego en línea, participar en video conferencias; y es que con estos requerimientos el equipo requerido es bastante costoso, pero se puede decir que no inaccesible. 
 
-Debido al problema expuesto anteriormente, aparece como solución el caching, en su definición más sencilla podemos decir que es un modelo mediante el cual, objetos que se encuentran hospedados en un sitio web son almacenados en otros servidores de forma que pueden ser servidos desde otros servidores distintos al servidor web original, esto reduce el número de peticiones que llegan al servidor original lo que disminuye su carga (en el marco teórico de este documento se repasarán los modelos de web caching existentes), el caching ha sido un tema de estudio en cientos de tesis e investigaciones, pero las soluciones usadas actualmente se limitan a soluciones que deben ser adquiridas por el dueño del sitio web y como hablamos no es muy rentable, y soluciones que son adquiridas por un cliente en su beneficio. Al parecer llegamos a un callejón sin salida.
+Ahora en el otro extremo, el servidor. Por ejemplo se supondrá un servidor que aloja un sitio web que hace transmisión de videos, los cuales son aportados por los mismos usuarios del servicio web. Ahora bien, si en este ejemplo el sitio recibiera un gran número de visitas, 100 visitas por segundo, usted como lector y experto encontraría una solución fácil al problema que supone el alto tráfico; y aumentaría el número de servidores que atienden el servicio web, además al esquema de solución se le podría agregar un balanceo de carga. Con estos previos ajustes, en efecto se puede hacer frente a este gran número de usuarios. 
 
-Por otro lado también desviemos nuestra atención hacia otros dos aspectos de suma importancia que fueron traídos con el auge del Internet, el primero es el establecimiento de comunidades virtuales, en las cuales un grupo de Internautas se reúnen alrededor de un sitio web que presenta información de su interés y como comunidad ayudan para mantenerlo y tienen su propio conjunto de reglas. Y el segundo aspecto es el compartir archivos en Internet, tal vez el más polémico de todos y el que más nos interesa es el protocolo P2P, el cual básicamente permite que un número de usuarios que cuentan con un archivo especifico lo compartan con otros de manera simultánea, esto quiere decir que si 100 usuarios tienen un archivo de mi interés y éste tiene un tamaño de 100MB, en lugar de bajarlo desde un solo servidor, bajo pequeñas partes desde cada uno de los usuarios que lo tienen, con esto el proceso de descarga es mucho más rápido y no se satura a un solo servidor.
+\marginpar{NLB, Network Load Balancing. Consiste en el balanceo de tráfico a través de dos o más enlaces WAN sin la utilización de complejos algoritmos de enrutamiento como BGP. \cite{wiki_nlb}}
+Si bien es cierto, la anterior solución es válida y en muchas ocasiones implementada. Es necesario tomar en cuenta otras variables y cuantificar todos los costos asociados, por ejemplo el precio por servidor, la solución de NLB y una conexión de Internet lo suficientemente buena como para servir videos. Unas cuantas sumas hasta aquí ya arrojarían números bastante elevados, pero lo más preocupante es que nunca es suficiente, siempre es necesario estar actualizándose, pues lo único constante es que la tecnología es cambiante y las necesidades del cliente van en aumento. 
 
-Para ir finalizando esta extensa introducción, el presente documento pretende introducir una posible solución de bajo costo para resolver el problema que se ha expuesto, esta solución se llama Comunidad Web Caché.
+Por otro lado, cubrir esta necesidad es una cosa, pero además de esto hay que pensar en otros riesgos asociados y que son inherentes en la publicación de un sitio en la Web por ejemplo ataques por Denegaciones de Servicio Distribuidas (DDoS), una caída del proveedor de servicios o simplemente un incremento inesperado de usuarios. Son muchas las variables que cubrir, y en todas ellas se podría decir que existen soluciones ya conocidas, pero todas implican mayor inversión por parte del individuo que desea publicar el contenido. 
+
+Debido al problema expuesto anteriormente, aparece como solución el Caché. En su definición más sencilla podemos decir que es: "una región de memoria rápida que contiene copias de datos. El acceso a la copia en caché es más eficiente que el acceso a la original" \cite{silberschatz:2008}. 
+\marginpar{Caché: "Es una región de memoria rápida que contiene copias de datos. El acceso a la copia en caché es más eficiente que el acceso a la original" \cite{silberschatz:2008}}
+
+En este caso en particular se podría ver como un modelo mediante el cual, objetos que se encuentran hospedados en un sitio web son almacenados en otros servidores de forma que pueden ser distribuidos desde otros servidores distintos al servidor web original, esto reduce el número de peticiones que llegan al servidor original lo que disminuye su carga (en el marco teórico de este documento se repasarán los modelos de web caché existentes). 
+
+El caché ha sido un tema de estudio en cientos de tesis e investigaciones, pero las soluciones usadas actualmente se limitan a soluciones que deben ser adquiridas por el dueño del sitio web y como se ha discutido anteriormente, esto no es muy rentable, o bien se podrían utilizar soluciones que sean adquiridas por el cliente en su beneficio individual. Parece ser un callejón sin salida, donde la única solución es la inversión en nuevo equipo.
+
+Por otro lado, hay otros dos aspectos de suma importancia que fueron traídos con el auge del Internet, el primero es el establecimiento de comunidades virtuales, en las cuales un grupo de Internautas se reúnen alrededor de un sitio web que presenta información de su interés y definidos como comunidad ayudan para mantenerlo, bajo un conjunto de reglas propias. 
+
+El segundo aspecto es el compartir archivos en Internet (tal vez el más polémico de todos) y el que más le interesa a la presente investigación; es el protocolo P2P. Éste básicamente permite que un número de usuarios que cuentan con un archivo especifico lo compartan con otros de manera simultánea. Esto quiere decir que si 100 usuarios tienen un archivo de interés común y éste tiene un tamaño de 100MB, en lugar de descargarlo desde un solo servidor, descarga pequeñas partes desde cada uno de los usuarios que lo poseen, haciendo el proceso de descarga es mucho más rápido y evitando que se sature a un solo servidor.
+
+Para ir finalizando esta introducción, el presente documento pretende proponer una posible solución de bajo costo para resolver el problema anteriormente expuesto. A esta solución se le llamó Comunidad Web Caché. 
 
 %----------------------------------------------------------------------------------------
 
@@ -33,15 +49,25 @@ La idea de la Comunidad Web Caché nace a partir de las siguientes premisas:
 
 \begin{enumerate}
 \item Los usuarios cuentan con una gran cantidad de recursos en sus computadoras, los cuales son desperdiciados en más de un 80\%.
-\item La mayoría del contenido en Internet es de interés común y no solo de la persona que lo publica, entonces si es de interés común porque solo unos cuantos deben mantenerlo. Porque no lo podemos mantener entre todos.
-\item Quien publica contenido en Internet no siempre tiene la capacidad para mantener grandes servidores que puedan  servir a grandes cantidades de usuarios.
-\item Así como existen comunidades en Internet que se conforman por un interés común, por ejemplo hacer amigos, deportes, etc. Porque no crear una comunidad alrededor de un sitio web.
-\marginpar{\myTitle \myVersion}
+\item La mayoría del contenido en Internet es de interés común y no solo de la persona que lo publica, entonces si éste es de interés común ¿Porqué solo unos cuantos deben mantenerlo?. ¿Porqué no se puede distribuir entre todos?.
+\item Quien publica contenido en Internet no siempre tiene la capacidad para invertir en grandes servidores que puedan servir a un gran número de usuarios.
+\item Así como existen comunidades en Internet que se conforman por un interés común, por ejemplo hacer amigos, deportes, entre otros. ¿Porqué no crear una comunidad alrededor de un sitio web?.
 \end{enumerate}
 
-La propuesta que se quiere implementar es dejar de lado el modelo tradicional de servir archivos mediante HTTP y dejar de lado también los modelos tradicionales de Web Caching, para utilizar las ventajas de ambos mas la creación de comunidades de caches y el uso de los recursos de los miembros de las comunidades caches y de esta manera utilizar algún protocolo, en este caso P2P para servir archivos desde diferentes localizaciones.
+La propuesta que se quiere implementar es dejar de lado el modelo tradicional de servir archivos mediante HTTP y dejar de lado también los modelos tradicionales de Web Caching, para utilizar las ventajas de ambos más la creación de comunidades de caches y el uso de los recursos de los miembros de las comunidades caches y de esta manera utilizar algún protocolo, en este caso P2P para servir archivos desde diferentes localizaciones.
 
-En este caso supongamos el siguiente ejemplo, contamos con el sitio www.cwc.org que sirve archivos de video de más de 30Mb, con un modelo tradicional HTTP, cliente-servidor, un cliente obtendría el archivo desde el servidor  imaginemos 1000 clientes haciendo esto, sería demasiado para el servidor si tiene recursos limitados, entonces tendríamos que pensar en aumentar los recursos del servidor, entre otras cosas. La tesis consiste en crear una comunidad alrededor de www.cwc.org supongamos que 30 de esos 1000 clientes forman parte de la comunidad y que tienen los recursos suficientes para servir archivos, entonces con esto podemos servir los archivos desde 31 lugares en lugar que desde uno y es evidente las ventajas que nos puede dar un modelo como este. Ahora que pasa si miembros de la comunidad no tienen suficientes recursos, bueno podemos hacer que en lugar de servir un archivo desde una sola localización se haga desde múltiples que queremos decir con esto, que en lugar de servir archivos grandes de 30MB o mas que sirvan solo una porción de estos, como en una comunidad en la cual cada miembro aporta lo que puede en beneficio de todos y para esto se utilizaría un protocolo como P2P, otra idea podría ser que los clientes con menos recursos sirvan archivos pequeños como por ejemplo imágenes. Esto le quitaría gran cantidad de trabajo al servidor ya que una imagen significa un thread más que se debe crear para servir un archivo.
+Basado en la imagen \ref{conexionvideo}  se supondrá el siguiente ejemplo, se cuenta con el sitio www.cwc.org que sirve archivos de video de más de 30Mb, con un modelo tradicional HTTP, cliente-servidor, un cliente obtendría el archivo desde el servidor, ahora bien, se tienen 1000 clientes realizando esta misma operación, sería demasiado para el servidor si tiene recursos limitados, por lo tanto es necesario pensar en aumentar los recursos del servidor, entre otras cosas. 
+
+La tesis consistiría en crear una comunidad alrededor de cwc.org supongamos que 30 de esos 1000 clientes forman parte de la comunidad y que tienen los recursos suficientes para servir archivos, entonces con esto se puede servir los archivos desde 31 lugares en lugar que desde uno y es evidente las ventajas que se puede dar un modelo como este. Ahora ¿Qué pasa si miembros de la comunidad no tienen suficientes recursos? En lugar de servir un archivo desde una sola localización, ese archivo se puede servir desde múltiples ubicaciones, osea, que en lugar de servir archivos grandes de 30MB o más que se sirvan sólo una porción de éstos, como en una comunidad en la cual cada miembro aporta lo que puede, en beneficio de todos y para esto se utilizaría un protocolo como P2P. 
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.7]{gfx/conexion_video}
+  \caption{Ejemplo de Conexión de Video}
+  \label{conexionvideo}
+\end{figure}
+
+Otra idea podría ser que los clientes con menos recursos sirvan archivos pequeños como por ejemplo imágenes. Esto le quitaría gran cantidad de trabajo al servidor ya que una imagen significa un hilo de ejecución más que se debe crear para servir un archivo.
 
 La idea es que estas comunidades se conformen de manera automática y voluntaria, esto quiere decir que un usuario instala el plugin en su navegador web y el sitio al que trata de acceder puede usar el protocolo CWC entonces los contenidos accedidos quedan automáticamente en la cache y pueden ser servidos.
 
@@ -49,5 +75,144 @@ La cache podrá tener dos modos de operación, el primero sería que sea adminis
 
 Se ampliará con mayor detalle el funcionamiento y diseño del protocolo de CWC más adelante.
 
+\section{Definición del problema}
+
+En los últimos años se ha dado un alto crecimiento en el número de usuarios de la "World Wide Web", por ejemplo a continuación se muestran las estadísticas del crecimiento de usuarios de acuerdo a el área geográfica en los últimos 10 años:
+
+\begin{table}[h] %here h, t top, b bottom, p dedicated page on floats
+\myfloatalign
+\begin{tabular}{lccc} \toprule % four columns, fist left, other ones centered. 
+\tableheadline{Región} & \tableheadline{2005} & \tableheadline{2010} & \tableheadline{2014}\\ \midrule
+África & 2.4\% & 9.8\% & 19\% \\ 
+Américas & 35.9\% & 50.5\% & 65.5\% \\
+Estados Árabes & 8.3\% & 23.0\% & 40.6\% \\
+Asia y Pacífico & 9.4\% & 22.5\% & 34.4\% \\
+Europa & 46.3\% &	66.6\% & 74.8\% \\
+\end{tabular}
+\caption{Uso de Internet por Región Geográfica. \citeauthor{itu:2014}}  
+\label{tab:crecimiento_internet}
+\end{table}
+
+Como se puede ver, en casi diez años se ha duplicado o más la cantidad de usuarios de Internet, lo cual implica que se dará una mayor demanda sobre los sitios web, esto se traduce en que el dueño de un sitio web que presta un servicio deberá hacer una inversión en recursos  computacionales, como por ejemplo poder procesamiento y ancho de banda para poder servir a sus usuarios de la mejor manera posible.
+
+Esto quiere decir que la publicación de un sitio web con contenido de calidad no se vuelve tan trivial (se hablará en términos de contenido de calidad, ya que el contenido justificará la cantidad de usuarios que recibirá un sitio web, o sea entre mayor sea la calidad del contenido ofrecido por un sitio web para un grupo de usuarios en particular, así será la cantidad de usuarios que recibirá) ya que se deberán tomar en cuenta aspectos de crecimiento en el número de usuarios que se visiten el sitio web y los requerimientos computacionales necesarios para poder prestar un servicio de calidad, acorde con los contenidos publicados.
+
+Tomando en cuenta que realizar una publicación en Internet implica un costo para el publicador y conforme aumente el número de usuarios  que seguirán los contenidos en el sitio web, se podría elaborar una función de costo donde se incluyan las variables anteriormente expresadas en función de una calidad de servicio aceptable.
+
+Este costo se traduce en que los interesados en publicar, deban de pagar por conexiones a Internet de Alta Velocidad y adquirir grandes granjas de servidores que soporten la infraestructura para hacer la publicación, y en éste punto son solo las grandes compañías las  únicas con la capacidad de sufragar estos gastos, mediante el establecimiento de grandes caches regionales que puedan atender el tráfico generado en un área específica.
+
+Ahora ¿Qué pasa con las pequeñas compañías, instituciones sin fines de lucro e individuos que quieren crear un sitio web con contenido de calidad y no cuentan con suficientes recursos para sufragar los gastos generados por un alto número de usuarios?, tienen que buscar financiamiento, poner precio a sus contenidos o simplemente buscar la forma de ganar dinero mediante el bombardeo de publicidad en los sitios web, lo cual es un aspecto negativo para los usuarios.
+
+Una vez que se han visto las necesidades de recursos computacionales para publicar contenido en Internet que es accedido por un alto número de usuarios, ¿Qué pasa con los recursos computacionales que tiene el usuario/cliente?, ¿Los recursos del cliente tienen una utilización de un 100\% todo el tiempo o se encuentran ociosos la mayoría del tiempo?, ya se notó que la cantidad de usuarios con acceso a WWW crece enormemente lo cual implica que un gran número de usuarios cuentan con una conexión a Internet con una velocidad aceptable para acceder a los contenidos de "moda" (videos, música, etc.), además esto implica que cada uno de esos usuarios cuenta con una o más computadoras, las cuales obviamente cuentan con recursos computacionales aceptables para poder visualizar los contenidos ofrecidos por los sitios web, entonces se tendría la siguiente pregunta: ¿Qué pasa con los recursos computacionales (limitado al ancho de banda, procesamiento y memoria) mientras se accede a alguna comunidad virtual, se utiliza una aplicación de ofimática, se reproduce algún contenido de multimedia en Internet o simplemente chateamos por texto?  Y la respuesta es simplemente se desperdician los recursos, están ociosos, están esperando a ser utilizados.
+
+En términos de definición de la problemática, este se encuentra compuesto por cinco partes esenciales:
+\begin{enumerate}
+\item Falta de recursos por quien publica contenido de calidad en Internet, esto implica un alto costo para poder atender un alto número de clientes.
+\item Un alto desperdicio de recursos en los clientes, entre estos recursos podemos citar: Ancho de Banda, Almacenamiento, Memoria y Procesamiento.
+\item Baja calidad de servicio conforme aumenta el número de clientes, tiempos de respuesta poco aceptables o bien se ve comprometida la continuidad del negocio. 
+\item El número de usuarios en Internet se incrementa exageradamente cada año, para muestras la Tabla \ref{tab:crecimiento_internet}, la cual reúne el crecimiento en los últimos 10 años.
+\item El problema inherente de tener un sitio con una disponibilidad del 100\%, soportando las solicitudes usuales de los clientes, las denegaciones distribuidas y las fallas en los servicios. 
+\end{enumerate}
+
+¿Cómo dar solución a este problema?, ¿Es posible que la solución se encuentre en una utilización eficiente de los recursos tanto del publicador cómo de los clientes?, ¿Es posible encontrar una solución de bajo costo que aproveche las causas de estos problemas para dar una solución que resuelva los problemas?, ¿Es posible el establecimiento de una comunidad virtual en la cual cada miembro de la misma, aporte un poco de recursos computacionales con el afán de mantener contenido de calidad en Internet, el cual pueda ser accedido de una forma rápida y fiable? Y aun mas importante ¿Es posible establecer una comunidad virtual basada en una aplicación de bajo costo que utilice de una manera eficiente los recursos computacionales aportados por cada miembro y además se pueda utilizar con las aplicaciones de navegadores y servidores web utilizados actualmente?
+
+\section{Justificación}
+
+\subsection{Innovación}
+
+La Comunidad Web Caché trata de establecer una comunidad en la cual cada miembro comparta un poco de sus recursos computacionales como almacenamiento, procesamiento y ancho de banda para buscar el bien común. Esto se traduce en un incremento en la eficiencia y la velocidad del servidor web que sirve archivos.
+
+Por otro lado, se han identificado varias problemáticas que son punto focal para la creación del presente proyecto y que es necesario cubrir en torno al diseño de la Comunidad Web Caché. Entre ellas se pueden mencionar:
+
+\begin{enumerate}
+\item El incremento exponencial en el número de usuarios en Internet.
+\item El incremento en los recursos computacionales accesibles a los usuarios en Internet, los cuales son desperdiciados. 
+\item La falta de recursos computacionales por parte de quien publica contenido de calidad en Internet, cuando aumenta el número de usuarios se vuelve un problema ya que entre más usuarios se necesitan más recursos para poder servir a estos usuarios de una manera satisfactoria.
+\item La tendencia en los contenidos de moda en Internet, archivos estáticos de gran tamaño básicamente contenidos de multimedia.
+\item El gran numero de comunidades con objetivos específicos que se establecen en Internet de la cual se puede tomar la decisión de formar parte.
+\item La necesidad de presentar continuidad del negocio, tomando en cuenta los ataques de DDoS y tolerancia a desastres. 
+\end{enumerate}
+  
+ 
+El proyecto pretende la utilización de tecnologías y productos ya establecidos, entre los cuales se tienen:
+
+\begin{enumerate}
+\item Protocolo HTTP
+\item Protocolo P2P
+\item Navegadores Web
+\item Servidores Web
+\end{enumerate}
+
+Se podría resumir el funcionamiento de la Comunidad Web Caché como:
+\begin{verse}
+Quien publica contenido de calidad en Internet podrá decidir cual contenido podrá ser mantenido por la comunidad (el contenido que podrá ser mantenido por la comunidad es el que se podrá mantener en la Cache, esto por el hecho de respetar el copyright), ahora los miembros de la comunidad se unirán, podrán aportar un poco de sus recursos computacionales, es importante que ellos decidan la cantidad que aportaran, cuando alguno ellos solicita un archivo supongamos un video, este será servido desde el servidor principal y los miembros de la comunidad que mantengan este archivo con el protocolo P2P, lo que debería de incrementar la velocidad ya que en el peor de los casos ningún miembro de la comunidad tendría el archivo por lo cual sería transmitido solo por el servidor web
+\end{verse}
+
+Uno de los puntos focales de la Comunidad Web Caché es precisamente la parte comunitaria y es por ello que le atañe varios conceptos propios de comunidades virtuales como: 
+
+\begin{enumerate}
+\item Aporte de recursos o participación libre: Los miembros de la comunidad decidirán qué cantidad de recursos computacionales aportaran.
+\item Adhesión abierta: Puedo decidir formar parte de la comunidad o no.
+\item Respeto por los contenidos privados: Se respeta el Copyright, quien publica los contenidos de calidad podrá decidir si estos pueden ser mantenidos por la comunidad o no.
+\item Bien común: los contenidos deben ser servidos de manera rápida y eficiente.
+\item Apoyo: Si alguno de los miembros de la comunidad falla otro podrá tomar su lugar, podríamos decir tolerancia a fallos.
+\end{enumerate}
+
+En general el CWC busca el establecimiento de una comunidad cooperativa sobre Internet utilizando los navegadores y servidores web actuales, y se diferencia de todo lo ya existente, por ejemplo, los Proxys buscan mejorar el rendimiento sobre una red de área local. Por otro lado, los Proxy Federados mejor conocidos como "Cooperative Web Caching" buscan tener un conjunto de servidores proxy que se comuniquen y que compartan los contenidos que tienen en cache esto sobre cualquier tipo de red, se podría hablar que se podría utilizar en una WAN o incluso en Internet. En comparación a éste último, en el CWC cualquier usuario puede formar parte de la comunidad, sin necesidad de tener un Proxy.
+
+
+\subsection{Impacto}
+
+
+El proyecto en impactará tanto al publicador de contenido de calidad en Internet, así como a los usuarios, en los siguientes aspectos:
+
+\paragraph{Publicador}
+
+
+\begin{itemize}
+\item Instalar un componente a su servidor web que le permita especificar los contenidos de calidad que serán mantenidos por la cache y que controle la consistencia de la cache, al final cada petición de un archivo llegara al servidor web y este se encargara de decir cuáles son los miembros de la cache que servirán estos.
+\item Conforme el número de miembros de la comunidad crezca, se podrá experimentar menos carga en el los servidores, por consiguiente se podrán servir muchos más usuarios.
+\end{itemize}
+ 
+
+\paragraph{Usuario}
+\begin{itemize}
+\item Instalar un componente en el  explorador web de su preferencia.
+\item Establecer qué cantidad de recursos desea aportar a la cache.
+\item Conforme el número de miembros de la comunidad crezca, se podrá experimentar una utilización más eficiente de sus recursos computacionales, una mejora en los tiempos de respuesta cuando se hace una petición a un servidor web y mayor tolerancia a fallos, dándole continuidad al negocio. 
+\end{itemize}
+
+
+\section{Hipótesis}
+El desarrollo de una caché web distribuida que permita compartir de manera transparente y eficiente los recursos computacionales distribuidos ofrecidos colaborativamente mediante una comunidad de servidores, tendrá un impacto positivo en el bajar los costos y mejorar la continuidad del negocio para las comunidades virtuales 
+
+\section{Objetivos}
+\subsection{Objetivo Principal}
+Desarrollar una caché web distribuida que permita compartir de manera transparente y eficiente los recursos computacionales distribuidos ofrecidos colaborativamente mediante una comunidad de servidores.
+
+\subsection{Objetivos Específicos}
+\begin{itemize}
+\item Investigar y comparar trabajos relevantes relacionados con sistemas distribuidos
+\item Identificar las oportunidades de mejoramiento estratégico de las plataformas existentes.
+\item Especificar los requerimientos de la caché web distribuida basada en HTTP.
+\item Diseñar una arquitectura de una caché web distribuida bajo un conjunto de principios tales como: transparencia de ubicación de los recursos, solución de bajo costo y calidad de servicio.
+\item Desarrollar un prototipo de la caché web distribuida.
+\end{itemize}
+
+\section{Entregables}
+\begin{enumerate}
+\item Informe investigación funcionamiento de protocolo HTTP.
+\item Informe investigación funcionamiento de protocolo P2P.
+\item Informe investigación de modelos de Web Caching existentes.
+\item Informe investigación sobre comunidades virtuales.
+\item Informe investigación de aplicaciones que utilicen los diferentes modelos de Web Caching.
+\item Informe de benchmarks realizados a las diferentes aplicaciones que utilizan Web Caching.
+\item Informe investigación de modelos de consistencia.
+\item Documento de requerimientos de Comunidad Web Caché.
+\item Prototipo de CWCCliente
+\item Prototipo de CWCServer 
+\item Análisis de rendimiento de velocidad del entorno de Comunity Web Caching
+\item Análisis de rendimiento de costos del Entorno de Comunity Web Caching
+\end{enumerate}  
 
 %----------------------------------------------------------------------------------------

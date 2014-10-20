@@ -1,4 +1,4 @@
-\begin{thebibliography}{11}
+\begin{thebibliography}{15}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -11,6 +11,12 @@ Sitaram~Iyer Antony~Rowstron, Peter~Druschel.
 \newblock \emph{21th ACM Symposium on Principles of Distributed Computing},
   2001.
 
+\bibitem[Berners-Lee et~al.(1996)Berners-Lee, Fielding, and Frystyk]{rfc1945}
+T.~Berners-Lee, R.~Fielding, and H.~Frystyk.
+\newblock {Hypertext Transfer Protocol -- HTTP/1.0}.
+\newblock RFC 1945 (Informational), May 1996.
+\newblock URL \url{http://www.ietf.org/rfc/rfc1945.txt}.
+
 \bibitem[Bordignon(2005)]{bordignon:2005}
 Fernando Ra{\'u}l~Alfredo Bordignon.
 \newblock Dise{\~n}o de una plataforma de computaci{\'o}n distribuida
@@ -22,6 +28,13 @@ Fernando Ra{\'u}l~Alfredo Bordignon.
 Michael~J. Freedman, Eric Freudenthal, and David Mazi{\'e}res.
 \newblock Democratizing content publication with coral.
 \newblock \emph{New York University}, 2004.
+
+\bibitem[ITU(2014)]{itu:2014}
+ITU.
+\newblock Key ict indicators for developed and developing countries and the
+  world, 2014.
+\newblock URL
+  \url{http://www.itu.int/en/ITU-D/Statistics/Documents/statistics/2014/ITU_Key_2005-2014_ICT_data.xls}.
 
 \bibitem[Knuth(1974)]{knuth:1974}
 Donald~E. Knuth.
@@ -40,6 +53,11 @@ Zhengang Liang, Hossam Hassanein, and Patrick Martin.
 \newblock Transparent distributed web caching.
 \newblock \emph{26th Annual IEEE International Conference on Local Computer
   Networks}, page 225, 2001.
+
+\bibitem[Silberschatz(2008)]{silberschatz:2008}
+Abraham Silberschatz.
+\newblock \emph{Sistemas Operativos}.
+\newblock Limusa Wiley, 2008.
 
 \bibitem[Tanenbaum and Wetherall(2011)]{Tanenbaum:2011}
 Andrew~S. Tanenbaum and D~Wetherall.
@@ -67,11 +85,17 @@ Wikipedia.
   2013{\natexlab{b}}.
 \newblock URL \url{http://en.wikipedia.org/wiki/Content_delivery_network}.
 
-\bibitem[Wikipedia(2013{\natexlab{c}})]{wiki_p2p}
+\bibitem[Wikipedia(2013{\natexlab{c}})]{wiki_nlb}
+Wikipedia.
+\newblock Network load balancing.
+\newblock \url{http://en.wikipedia.org/wiki/Network_Load_Balancing},
+  2013{\natexlab{c}}.
+\newblock URL \url{http://en.wikipedia.org/wiki/Network_Load_Balancing}.
+
+\bibitem[Wikipedia(2013{\natexlab{d}})]{wiki_p2p}
 Wikipedia.
 \newblock P2p.
-\newblock \url{http://es.wikipedia.org/wiki/P2P#Redes_P2P_centralizadas},
-  2013{\natexlab{c}}.
+\newblock \url{http://es.wikipedia.org/wiki/P2P}, 2013{\natexlab{d}}.
 \newblock URL \url{http://es.wikipedia.org/wiki/P2P#Redes_P2P_centralizadas}.
 
 \end{thebibliography}

@@ -10,64 +10,73 @@
 \BOOKMARK [-1][]{part.1}{Introducci\363n}{}% 10
 \BOOKMARK [0][]{chapter.1}{1 Introducci\363n}{part.1}% 11
 \BOOKMARK [1][-]{section.1.1}{1.1 Comunidad Web Cach\351}{chapter.1}% 12
-\BOOKMARK [-1][]{part.2}{Marco Te\363rico}{}% 13
-\BOOKMARK [0][]{chapter.2}{2 Protocolo HTTP}{part.2}% 14
-\BOOKMARK [1][-]{section.2.1}{2.1 \277C\363mo trabaja?}{chapter.2}% 15
-\BOOKMARK [1][-]{section.2.2}{2.2 Mensajes HTTP}{chapter.2}% 16
-\BOOKMARK [1][-]{section.2.3}{2.3 Petici\363n}{chapter.2}% 17
-\BOOKMARK [1][-]{section.2.4}{2.4 Respuesta}{chapter.2}% 18
-\BOOKMARK [0][]{chapter.3}{3 Protoloco P2P}{part.2}% 19
-\BOOKMARK [1][-]{section.3.1}{3.1 Clasificaci\363n}{chapter.3}% 20
-\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Directorio Centralizado}{section.3.1}% 21
-\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Soluci\363n Distribuida}{section.3.1}% 22
-\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Directorio Descentralizado }{section.3.1}% 23
-\BOOKMARK [1][-]{section.3.2}{3.2 Mecanismos de b\372squeda en Redes P2P}{chapter.3}% 24
-\BOOKMARK [0][]{chapter.4}{4 Modelos de Web Caching}{part.2}% 25
-\BOOKMARK [1][-]{section.4.1}{4.1 Web Caching mediante Proxy}{chapter.4}% 26
-\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Proxy Simple}{section.4.1}% 27
-\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Proxy Jer\341rquico}{section.4.1}% 28
-\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Proxy Descentralizado}{section.4.1}% 29
-\BOOKMARK [1][-]{section.4.2}{4.2 Redes CDN}{chapter.4}% 30
-\BOOKMARK [0][]{chapter.5}{5 Modelos de Cosistencia}{part.2}% 31
-\BOOKMARK [1][-]{section.5.1}{5.1 Razones para Replicar}{chapter.5}% 32
-\BOOKMARK [1][-]{section.5.2}{5.2 Modelos de Consistencia sin Sincronizaci\363n}{chapter.5}% 33
-\BOOKMARK [1][-]{section.5.3}{5.3 Modelos de Consistencia con Sincronizaci\363n}{chapter.5}% 34
-\BOOKMARK [0][]{chapter.6}{6 Comunidades Virtuales}{part.2}% 35
-\BOOKMARK [1][-]{section.6.1}{6.1 Definici\363n de una Comunidad Virtual}{chapter.6}% 36
-\BOOKMARK [1][-]{section.6.2}{6.2 Caracter\355sticas de una Comunidad Virtual}{chapter.6}% 37
-\BOOKMARK [1][-]{section.6.3}{6.3 Tipos de Comunidades Vituales}{chapter.6}% 38
-\BOOKMARK [-1][]{part.3}{Dise\361o de la CWC}{}% 39
-\BOOKMARK [0][]{chapter.7}{7 Chapter Title}{part.3}% 40
-\BOOKMARK [1][-]{section.7.1}{7.1 Section Title}{chapter.7}% 41
-\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Subsection Title}{section.7.1}% 42
-\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Subsection Title}{section.7.1}% 43
-\BOOKMARK [1][-]{section.7.2}{7.2 Section Title}{chapter.7}% 44
-\BOOKMARK [0][]{chapter.8}{8 Chapter Title}{part.3}% 45
-\BOOKMARK [1][-]{section.8.1}{8.1 Section Title}{chapter.8}% 46
-\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Subsection Title}{section.8.1}% 47
-\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Subsection Title}{section.8.1}% 48
-\BOOKMARK [1][-]{section.8.2}{8.2 Section Title}{chapter.8}% 49
-\BOOKMARK [-1][]{part.4}{An\341lisis y Resultados}{}% 50
-\BOOKMARK [0][]{chapter.9}{9 Chapter Title}{part.4}% 51
-\BOOKMARK [1][-]{section.9.1}{9.1 Section Title}{chapter.9}% 52
-\BOOKMARK [2][-]{subsection.9.1.1}{9.1.1 Subsection Title}{section.9.1}% 53
-\BOOKMARK [2][-]{subsection.9.1.2}{9.1.2 Subsection Title}{section.9.1}% 54
-\BOOKMARK [1][-]{section.9.2}{9.2 Section Title}{chapter.9}% 55
-\BOOKMARK [0][]{chapter.10}{10 Chapter Title}{part.4}% 56
-\BOOKMARK [1][-]{section.10.1}{10.1 Section Title}{chapter.10}% 57
-\BOOKMARK [2][-]{subsection.10.1.1}{10.1.1 Subsection Title}{section.10.1}% 58
-\BOOKMARK [2][-]{subsection.10.1.2}{10.1.2 Subsection Title}{section.10.1}% 59
-\BOOKMARK [1][-]{section.10.2}{10.2 Section Title}{chapter.10}% 60
-\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 61
-\BOOKMARK [0][]{chapter.11}{11 Chapter Title}{part.5}% 62
-\BOOKMARK [1][-]{section.11.1}{11.1 Section Title}{chapter.11}% 63
-\BOOKMARK [2][-]{subsection.11.1.1}{11.1.1 Subsection Title}{section.11.1}% 64
-\BOOKMARK [2][-]{subsection.11.1.2}{11.1.2 Subsection Title}{section.11.1}% 65
-\BOOKMARK [1][-]{section.11.2}{11.2 Section Title}{chapter.11}% 66
-\BOOKMARK [-1][]{part.6}{Appendix}{}% 67
-\BOOKMARK [0][]{appendix.A}{A Appendix Test}{part.6}% 68
-\BOOKMARK [1][-]{section.A.1}{A.1 Appendix Section Test}{appendix.A}% 69
-\BOOKMARK [1][-]{section.A.2}{A.2 Another Appendix Section Test}{appendix.A}% 70
-\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.6}% 71
-\BOOKMARK [0][]{colophon.0}{Colophon}{part.6}% 72
-\BOOKMARK [0][]{Declaraci\IeC {\'o}n.0}{Declaraci\363n}{part.6}% 73
+\BOOKMARK [1][-]{section.1.2}{1.2 Definici\363n del problema}{chapter.1}% 13
+\BOOKMARK [1][-]{section.1.3}{1.3 Justificaci\363n}{chapter.1}% 14
+\BOOKMARK [2][-]{subsection.1.3.1}{1.3.1 Innovaci\363n}{section.1.3}% 15
+\BOOKMARK [2][-]{subsection.1.3.2}{1.3.2 Impacto}{section.1.3}% 16
+\BOOKMARK [1][-]{section.1.4}{1.4 Hip\363tesis}{chapter.1}% 17
+\BOOKMARK [1][-]{section.1.5}{1.5 Objetivos}{chapter.1}% 18
+\BOOKMARK [2][-]{subsection.1.5.1}{1.5.1 Objetivo Principal}{section.1.5}% 19
+\BOOKMARK [2][-]{subsection.1.5.2}{1.5.2 Objetivos Espec\355ficos}{section.1.5}% 20
+\BOOKMARK [1][-]{section.1.6}{1.6 Entregables}{chapter.1}% 21
+\BOOKMARK [-1][]{part.2}{Marco Te\363rico}{}% 22
+\BOOKMARK [0][]{chapter.2}{2 Protocolo HTTP}{part.2}% 23
+\BOOKMARK [1][-]{section.2.1}{2.1 \277C\363mo trabaja?}{chapter.2}% 24
+\BOOKMARK [1][-]{section.2.2}{2.2 Mensajes HTTP}{chapter.2}% 25
+\BOOKMARK [1][-]{section.2.3}{2.3 Petici\363n}{chapter.2}% 26
+\BOOKMARK [1][-]{section.2.4}{2.4 Respuesta}{chapter.2}% 27
+\BOOKMARK [0][]{chapter.3}{3 Protoloco P2P}{part.2}% 28
+\BOOKMARK [1][-]{section.3.1}{3.1 Clasificaci\363n}{chapter.3}% 29
+\BOOKMARK [2][-]{subsection.3.1.1}{3.1.1 Directorio Centralizado}{section.3.1}% 30
+\BOOKMARK [2][-]{subsection.3.1.2}{3.1.2 Soluci\363n Distribuida}{section.3.1}% 31
+\BOOKMARK [2][-]{subsection.3.1.3}{3.1.3 Directorio Descentralizado }{section.3.1}% 32
+\BOOKMARK [1][-]{section.3.2}{3.2 Mecanismos de b\372squeda en Redes P2P}{chapter.3}% 33
+\BOOKMARK [0][]{chapter.4}{4 Modelos de Web Caching}{part.2}% 34
+\BOOKMARK [1][-]{section.4.1}{4.1 Web Caching mediante Proxy}{chapter.4}% 35
+\BOOKMARK [2][-]{subsection.4.1.1}{4.1.1 Proxy Simple}{section.4.1}% 36
+\BOOKMARK [2][-]{subsection.4.1.2}{4.1.2 Proxy Jer\341rquico}{section.4.1}% 37
+\BOOKMARK [2][-]{subsection.4.1.3}{4.1.3 Proxy Descentralizado}{section.4.1}% 38
+\BOOKMARK [1][-]{section.4.2}{4.2 Redes CDN}{chapter.4}% 39
+\BOOKMARK [0][]{chapter.5}{5 Modelos de Cosistencia}{part.2}% 40
+\BOOKMARK [1][-]{section.5.1}{5.1 Razones para Replicar}{chapter.5}% 41
+\BOOKMARK [1][-]{section.5.2}{5.2 Modelos de Consistencia sin Sincronizaci\363n}{chapter.5}% 42
+\BOOKMARK [1][-]{section.5.3}{5.3 Modelos de Consistencia con Sincronizaci\363n}{chapter.5}% 43
+\BOOKMARK [0][]{chapter.6}{6 Comunidades Virtuales}{part.2}% 44
+\BOOKMARK [1][-]{section.6.1}{6.1 Definici\363n de una Comunidad Virtual}{chapter.6}% 45
+\BOOKMARK [1][-]{section.6.2}{6.2 Caracter\355sticas de una Comunidad Virtual}{chapter.6}% 46
+\BOOKMARK [1][-]{section.6.3}{6.3 Tipos de Comunidades Vituales}{chapter.6}% 47
+\BOOKMARK [-1][]{part.3}{Dise\361o de la CWC}{}% 48
+\BOOKMARK [0][]{chapter.7}{7 Chapter Title}{part.3}% 49
+\BOOKMARK [1][-]{section.7.1}{7.1 Section Title}{chapter.7}% 50
+\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Subsection Title}{section.7.1}% 51
+\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Subsection Title}{section.7.1}% 52
+\BOOKMARK [1][-]{section.7.2}{7.2 Section Title}{chapter.7}% 53
+\BOOKMARK [0][]{chapter.8}{8 Chapter Title}{part.3}% 54
+\BOOKMARK [1][-]{section.8.1}{8.1 Section Title}{chapter.8}% 55
+\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Subsection Title}{section.8.1}% 56
+\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Subsection Title}{section.8.1}% 57
+\BOOKMARK [1][-]{section.8.2}{8.2 Section Title}{chapter.8}% 58
+\BOOKMARK [-1][]{part.4}{An\341lisis y Resultados}{}% 59
+\BOOKMARK [0][]{chapter.9}{9 Chapter Title}{part.4}% 60
+\BOOKMARK [1][-]{section.9.1}{9.1 Section Title}{chapter.9}% 61
+\BOOKMARK [2][-]{subsection.9.1.1}{9.1.1 Subsection Title}{section.9.1}% 62
+\BOOKMARK [2][-]{subsection.9.1.2}{9.1.2 Subsection Title}{section.9.1}% 63
+\BOOKMARK [1][-]{section.9.2}{9.2 Section Title}{chapter.9}% 64
+\BOOKMARK [0][]{chapter.10}{10 Chapter Title}{part.4}% 65
+\BOOKMARK [1][-]{section.10.1}{10.1 Section Title}{chapter.10}% 66
+\BOOKMARK [2][-]{subsection.10.1.1}{10.1.1 Subsection Title}{section.10.1}% 67
+\BOOKMARK [2][-]{subsection.10.1.2}{10.1.2 Subsection Title}{section.10.1}% 68
+\BOOKMARK [1][-]{section.10.2}{10.2 Section Title}{chapter.10}% 69
+\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 70
+\BOOKMARK [0][]{chapter.11}{11 Chapter Title}{part.5}% 71
+\BOOKMARK [1][-]{section.11.1}{11.1 Section Title}{chapter.11}% 72
+\BOOKMARK [2][-]{subsection.11.1.1}{11.1.1 Subsection Title}{section.11.1}% 73
+\BOOKMARK [2][-]{subsection.11.1.2}{11.1.2 Subsection Title}{section.11.1}% 74
+\BOOKMARK [1][-]{section.11.2}{11.2 Section Title}{chapter.11}% 75
+\BOOKMARK [-1][]{part.6}{Appendix}{}% 76
+\BOOKMARK [0][]{appendix.A}{A Appendix Test}{part.6}% 77
+\BOOKMARK [1][-]{section.A.1}{A.1 Appendix Section Test}{appendix.A}% 78
+\BOOKMARK [1][-]{section.A.2}{A.2 Another Appendix Section Test}{appendix.A}% 79
+\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.6}% 80
+\BOOKMARK [0][]{colophon.0}{Colophon}{part.6}% 81
+\BOOKMARK [0][]{Declaraci\IeC {\'o}n.0}{Declaraci\363n}{part.6}% 82

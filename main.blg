@@ -1,4 +1,4 @@
-This is BibTeX, Version 0.99d (TeX Live 2013)
+This is BibTeX, Version 0.99d (TeX Live 2014/dev)
 Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
 The top-level auxiliary file: main.aux
 A level-1 auxiliary file: FrontBackMatter/Titlepage.aux
@@ -25,51 +25,55 @@ The style file: plainnat.bst
 A level-1 auxiliary file: FrontBackMatter/Colophon.aux
 A level-1 auxiliary file: FrontBackMatter/Declaration.aux
 Database file #1: Bibliography.bib
+Warning--entry type for "itu:2014" isn't style-file defined
+--line 192 of file Bibliography.bib
 Warning--entry type for "wiki_cacheweb" isn't style-file defined
---line 129 of file Bibliography.bib
-Warning--entry type for "wiki_p2p" isn't style-file defined
---line 139 of file Bibliography.bib
+--line 481 of file Bibliography.bib
 Warning--entry type for "wiki_cdn" isn't style-file defined
---line 149 of file Bibliography.bib
-You've used 11 entries,
+--line 492 of file Bibliography.bib
+Warning--entry type for "wiki_nlb" isn't style-file defined
+--line 503 of file Bibliography.bib
+Warning--entry type for "wiki_p2p" isn't style-file defined
+--line 514 of file Bibliography.bib
+You've used 15 entries,
             2773 wiz_defined-function locations,
-            677 strings with 7057 characters,
-and the built_in function-call counts, 4140 in all, are:
-= -- 373
-> -- 181
-< -- 10
-+ -- 67
-- -- 54
-* -- 272
-:= -- 644
-add.period$ -- 37
-call.type$ -- 11
-change.case$ -- 51
-chr.to.int$ -- 9
-cite$ -- 22
-duplicate$ -- 220
-empty$ -- 373
-format.name$ -- 67
-if$ -- 878
-int.to.chr$ -- 3
+            701 strings with 7639 characters,
+and the built_in function-call counts, 5464 in all, are:
+= -- 487
+> -- 241
+< -- 13
++ -- 90
+- -- 72
+* -- 355
+:= -- 850
+add.period$ -- 51
+call.type$ -- 15
+change.case$ -- 68
+chr.to.int$ -- 12
+cite$ -- 30
+duplicate$ -- 286
+empty$ -- 502
+format.name$ -- 89
+if$ -- 1159
+int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 9
-newline$ -- 67
-num.names$ -- 44
-pop$ -- 114
+missing$ -- 11
+newline$ -- 89
+num.names$ -- 60
+pop$ -- 163
 preamble$ -- 1
-purify$ -- 40
+purify$ -- 54
 quote$ -- 0
-skip$ -- 167
+skip$ -- 219
 stack$ -- 0
-substring$ -- 85
-swap$ -- 31
+substring$ -- 93
+swap$ -- 37
 text.length$ -- 2
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 116
+type$ -- 155
 warning$ -- 0
-while$ -- 39
+while$ -- 51
 width$ -- 0
-write$ -- 152
-(There were 3 warnings)
+write$ -- 204
+(There were 5 warnings)
