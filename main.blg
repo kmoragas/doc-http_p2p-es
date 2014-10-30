@@ -26,54 +26,64 @@ A level-1 auxiliary file: FrontBackMatter/Colophon.aux
 A level-1 auxiliary file: FrontBackMatter/Declaration.aux
 Database file #1: Bibliography.bib
 Warning--entry type for "itu:2014" isn't style-file defined
---line 192 of file Bibliography.bib
+--line 235 of file Bibliography.bib
 Warning--entry type for "wiki_cacheweb" isn't style-file defined
---line 481 of file Bibliography.bib
+--line 570 of file Bibliography.bib
 Warning--entry type for "wiki_cdn" isn't style-file defined
---line 492 of file Bibliography.bib
+--line 581 of file Bibliography.bib
 Warning--entry type for "wiki_nlb" isn't style-file defined
---line 503 of file Bibliography.bib
+--line 592 of file Bibliography.bib
 Warning--entry type for "wiki_p2p" isn't style-file defined
---line 514 of file Bibliography.bib
-You've used 15 entries,
+--line 603 of file Bibliography.bib
+Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
+while executing---line 1347 of file plainnat.bst
+Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
+while executing---line 1347 of file plainnat.bst
+Warning--empty year in herlihy
+Warning--empty year in herlihy
+Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
+while executing---line 1429 of file plainnat.bst
+Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
+while executing---line 1429 of file plainnat.bst
+You've used 23 entries,
             2773 wiz_defined-function locations,
-            701 strings with 7639 characters,
-and the built_in function-call counts, 5464 in all, are:
-= -- 487
-> -- 241
-< -- 13
-+ -- 90
-- -- 72
-* -- 355
-:= -- 850
-add.period$ -- 51
-call.type$ -- 15
-change.case$ -- 68
-chr.to.int$ -- 12
-cite$ -- 30
-duplicate$ -- 286
-empty$ -- 502
-format.name$ -- 89
-if$ -- 1159
+            751 strings with 9057 characters,
+and the built_in function-call counts, 8673 in all, are:
+= -- 773
+> -- 468
+< -- 24
++ -- 167
+- -- 141
+* -- 606
+:= -- 1390
+add.period$ -- 77
+call.type$ -- 23
+change.case$ -- 116
+chr.to.int$ -- 20
+cite$ -- 48
+duplicate$ -- 418
+empty$ -- 711
+format.name$ -- 174
+if$ -- 1802
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 11
-newline$ -- 89
-num.names$ -- 60
-pop$ -- 163
+missing$ -- 12
+newline$ -- 131
+num.names$ -- 92
+pop$ -- 245
 preamble$ -- 1
-purify$ -- 54
+purify$ -- 93
 quote$ -- 0
-skip$ -- 219
+skip$ -- 328
 stack$ -- 0
-substring$ -- 93
-swap$ -- 37
-text.length$ -- 2
+substring$ -- 124
+swap$ -- 46
+text.length$ -- 7
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 155
-warning$ -- 0
-while$ -- 51
+type$ -- 243
+warning$ -- 2
+while$ -- 76
 width$ -- 0
-write$ -- 204
-(There were 5 warnings)
+write$ -- 310
+(There were 4 error messages)

@@ -4,15 +4,15 @@
 \contentsline {part}{i\hspace {1em}\spacedlowsmallcaps {Introducci\IeC {\'o}n}}{1}{part.1}
 \contentsline {chapter}{\numberline {1}\spacedlowsmallcaps {Introducci\IeC {\'o}n}}{3}{chapter.1}
 \contentsline {section}{\numberline {1.1}Comunidad Web Cach\IeC {\'e}}{5}{section.1.1}
-\contentsline {section}{\numberline {1.2}Definici\IeC {\'o}n del problema}{7}{section.1.2}
+\contentsline {section}{\numberline {1.2}Definici\IeC {\'o}n del problema}{8}{section.1.2}
 \contentsline {section}{\numberline {1.3}Justificaci\IeC {\'o}n}{10}{section.1.3}
 \contentsline {subsection}{\numberline {1.3.1}Innovaci\IeC {\'o}n}{10}{subsection.1.3.1}
 \contentsline {subsection}{\numberline {1.3.2}Impacto}{12}{subsection.1.3.2}
 \contentsline {paragraph}{Publicador}{12}{subsection.1.3.2}
 \contentsline {paragraph}{Usuario}{12}{subsection.1.3.2}
-\contentsline {section}{\numberline {1.4}Hip\IeC {\'o}tesis}{12}{section.1.4}
-\contentsline {section}{\numberline {1.5}Objetivos}{12}{section.1.5}
-\contentsline {subsection}{\numberline {1.5.1}Objetivo Principal}{12}{subsection.1.5.1}
+\contentsline {section}{\numberline {1.4}Hip\IeC {\'o}tesis}{13}{section.1.4}
+\contentsline {section}{\numberline {1.5}Objetivos}{13}{section.1.5}
+\contentsline {subsection}{\numberline {1.5.1}Objetivo Principal}{13}{subsection.1.5.1}
 \contentsline {subsection}{\numberline {1.5.2}Objetivos Espec\IeC {\'\i }ficos}{13}{subsection.1.5.2}
 \contentsline {section}{\numberline {1.6}Entregables}{13}{section.1.6}
 \contentsline {part}{ii\hspace {1em}\spacedlowsmallcaps {Marco Te\IeC {\'o}rico}}{15}{part.2}
@@ -20,58 +20,58 @@
 \contentsline {section}{\numberline {2.1}\IeC {\textquestiondown }C\IeC {\'o}mo trabaja?}{17}{section.2.1}
 \contentsline {section}{\numberline {2.2}Mensajes HTTP}{18}{section.2.2}
 \contentsline {section}{\numberline {2.3}Petici\IeC {\'o}n}{19}{section.2.3}
-\contentsline {section}{\numberline {2.4}Respuesta}{22}{section.2.4}
-\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Protoloco P2P}}{23}{chapter.3}
-\contentsline {section}{\numberline {3.1}Clasificaci\IeC {\'o}n}{23}{section.3.1}
-\contentsline {subsection}{\numberline {3.1.1}Directorio Centralizado}{23}{subsection.3.1.1}
-\contentsline {subsection}{\numberline {3.1.2}Soluci\IeC {\'o}n Distribuida}{24}{subsection.3.1.2}
-\contentsline {subsection}{\numberline {3.1.3}Directorio Descentralizado }{25}{subsection.3.1.3}
-\contentsline {section}{\numberline {3.2}Mecanismos de b\IeC {\'u}squeda en Redes P2P}{25}{section.3.2}
-\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Modelos de Web Caching}}{27}{chapter.4}
-\contentsline {section}{\numberline {4.1}Web Caching mediante Proxy}{28}{section.4.1}
-\contentsline {subsection}{\numberline {4.1.1}Proxy Simple}{28}{subsection.4.1.1}
-\contentsline {subsection}{\numberline {4.1.2}Proxy Jer\IeC {\'a}rquico}{28}{subsection.4.1.2}
-\contentsline {subsection}{\numberline {4.1.3}Proxy Descentralizado}{29}{subsection.4.1.3}
-\contentsline {section}{\numberline {4.2}Redes CDN}{29}{section.4.2}
-\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Modelos de Cosistencia}}{33}{chapter.5}
-\contentsline {section}{\numberline {5.1}Razones para Replicar}{33}{section.5.1}
-\contentsline {section}{\numberline {5.2}Modelos de Consistencia sin Sincronizaci\IeC {\'o}n}{33}{section.5.2}
-\contentsline {section}{\numberline {5.3}Modelos de Consistencia con Sincronizaci\IeC {\'o}n}{35}{section.5.3}
-\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Comunidades Virtuales}}{37}{chapter.6}
-\contentsline {section}{\numberline {6.1}Definici\IeC {\'o}n de una Comunidad Virtual}{37}{section.6.1}
-\contentsline {section}{\numberline {6.2}Caracter\IeC {\'\i }sticas de una Comunidad Virtual}{38}{section.6.2}
-\contentsline {section}{\numberline {6.3}Tipos de Comunidades Vituales}{39}{section.6.3}
-\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o de la CWC}}{43}{part.3}
-\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Chapter Title}}{45}{chapter.7}
-\contentsline {section}{\numberline {7.1}Section Title}{45}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Subsection Title}{45}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Subsection Title}{45}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Section Title}{45}{section.7.2}
-\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Chapter Title}}{47}{chapter.8}
-\contentsline {section}{\numberline {8.1}Section Title}{47}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Subsection Title}{47}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Subsection Title}{47}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Section Title}{47}{section.8.2}
-\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{49}{part.4}
-\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Chapter Title}}{51}{chapter.9}
-\contentsline {section}{\numberline {9.1}Section Title}{51}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Subsection Title}{51}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Subsection Title}{51}{subsection.9.1.2}
-\contentsline {section}{\numberline {9.2}Section Title}{51}{section.9.2}
-\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Chapter Title}}{53}{chapter.10}
-\contentsline {section}{\numberline {10.1}Section Title}{53}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Subsection Title}{53}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}Subsection Title}{53}{subsection.10.1.2}
-\contentsline {section}{\numberline {10.2}Section Title}{53}{section.10.2}
-\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{55}{part.5}
-\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Chapter Title}}{57}{chapter.11}
-\contentsline {section}{\numberline {11.1}Section Title}{57}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Subsection Title}{57}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}Subsection Title}{57}{subsection.11.1.2}
-\contentsline {section}{\numberline {11.2}Section Title}{57}{section.11.2}
-\contentsline {part}{vi\hspace {1em}\spacedlowsmallcaps {Appendix}}{59}{part.6}
-\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{61}{appendix.A}
-\contentsline {section}{\numberline {A.1}Appendix Section Test}{61}{section.A.1}
-\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{62}{section.A.2}
+\contentsline {section}{\numberline {2.4}Respuesta}{21}{section.2.4}
+\contentsline {chapter}{\numberline {3}\spacedlowsmallcaps {Protoloco P2P}}{25}{chapter.3}
+\contentsline {section}{\numberline {3.1}Clasificaci\IeC {\'o}n}{25}{section.3.1}
+\contentsline {subsection}{\numberline {3.1.1}Directorio Centralizado}{25}{subsection.3.1.1}
+\contentsline {subsection}{\numberline {3.1.2}Soluci\IeC {\'o}n Distribuida}{26}{subsection.3.1.2}
+\contentsline {subsection}{\numberline {3.1.3}Directorio Descentralizado }{27}{subsection.3.1.3}
+\contentsline {section}{\numberline {3.2}Mecanismos de b\IeC {\'u}squeda en Redes P2P}{27}{section.3.2}
+\contentsline {chapter}{\numberline {4}\spacedlowsmallcaps {Modelos de Web Cach\IeC {\'e}}}{29}{chapter.4}
+\contentsline {section}{\numberline {4.1}Web Caching mediante Proxy}{30}{section.4.1}
+\contentsline {subsection}{\numberline {4.1.1}Proxy Simple}{30}{subsection.4.1.1}
+\contentsline {subsection}{\numberline {4.1.2}Proxy Jer\IeC {\'a}rquico}{30}{subsection.4.1.2}
+\contentsline {subsection}{\numberline {4.1.3}Proxy Descentralizado}{31}{subsection.4.1.3}
+\contentsline {section}{\numberline {4.2}Redes CDN}{31}{section.4.2}
+\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Modelos de Cosistencia}}{35}{chapter.5}
+\contentsline {section}{\numberline {5.1}Razones para Replicar}{35}{section.5.1}
+\contentsline {section}{\numberline {5.2}Modelos de Consistencia sin Sincronizaci\IeC {\'o}n}{35}{section.5.2}
+\contentsline {section}{\numberline {5.3}Modelos de Consistencia con Sincronizaci\IeC {\'o}n}{37}{section.5.3}
+\contentsline {chapter}{\numberline {6}\spacedlowsmallcaps {Comunidades Virtuales}}{39}{chapter.6}
+\contentsline {section}{\numberline {6.1}Definici\IeC {\'o}n de una Comunidad Virtual}{39}{section.6.1}
+\contentsline {section}{\numberline {6.2}Caracter\IeC {\'\i }sticas de una Comunidad Virtual}{40}{section.6.2}
+\contentsline {section}{\numberline {6.3}Tipos de Comunidades Vituales}{41}{section.6.3}
+\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o de la CWC}}{45}{part.3}
+\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Chapter Title}}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Section Title}{47}{section.7.1}
+\contentsline {subsection}{\numberline {7.1.1}Subsection Title}{47}{subsection.7.1.1}
+\contentsline {subsection}{\numberline {7.1.2}Subsection Title}{47}{subsection.7.1.2}
+\contentsline {section}{\numberline {7.2}Section Title}{47}{section.7.2}
+\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Chapter Title}}{49}{chapter.8}
+\contentsline {section}{\numberline {8.1}Section Title}{49}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Subsection Title}{49}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Subsection Title}{49}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Section Title}{49}{section.8.2}
+\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{51}{part.4}
+\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Chapter Title}}{53}{chapter.9}
+\contentsline {section}{\numberline {9.1}Section Title}{53}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Subsection Title}{53}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Subsection Title}{53}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Section Title}{53}{section.9.2}
+\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Chapter Title}}{55}{chapter.10}
+\contentsline {section}{\numberline {10.1}Section Title}{55}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Subsection Title}{55}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Subsection Title}{55}{subsection.10.1.2}
+\contentsline {section}{\numberline {10.2}Section Title}{55}{section.10.2}
+\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{57}{part.5}
+\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Chapter Title}}{59}{chapter.11}
+\contentsline {section}{\numberline {11.1}Section Title}{59}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Subsection Title}{59}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Subsection Title}{59}{subsection.11.1.2}
+\contentsline {section}{\numberline {11.2}Section Title}{59}{section.11.2}
+\contentsline {part}{vi\hspace {1em}\spacedlowsmallcaps {Appendix}}{61}{part.6}
+\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{63}{appendix.A}
+\contentsline {section}{\numberline {A.1}Appendix Section Test}{63}{section.A.1}
+\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{64}{section.A.2}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{63}{dummy.7}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{65}{dummy.7}
