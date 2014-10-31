@@ -1,13 +1,73 @@
 % This file was created with JabRef 2.9.2.
-% Encoding: ANSI_X3.4-1968
+% Encoding: UTF8
 
-@ARTICLE{rowstron:2001,
-  author = {Antony Rowstron, Peter Druschel, Sitaram Iyer},
-  title = {Squirrel: A decentralized peer-to-peer web cache},
-  journal = {21th ACM Symposium on Principles of Distributed Computing},
-  year = {2001},
-  date-added = {2013-11-05 02:42:06 +0000},
-  date-modified = {2013-11-05 02:42:42 +0000}
+@TECHREPORT{ahamad:1991,
+  author = {M. Ahamad and J. E. Burns and P.W. Hutto and G Nieger},
+  title = {Causal Memory},
+  institution = {Georgia Institute of Technology},
+  year = {1991},
+  type = {TR},
+  number = {GIT-CC-93/95},
+  month = {July},
+  owner = {user},
+  timestamp = {2014.10.29}
+}
+
+@OTHER{AldoDeMoor2007,
+  __markedentry = {[user:6]},
+  abstract = {Collaboration increasingly takes place in virtual communities using
+	the Internet. These communities are socio-technical systems that
+	tend to evolve strongly and become more complex over time. To ensure
+	that changes to these complex socio-technical systems are meaningful
+	and acceptable to the community as a whole, the relevant members
+	of the community need to be involved in their specification. The
+	RENISYS method conceptualizes community specification processes as
+	conversations for specification by relevant members. It supports
+	this process in two steps. First, it uses formal composition norms
+	to select the relevant community members who need to be involved
+	in a particular conversation for specification. It then uses a formal
+	model of conversations for specification to determine the acceptable
+	conversational moves that the selected community members can make,
+	as well as the status of their responsibilities and accomplishments
+	at each point in time. By combining composition norms with conversations
+	for specification, the specification processes can be precisely tailored
+	to the specification support needs of the community.},
+  author = {Aldo De Moor, Hans Weigand},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {Formalizing the evolution of virtual communities},
+  year = {2007}
+}
+
+@OTHER{AlfarezAbdul-Rahman2000,
+  __markedentry = {[user:6]},
+  abstract = {At any given time, the stability of a community depends on the right
+	balance of trust and distrust. Furthermore, we face information overload,
+	increased uncertainty and risk taking as a prominent feature of modern
+	living. As members of society, we cope with these complexities and
+	uncertainties by relying trust, which is the basis of all social
+	interactions. Although a small number of trust models have been proposed
+	for the virtual medium, we find that they are largely impractical
+	and artificial. In this paper we provide and discuss a trust model
+	that is grounded in real-world social trust characteristics, and
+	based on a reputation mechanism, or word-of-mouth. Our proposed model
+	allows agents to decide which other agents&#039; opinions they trust
+	more and allows agents to progressively tune their understanding
+	of another agent&#039;s subjective recommendations.},
+  author = {Alfarez Abdul-Rahman  , Stephen Hailes},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {Supporting Trust in Virtual Communities},
+  year = {2000}
+}
+
+@TECHREPORT{cabero,
+  author = {Julio Cabero Almerana},
+  title = {Comunidades Virtuales para el aprendizaje. Su utilizaci{\'o}n en
+	la educaci{\'o}n.},
+  institution = {Universidad de Sevilla},
+  owner = {user},
+  timestamp = {2014.10.30}
 }
 
 @BOOK{bentley:1999,
@@ -78,6 +138,31 @@
   author = {Robert Bringhurst},
   series = {Version 3.2},
   address = {Point Roberts, WA, USA}
+}
+
+@OTHER{Brocke,
+  __markedentry = {[user:6]},
+  abstract = {The use of social software and virtual community platforms in particular
+	promises to offer opportunities for customer integration into a company’s
+	value adding activities. Therefore, ideas and innovations generated
+	by members of a virtual community can be analyzed and used in order
+	to enhance the quality of products and services. However, evaluating
+	economic consequences associated with the set-up, operation and maintenance
+	of virtual communities on a quantitative basis has widely been neglected
+	in social network research. Accordingly, no framework for valuation
+	of web 2.0 applications has been established as yet. Thus, the objective
+	of this paper is therefore to develop a measurement framework for
+	the financial performance of a virtual community platform reflecting
+	specific economic conditions relevant to a certain situation. The
+	measurement framework is then applied to a real life example of the
+	Berlin Stock Exchange.},
+  author = {Brocke, Jan and Sonnenberg, Christian and Lattemann, Christoph and
+	Stieglitz, Stefan and Exchange, Berlin Stock and Lattemann, Christoph
+	and Sonnenberg, Christian and Stieglitz, Stefan},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {Economics of Virtual Communities Economics of Virtual Communities
+	–}
 }
 
 @BOOK{Buyya:2008aa,
@@ -155,6 +240,16 @@
   edition = {2nd}
 }
 
+@OTHER{Donath1997,
+  __markedentry = {[user:6]},
+  abstract = {},
+  author = {Judith S. Donath},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {Identity and Deception in the Virtual Community},
+  year = {1997}
+}
+
 @BOOK{dueck:trio,
   title = {{D}ueck's {T}rilogie: {O}mnisophie -- {S}upramanie -- {T}opothesie},
   publisher = {Springer, Berlin},
@@ -177,6 +272,15 @@
   publisher = {IETF},
   series = {Request for Comments},
   url = {http://www.ietf.org/rfc/rfc2616.txt}
+}
+
+@OTHER{Foster2001,
+  __markedentry = {[user:6]},
+  author = {Foster, Ian and Kesselman, Carl and Tuecke, Steven},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {The Anatomy of the Grid - Enabling Scalable Virtual Organizations},
+  year = {2001}
 }
 
 @ARTICLE{freedman:2004,
@@ -210,7 +314,7 @@
   year = {1990},
   volume = {18},
   pages = {15-26},
-  __markedentry = {[user:6]},
+  __markedentry = {[user:]},
   abstract = {Scalable shared-memory multiprocessors distribute memory among the
 	processors and use scalable interconnection networks to provide high
 	bandwidth and low latency communication. In addition, memory accesses
@@ -224,12 +328,32 @@
   timestamp = {2014.10.29}
 }
 
+@TECHREPORT{gupta:2005,
+  author = {Sumeet Gupta and Hee Woon Kim},
+  title = {Virtual Community: Concepts, Implications, and Future Research Directions},
+  institution = {National University of Singapore},
+  year = {2005},
+  type = {TR},
+  number = {SIGEBZ02-1115},
+  owner = {user},
+  timestamp = {2014.10.30}
+}
+
 @TECHREPORT{herlihy,
   author = {Maurice P. Herlihy and Jeannette M. Wing},
   title = {Linearizability: a Correctnes Condition for Concurrent Objects},
   institution = {Carnegie Mellon University},
   owner = {user},
   timestamp = {2014.10.29}
+}
+
+@BOOK{armstrong:1997,
+  title = {Net Gain: Expanding Markets Through Virtual Communities},
+  publisher = {Harvard Bussiness School Press},
+  year = {1997},
+  author = {John Hagel III and Arthur G. Armstrong},
+  owner = {user},
+  timestamp = {2014.10.30}
 }
 
 @ELECTRONIC{itu:2014,
@@ -240,6 +364,25 @@
   url = {http://www.itu.int/en/ITU-D/Statistics/Documents/statistics/2014/ITU_Key_2005-2014_ICT_data.xls},
   owner = {user},
   timestamp = {2014.10.19}
+}
+
+@OTHER{JoeArteaga1999,
+  __markedentry = {[user:6]},
+  abstract = {... This paper outlines some of the differences between virtual communities
+	and traditional communities which result from use of the intermediating
+	technology. The purpose of the virtual community as a social system
+	is then described in terms of the four ideals suggested by Ackoff
+	&amp; Emery (1972), applied both to the community in its parts (i.e.,
+	the members) and of the whole (i.e., the community). The &#034;five
+	ways of knowing&#034; -- categorizations of inquiring systems, as
+	suggested by Mitroff &amp; Linstone (1993) -- are then applied to
+	describe the interaction, development and maturity of purpose for
+	virtual communities},
+  author = {Joe Arteaga, David Ing},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {THE NATURE \&amp; PURPOSE OF VIRTUAL COMMUNITIES},
+  year = {1999}
 }
 
 @BOOK{jonassen:1999,
@@ -298,16 +441,48 @@
   date-modified = {2013-11-05 02:39:21 +0000}
 }
 
-@TECHREPORT{ahamad:1991,
-  author = {M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger},
-  title = {Causal Memory},
-  institution = {Georgia Institute of Technology},
-  year = {1991},
-  type = {TR},
-  number = {GIT-CC-93/95},
-  month = {July},
+@TECHREPORT{lipton:1988,
+  author = {Richard J. Lipton and Jonathan S. Sandberg},
+  title = {PRAM: A Scalable Shared Memory},
+  institution = {Princeton University, Department of Computer Science},
+  year = {1988},
+  type = {RR},
+  number = {88-180},
   owner = {user},
   timestamp = {2014.10.29}
+}
+
+@OTHER{MarcoBenini,
+  __markedentry = {[user:6]},
+  abstract = {Abstract. By facing the problem to describe the history of a virtual
+	community as the sequence of events generated by its participants,
+	a different perception of the meaning of communitywares emerges.
+	This paper describes a proposal for a virtual community system based
+	on the narrative process that supports the social evolution of the
+	community.},
+  author = {Marco Benini, Federico Gobbo},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {Virtual Communities as Narrative Processes}
+}
+
+@OTHER{MathiasKlang1999,
+  __markedentry = {[user:6]},
+  abstract = {This article presents a classification model for virtual communities.
+	Virtual communities may be classified as being commercial or non-commercial.
+	This classification is made from the organisers&#039; purpose and
+	identity. The description of the model attempts to show the differences
+	between different types of virtual communities from a common point
+	of view. The model makes no attempt to exactly define the criteria
+	for the community at any given stage but rather shows the differences,
+	which exist, in virtual communities and their different functions.
+	The model describes a theoretical reality that will be used as a
+	basis for further discussion.},
+  author = {Mathias Klang  , Stefan Olsson},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {Virtual Communities},
+  year = {1999}
 }
 
 @TECHREPORT{mosberger:1993,
@@ -335,6 +510,33 @@
   url = {http://www.ietf.org/rfc/rfc6707.txt}
 }
 
+@OTHER{Qiang,
+  __markedentry = {[user:6]},
+  abstract = {With the evolutions of technologies of computer, network, remote sensing
+	and GIS, CyberCity researches are dramatically being improved, and
+	CyberCity applications are becoming more and more important in our
+	world. As the minimum unit for people’s living in a city, community
+	is a primary part of city management. Therefore, virtual community
+	plays a key role in CyberCity. Virtual Community is not only the
+	key node to combine families with the city, but also the indispensable
+	part to construct digital nation in China. In this paper, the architecture
+	and function structure of a proposed virtual community trials platform
+	are presented. Three sub-systems like 3D real-time walkthrough, community
+	services and community managements are included in this platform
+	system. With a virtual community system, residents in a real community
+	may login a specific virtual community via Internet with a computer
+	(or a handheld device) at any site, and then may acquire some information
+	about their real communities. They can order commodities via online
+	E-Commerce, and even acquire some services like education, entertainment
+	and health care, or online work. On the other hand, managers and
+	service providers can provide knight service and manage efficiently
+	with the virtual community system. 1.},
+  author = {Qiang, Liu and Huanzhi, Luan and Fei, Wang and Boyan, Cheng},
+  owner = {user},
+  timestamp = {2014.10.30},
+  title = {VIRTUAL COMMUNITY TRIALS PLATFORM}
+}
+
 @TECHREPORT{raynal:1995,
   author = {Michel Raynal and Andre Schiper},
   title = {From Causal Consistency to Sequential Consistency in Shared Memory
@@ -347,15 +549,91 @@
   timestamp = {2014.10.29}
 }
 
-@TECHREPORT{lipton:1988,
-  author = {Richard J. Lipton, Jonathan S. Sandberg},
-  title = {PRAM: A Scalable Shared Memory},
-  institution = {Princeton University, Department of Computer Science},
-  year = {1988},
-  type = {RR},
-  number = {88-180},
+@STANDARD{rfc4981,
+  title = {Survey of Research towards Robust Peer-to-Peer Networks},
+  organization = {IETF},
+  institution = {University of New South Wales},
+  author = {J. Risson and T. Moors},
+  month = {September},
+  year = {2007},
+  url = {https://tools.ietf.org/html/rfc4981},
+  abstract = {The pace of research on peer-to-peer (P2P) networking in the last
+	
+	   five years warrants a critical survey.  P2P has the makings of
+	a
+	
+	   disruptive technology -- it can aggregate enormous storage and
+	
+	   processing resources while minimizing entry and scaling costs.
+	
+	
+	   Failures are common amongst massive numbers of distributed peers,
+	
+	   though the impact of individual failures may be less than in
+	
+	   conventional architectures.  Thus, the key to realizing P2P's
+	
+	   potential in applications other than casual file sharing is
+	
+	   robustness.
+	
+	
+	   P2P search methods are first couched within an overall P2P taxonomy.
+	
+	   P2P indexes for simple key lookup are assessed, including those
+	based
+	
+	   on Plaxton trees, rings, tori, butterflies, de Bruijn graphs, and
+	
+	   skip graphs.  Similarly, P2P indexes for keyword lookup, information
+	
+	   retrieval and data management are explored.  Finally, early efforts
+	
+	   to optimize range, multi-attribute, join, and aggregation queries
+	
+	   over P2P indexes are reviewed.  Insofar as they are available in
+	the
+	
+	   primary literature, robustness mechanisms and metrics are highlighted
+	
+	   throughout.  However, the low-level mechanisms that most affect
+	
+	   robustness are not well isolated in the literature.  Recommendations
+	
+	   are given for future research.},
   owner = {user},
-  timestamp = {2014.10.29}
+  timestamp = {2014.10.30}
+}
+
+@ARTICLE{rowstron:2001,
+  author = {Antony Rowstron and Peter Druschel and Sitaram Iyer},
+  title = {Squirrel: A decentralized peer-to-peer web cache},
+  journal = {21th ACM Symposium on Principles of Distributed Computing},
+  year = {2001},
+  date-added = {2013-11-05 02:42:06 +0000},
+  date-modified = {2013-11-05 02:42:42 +0000}
+}
+
+@CONFERENCE{salinas:2003,
+  author = {Jesus Salinas},
+  title = {Comunidades Virtuales y Aprendizaje Digital},
+  year = {2003},
+  month = {Noviembre},
+  organization = {EDUTEC'03},
+  publisher = {IV Congreso Internacional de Tecnolog{\'i}a Educativa y NNNT aplicadas
+	a la Educaci{\'o}n},
+  owner = {user},
+  timestamp = {2014.10.30}
+}
+
+@TECHREPORT{sanghi,
+  author = {Dheeraj Sanghi},
+  title = {Peer-to-Peer Networks and Issues Involving Them},
+  institution = {Indian Institute of Technology Kanpur},
+  type = {TR},
+  number = {625},
+  owner = {user},
+  timestamp = {2014.10.30}
 }
 
 @BOOK{silberschatz:2008,
@@ -565,6 +843,16 @@
   year = {2009},
   date-added = {2013-11-05 02:40:16 +0000},
   date-modified = {2013-11-05 02:42:53 +0000}
+}
+
+@TECHREPORT{whittaker:1997,
+  author = {Steve Whittaker and Ellen Isaacs and Vicki O'Day},
+  title = {Widening the Net: Workshop Report on the Theory and Practice of Physical
+	and Network Communities},
+  institution = {SIGCHI},
+  year = {1997},
+  owner = {user},
+  timestamp = {2014.10.30}
 }
 
 @OTHER{wiki_cacheweb,

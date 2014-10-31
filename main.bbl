@@ -1,15 +1,20 @@
-\begin{thebibliography}{23}
+\begin{thebibliography}{30}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
   \providecommand{\doi}[1]{doi: #1}\else
   \providecommand{\doi}{doi: \begingroup \urlstyle{rm}\Url}\fi
 
-\bibitem[Antony~Rowstron(2001)]{rowstron:2001}
-Sitaram~Iyer Antony~Rowstron, Peter~Druschel.
-\newblock Squirrel: A decentralized peer-to-peer web cache.
-\newblock \emph{21th ACM Symposium on Principles of Distributed Computing},
-  2001.
+\bibitem[Ahamad et~al.(1991)Ahamad, Burns, Hutto, and Nieger]{ahamad:1991}
+M.~Ahamad, J.~E. Burns, P.W. Hutto, and G~Nieger.
+\newblock Causal memory.
+\newblock TR GIT-CC-93/95, Georgia Institute of Technology, July 1991.
+
+\bibitem[Almerana()]{cabero}
+Julio~Cabero Almerana.
+\newblock Comunidades virtuales para el aprendizaje. su utilizaci{\'o}n en la
+  educaci{\'o}n.
+\newblock Technical report, Universidad de Sevilla.
 
 \bibitem[Berners-Lee et~al.(1996)Berners-Lee, Fielding, and Frystyk]{rfc1945}
 T.~Berners-Lee, R.~Fielding, and H.~Frystyk.
@@ -53,10 +58,21 @@ Kourosh Gharachorloo, Daniel Lenoski, James Laudon, Phillip Gibbons, Anoop
 \newblock \emph{ISCA '90 Proceedings of the 17th annual international symposium
   on Computer Architecture}, 18:\penalty0 15--26, 1990.
 
+\bibitem[Gupta and Kim(2005)]{gupta:2005}
+Sumeet Gupta and Hee~Woon Kim.
+\newblock Virtual community: Concepts, implications, and future research
+  directions.
+\newblock TR SIGEBZ02-1115, National University of Singapore, 2005.
+
 \bibitem[Herlihy and Wing()]{herlihy}
 Maurice~P. Herlihy and Jeannette~M. Wing.
 \newblock Linearizability: a correctnes condition for concurrent objects.
 \newblock Technical report, Carnegie Mellon University.
+
+\bibitem[III and Armstrong(1997)]{armstrong:1997}
+John~Hagel III and Arthur~G. Armstrong.
+\newblock \emph{Net Gain: Expanding Markets Through Virtual Communities}.
+\newblock Harvard Bussiness School Press, 1997.
 
 \bibitem[ITU(2014)]{itu:2014}
 ITU.
@@ -83,10 +99,11 @@ Zhengang Liang, Hossam Hassanein, and Patrick Martin.
 \newblock \emph{26th Annual IEEE International Conference on Local Computer
   Networks}, page 225, 2001.
 
-\bibitem[M.~Ahamad and Nieger(1991)]{ahamad:1991}
-P.W.~Hutto M.~Ahamad, J. E.~Burns and G~Nieger.
-\newblock Causal memory.
-\newblock TR GIT-CC-93/95, Georgia Institute of Technology, July 1991.
+\bibitem[Lipton and Sandberg(1988)]{lipton:1988}
+Richard~J. Lipton and Jonathan~S. Sandberg.
+\newblock Pram: A scalable shared memory.
+\newblock RR 88-180, Princeton University, Department of Computer Science,
+  1988.
 
 \bibitem[Mosberger(1993)]{mosberger:1993}
 David Mosberger.
@@ -100,11 +117,28 @@ Michel Raynal and Andre Schiper.
 \newblock RR 2557, Institut National de Recherche en Informatique et
   Automatique, 1995.
 
-\bibitem[Richard J.~Lipton(1988)]{lipton:1988}
-Jonathan S.~Sandberg Richard J.~Lipton.
-\newblock Pram: A scalable shared memory.
-\newblock RR 88-180, Princeton University, Department of Computer Science,
-  1988.
+\bibitem[Risson and Moors(2007)]{rfc4981}
+J.~Risson and T.~Moors.
+\newblock Survey of research towards robust peer-to-peer networks, September
+  2007.
+\newblock URL \url{https://tools.ietf.org/html/rfc4981}.
+
+\bibitem[Rowstron et~al.(2001)Rowstron, Druschel, and Iyer]{rowstron:2001}
+Antony Rowstron, Peter Druschel, and Sitaram Iyer.
+\newblock Squirrel: A decentralized peer-to-peer web cache.
+\newblock \emph{21th ACM Symposium on Principles of Distributed Computing},
+  2001.
+
+\bibitem[Salinas(2003)]{salinas:2003}
+Jesus Salinas.
+\newblock Comunidades virtuales y aprendizaje digital.
+\newblock EDUTEC'03, IV Congreso Internacional de Tecnolog{\'i}a Educativa y
+  NNNT aplicadas a la Educaci{\'o}n, Noviembre 2003.
+
+\bibitem[Sanghi()]{sanghi}
+Dheeraj Sanghi.
+\newblock Peer-to-peer networks and issues involving them.
+\newblock TR 625, Indian Institute of Technology Kanpur.
 
 \bibitem[Silberschatz(2008)]{silberschatz:2008}
 Abraham Silberschatz.
@@ -122,6 +156,12 @@ Andrew~S. Tanenbaum and D~Wetherall.
 Wathsala Vithanage, Nuwan Gunaratne, and Nishshanka Sirisena.
 \newblock Dalesa cache: A peer -- to -- peer web cache.
 \newblock \emph{Lanka Software Fundation}, 2009.
+
+\bibitem[Whittaker et~al.(1997)Whittaker, Isaacs, and O'Day]{whittaker:1997}
+Steve Whittaker, Ellen Isaacs, and Vicki O'Day.
+\newblock Widening the net: Workshop report on the theory and practice of
+  physical and network communities.
+\newblock Technical report, SIGCHI, 1997.
 
 \bibitem[Wikipedia(2013{\natexlab{a}})]{wiki_cacheweb}
 Wikipedia.

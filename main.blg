@@ -26,64 +26,63 @@ A level-1 auxiliary file: FrontBackMatter/Colophon.aux
 A level-1 auxiliary file: FrontBackMatter/Declaration.aux
 Database file #1: Bibliography.bib
 Warning--entry type for "itu:2014" isn't style-file defined
---line 235 of file Bibliography.bib
+--line 359 of file Bibliography.bib
+Warning--entry type for "rfc4981" isn't style-file defined
+--line 552 of file Bibliography.bib
 Warning--entry type for "wiki_cacheweb" isn't style-file defined
---line 570 of file Bibliography.bib
+--line 858 of file Bibliography.bib
 Warning--entry type for "wiki_cdn" isn't style-file defined
---line 581 of file Bibliography.bib
+--line 869 of file Bibliography.bib
 Warning--entry type for "wiki_nlb" isn't style-file defined
---line 592 of file Bibliography.bib
+--line 880 of file Bibliography.bib
 Warning--entry type for "wiki_p2p" isn't style-file defined
---line 603 of file Bibliography.bib
-Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
-while executing---line 1347 of file plainnat.bst
-Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
-while executing---line 1347 of file plainnat.bst
+--line 891 of file Bibliography.bib
+Warning--empty year in cabero
+Warning--empty year in cabero
 Warning--empty year in herlihy
 Warning--empty year in herlihy
-Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
-while executing---line 1429 of file plainnat.bst
-Name 1 in "M. Ahamad, J. E. Burns, P.W. Hutto, and G Nieger" has a comma at the end for entry ahamad:1991
-while executing---line 1429 of file plainnat.bst
-You've used 23 entries,
+Warning--empty booktitle in salinas:2003
+Warning--empty year in sanghi
+Warning--empty year in sanghi
+You've used 30 entries,
             2773 wiz_defined-function locations,
-            751 strings with 9057 characters,
-and the built_in function-call counts, 8673 in all, are:
-= -- 773
-> -- 468
-< -- 24
-+ -- 167
-- -- 141
-* -- 606
-:= -- 1390
-add.period$ -- 77
-call.type$ -- 23
-change.case$ -- 116
-chr.to.int$ -- 20
-cite$ -- 48
-duplicate$ -- 418
-empty$ -- 711
-format.name$ -- 174
-if$ -- 1802
+            787 strings with 10102 characters,
+and the built_in function-call counts, 11310 in all, are:
+= -- 1000
+> -- 640
+< -- 30
++ -- 225
+- -- 192
+* -- 810
+:= -- 1821
+add.period$ -- 98
+call.type$ -- 30
+change.case$ -- 155
+chr.to.int$ -- 27
+cite$ -- 67
+duplicate$ -- 540
+empty$ -- 908
+format.name$ -- 238
+if$ -- 2336
 int.to.chr$ -- 4
 int.to.str$ -- 1
-missing$ -- 12
-newline$ -- 131
-num.names$ -- 92
-pop$ -- 245
+missing$ -- 15
+newline$ -- 166
+num.names$ -- 120
+pop$ -- 328
 preamble$ -- 1
-purify$ -- 93
+purify$ -- 124
 quote$ -- 0
-skip$ -- 328
+skip$ -- 418
 stack$ -- 0
-substring$ -- 124
-swap$ -- 46
-text.length$ -- 7
+substring$ -- 138
+swap$ -- 53
+text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 243
-warning$ -- 2
-while$ -- 76
+type$ -- 315
+warning$ -- 7
+while$ -- 97
 width$ -- 0
-write$ -- 310
-(There were 4 error messages)
+write$ -- 397
+(There were 13 warnings)

@@ -18,7 +18,7 @@ Los sistemas compañero a compañero (o P2P por sus siglas en inglés) permiten 
 
 \subsection{Directorio Centralizado}
 
-Esta primera visión se puso en práctica para el año 1997 con la red Napster. Bajo este modelo los clientes o peers realizan el descubrimiento y búsqueda de los otros miembros mediante un servidor central, luego el mismo servidor se encarga de negociar la conexión entre ambos clientes.
+Esta primera visión se puso en práctica para el año 1997 con la red Napster \cite{rfc4981}. Bajo este modelo los clientes o peers realizan el descubrimiento y búsqueda de los otros miembros mediante un servidor central, luego el mismo servidor se encarga de negociar la conexión entre ambos clientes.
 
 Este tipo de red P2P se basa en una arquitectura monolítica en la que todas las transacciones se hacen a través de un único servidor que sirve de punto de enlace entre dos nodos y que, a la vez, almacena y distribuye los nodos donde se almacenan los contenidos. Poseen una administración muy dinámica y una disposición más permanente de contenido. Sin embargo, está muy limitada en la privacidad de los usuarios y en la falta de escalabilidad de un sólo servidor, además de ofrecer problemas en puntos únicos de fallo, situaciones legales y enormes costos en el mantenimiento así como el consumo de ancho de banda \cite{wiki_p2p}.
 
@@ -33,9 +33,9 @@ El principal problema presentado en este modelo es que el servidor P2P Central e
 
 %------------------------------------------------
 
-\subsection{Solución Distribuida}
+\subsection{Directorio Distribuido}
 
-Las redes P2P de este tipo son las más comunes, siendo las más versátiles al no requerir de un gestiona miento central de ningún tipo, lo que permite una reducción de la necesidad de usar un servidor central, por lo que se opta por los mismos usuarios como nodos de esas conexiones y también como almacenistas de esa información. En otras palabras, todas las comunicaciones son directamente de usuario a usuario con ayuda de un nodo (que es otro usuario) quien permite enlazar esas comunicaciones \cite{wiki_p2p}.
+Uno de los ejemplos más conocidos de este tipo de redes es Freenet \cite{rfc4981}. Las redes P2P de este tipo son las más comunes, siendo las más versátiles al no requerir de un gestionamiento central de ningún tipo, lo que permite una reducción de la necesidad de usar un servidor central, por lo que se opta por los mismos usuarios como nodos de esas conexiones y también como almacenistas de esa información. En otras palabras, todas las comunicaciones son directamente de usuario a usuario con ayuda de un nodo (que es otro usuario) quien permite enlazar esas comunicaciones \cite{wiki_p2p}.
 
 \begin{figure}[h]
   \centering
@@ -46,29 +46,30 @@ Las redes P2P de este tipo son las más comunes, siendo las más versátiles al 
 
 %------------------------------------------------
 
-\subsection{Directorio Descentralizado }
+\subsection{Directorio Híbrido}
 
-En este tipo de red, se puede observar la interacción entre un servidor central que sirve como hub y administra los recursos de banda ancha, enrutamientos y comunicación entre nodos pero sin saber la identidad de cada nodo y sin almacenar información alguna, por lo que el servidor no comparte archivos de ningún tipo a ningún nodo. Tiene la peculiaridad de funcionar (en algunos casos como en Torrent) de ambas maneras, es decir, puede incorporar más de un servidor que gestione los recursos compartidos, pero también en caso de que el o los servidores que gestionan todo caigan, el grupo de nodos sigue en contacto a través de una conexión directa entre ellos mismos con lo que es posible seguir compartiendo y descargando más información en ausencia de los servidores \cite{wiki_p2p}.
+Un ejemplo de este tipo de redes es Gnutella 0.6 \cite{sanghi}. Este tipo de red se encuentra formada por una estructura jerárquica la cual comprende nodos de usuario y ultrapeers. Cuando un nuevo nodo entra al sistema, este se transforma como un nodo usuario quedando en el perímetro de la red, donde éste no posea ninguna responsabilidad de enrutamiento y su única función es la de enviar consultas a los ultrapeers. 
+
+Por otro lado nodos con capacidades más elevadas y con habilidades de procesamiento mejoradas, son promovidos como ultrapeers. Éstos son los responsables de realizar enrutamiento y de resolver consultas de los nodos usuario \cite{sanghi}. 
 
 \begin{figure}[h]
   \centering
     \includegraphics[scale=1]{gfx/p2p_dir_centralizado}
-  \caption{Directorio Descentralizado}
+  \caption{Directorio Híbrido}
   \label{conexionhttp}
 \end{figure}
 
 %----------------------------------------------------------------------------------------
 
 \section{Mecanismos de búsqueda en Redes P2P}
+Las redes P2P son clasificadas a su vez en: Redes no estructuradas y Redes estructuradas. Algunos han aseverado que éstos algoritmos son alternativas que compiten entre sí \cite{rfc4981}.
 
 \begin{description}
-\item[Centralizados: ]
-Un repositorio central almacena un índice de todos los recursos en la red, junto con la localización de dichos recursos (qué nodos los ofrecen). Todos los miembros de la red registran sus recursos y dirigen sus búsquedas a este repositorio. Un ejemplo es la red Napster. En realidad, a los sistemas de este tipo no se les considera como P2P puros, ya que ese repositorio es un servicio centralizado, con los inconvenientes típicos: representa un punto único de fallo, y compromete la escalabilidad del sistema.
 
-\item[Descentralizados: ]
-No existe ningún repositorio centralizado. Para encontrar un recurso, los nodos lanzan mensajes de búsqueda que son encaminados por la red. Las redes descentralizadas son clasificadas a su vez en: Redes no estructuradas y Redes estructuradas.
+\item[Redes No Estructuradas: ]
+Las redes No Estructuradas han sido llamadas redes de "primera generación". Los nodos en estas redes se unen conectándose a través de cualquier otro nodo. En los primeras versiones de Gnutella, ésta se podía clasificar como No Estructurada \cite{rfc4981}. En estas redes el costo por enrutamiento debido difusión o broadcasting es muy elevado o también puede ocasionar que hayan fallos encontrando el recurso solicitado. \cite{rfc4981}
 
 \item[Redes Estructuradas: ]
-Las redes estructuradas tienen importantes ventajas. Proporcionan un mecanismo determinista de localización, de tal forma que se asegura que un recurso será encontrado siempre que esté en la red. Además, los mensajes de búsqueda son encaminados de forma eficiente, de tal forma que el recurso es encontrado en $O(\log n)$ saltos, donde $n$ es el tamaño de la red.
+Las redes estructuradas tienen importantes ventajas. Proporcionan un mecanismo determinista de localización, de tal forma que se asegura que un recurso será encontrado siempre que esté en la red. Además, los mensajes de búsqueda son encaminados de forma eficiente, de tal forma que el recurso es encontrado en $O(\log n)$ saltos, donde $n$ es el tamaño de la red \cite{wiki_p2p}. Estas redes han sufrido dos críticas principalmente \cite{rfc4981}. La primera de ellas es entorno a la transitoriedad de un nodo, que al final afecta qué tan robusto es la red. La otra crítica es debido a que éstas redes no soportan búsquedas por palabra clave ni consultas complejas como los sistemas No Estructurados. 
 
 \end{description}
