@@ -46,37 +46,46 @@
 \BOOKMARK [1][-]{section.6.2}{6.2 Caracter\355sticas de una Comunidad Virtual}{chapter.6}% 46
 \BOOKMARK [1][-]{section.6.3}{6.3 Tipos de Comunidades Vituales}{chapter.6}% 47
 \BOOKMARK [-1][]{part.3}{Dise\361o de la CWC}{}% 48
-\BOOKMARK [0][]{chapter.7}{7 Chapter Title}{part.3}% 49
-\BOOKMARK [1][-]{section.7.1}{7.1 Section Title}{chapter.7}% 50
-\BOOKMARK [2][-]{subsection.7.1.1}{7.1.1 Subsection Title}{section.7.1}% 51
-\BOOKMARK [2][-]{subsection.7.1.2}{7.1.2 Subsection Title}{section.7.1}% 52
-\BOOKMARK [1][-]{section.7.2}{7.2 Section Title}{chapter.7}% 53
-\BOOKMARK [0][]{chapter.8}{8 Chapter Title}{part.3}% 54
-\BOOKMARK [1][-]{section.8.1}{8.1 Section Title}{chapter.8}% 55
-\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Subsection Title}{section.8.1}% 56
-\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Subsection Title}{section.8.1}% 57
-\BOOKMARK [1][-]{section.8.2}{8.2 Section Title}{chapter.8}% 58
-\BOOKMARK [-1][]{part.4}{An\341lisis y Resultados}{}% 59
-\BOOKMARK [0][]{chapter.9}{9 Chapter Title}{part.4}% 60
-\BOOKMARK [1][-]{section.9.1}{9.1 Section Title}{chapter.9}% 61
-\BOOKMARK [2][-]{subsection.9.1.1}{9.1.1 Subsection Title}{section.9.1}% 62
-\BOOKMARK [2][-]{subsection.9.1.2}{9.1.2 Subsection Title}{section.9.1}% 63
-\BOOKMARK [1][-]{section.9.2}{9.2 Section Title}{chapter.9}% 64
-\BOOKMARK [0][]{chapter.10}{10 Chapter Title}{part.4}% 65
-\BOOKMARK [1][-]{section.10.1}{10.1 Section Title}{chapter.10}% 66
-\BOOKMARK [2][-]{subsection.10.1.1}{10.1.1 Subsection Title}{section.10.1}% 67
-\BOOKMARK [2][-]{subsection.10.1.2}{10.1.2 Subsection Title}{section.10.1}% 68
-\BOOKMARK [1][-]{section.10.2}{10.2 Section Title}{chapter.10}% 69
-\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 70
-\BOOKMARK [0][]{chapter.11}{11 Chapter Title}{part.5}% 71
-\BOOKMARK [1][-]{section.11.1}{11.1 Section Title}{chapter.11}% 72
-\BOOKMARK [2][-]{subsection.11.1.1}{11.1.1 Subsection Title}{section.11.1}% 73
-\BOOKMARK [2][-]{subsection.11.1.2}{11.1.2 Subsection Title}{section.11.1}% 74
-\BOOKMARK [1][-]{section.11.2}{11.2 Section Title}{chapter.11}% 75
-\BOOKMARK [-1][]{part.6}{Appendix}{}% 76
-\BOOKMARK [0][]{appendix.A}{A Appendix Test}{part.6}% 77
-\BOOKMARK [1][-]{section.A.1}{A.1 Appendix Section Test}{appendix.A}% 78
-\BOOKMARK [1][-]{section.A.2}{A.2 Another Appendix Section Test}{appendix.A}% 79
-\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.6}% 80
-\BOOKMARK [0][]{colophon.0}{Colophon}{part.6}% 81
-\BOOKMARK [0][]{Declaraci\IeC {\'o}n.0}{Declaraci\363n}{part.6}% 82
+\BOOKMARK [0][]{chapter.7}{7 Especificaci\363n de requerimientos}{part.3}% 49
+\BOOKMARK [1][-]{section.7.1}{7.1 Actores}{chapter.7}% 50
+\BOOKMARK [1][-]{section.7.2}{7.2 Requerimientos Funcionales del Protocolo}{chapter.7}% 51
+\BOOKMARK [2][-]{subsection.7.2.1}{7.2.1 HTTP SEND Cache}{section.7.2}% 52
+\BOOKMARK [2][-]{subsection.7.2.2}{7.2.2 HTTP GET Distribuido}{section.7.2}% 53
+\BOOKMARK [2][-]{subsection.7.2.3}{7.2.3 HTTP SEND Distribuido}{section.7.2}% 54
+\BOOKMARK [1][-]{section.7.3}{7.3 Requerimientos Funcionales del Servidor Web Cach\351}{chapter.7}% 55
+\BOOKMARK [2][-]{subsection.7.3.1}{7.3.1 Administraci\363n de Contenido}{section.7.3}% 56
+\BOOKMARK [2][-]{subsection.7.3.2}{7.3.2 Administraci\363n de Miembros de la Comunidad }{section.7.3}% 57
+\BOOKMARK [2][-]{subsection.7.3.3}{7.3.3 Implementaci\363n de Modelo de Consistencia}{section.7.3}% 58
+\BOOKMARK [1][-]{section.7.4}{7.4 Requerimientos Funcionales del Cliente Web Cach\351}{chapter.7}% 59
+\BOOKMARK [2][-]{subsection.7.4.1}{7.4.1 Administraci\363n de Cach\351}{section.7.4}% 60
+\BOOKMARK [2][-]{subsection.7.4.2}{7.4.2 Administraci\363n de la velocidad de conexi\363n}{section.7.4}% 61
+\BOOKMARK [2][-]{subsection.7.4.3}{7.4.3 Modos de Operaci\363n de la Cach\351}{section.7.4}% 62
+\BOOKMARK [0][]{chapter.8}{8 Chapter Title}{part.3}% 63
+\BOOKMARK [1][-]{section.8.1}{8.1 Section Title}{chapter.8}% 64
+\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Subsection Title}{section.8.1}% 65
+\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Subsection Title}{section.8.1}% 66
+\BOOKMARK [1][-]{section.8.2}{8.2 Section Title}{chapter.8}% 67
+\BOOKMARK [-1][]{part.4}{An\341lisis y Resultados}{}% 68
+\BOOKMARK [0][]{chapter.9}{9 Chapter Title}{part.4}% 69
+\BOOKMARK [1][-]{section.9.1}{9.1 Section Title}{chapter.9}% 70
+\BOOKMARK [2][-]{subsection.9.1.1}{9.1.1 Subsection Title}{section.9.1}% 71
+\BOOKMARK [2][-]{subsection.9.1.2}{9.1.2 Subsection Title}{section.9.1}% 72
+\BOOKMARK [1][-]{section.9.2}{9.2 Section Title}{chapter.9}% 73
+\BOOKMARK [0][]{chapter.10}{10 Chapter Title}{part.4}% 74
+\BOOKMARK [1][-]{section.10.1}{10.1 Section Title}{chapter.10}% 75
+\BOOKMARK [2][-]{subsection.10.1.1}{10.1.1 Subsection Title}{section.10.1}% 76
+\BOOKMARK [2][-]{subsection.10.1.2}{10.1.2 Subsection Title}{section.10.1}% 77
+\BOOKMARK [1][-]{section.10.2}{10.2 Section Title}{chapter.10}% 78
+\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 79
+\BOOKMARK [0][]{chapter.11}{11 Chapter Title}{part.5}% 80
+\BOOKMARK [1][-]{section.11.1}{11.1 Section Title}{chapter.11}% 81
+\BOOKMARK [2][-]{subsection.11.1.1}{11.1.1 Subsection Title}{section.11.1}% 82
+\BOOKMARK [2][-]{subsection.11.1.2}{11.1.2 Subsection Title}{section.11.1}% 83
+\BOOKMARK [1][-]{section.11.2}{11.2 Section Title}{chapter.11}% 84
+\BOOKMARK [-1][]{part.6}{Appendix}{}% 85
+\BOOKMARK [0][]{appendix.A}{A Appendix Test}{part.6}% 86
+\BOOKMARK [1][-]{section.A.1}{A.1 Appendix Section Test}{appendix.A}% 87
+\BOOKMARK [1][-]{section.A.2}{A.2 Another Appendix Section Test}{appendix.A}% 88
+\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.6}% 89
+\BOOKMARK [0][]{colophon.0}{Colophon}{part.6}% 90
+\BOOKMARK [0][]{Declaraci\IeC {\'o}n.0}{Declaraci\363n}{part.6}% 91

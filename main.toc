@@ -42,36 +42,45 @@
 \contentsline {section}{\numberline {6.2}Caracter\IeC {\'\i }sticas de una Comunidad Virtual}{39}{section.6.2}
 \contentsline {section}{\numberline {6.3}Tipos de Comunidades Vituales}{40}{section.6.3}
 \contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o de la CWC}}{45}{part.3}
-\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Chapter Title}}{47}{chapter.7}
-\contentsline {section}{\numberline {7.1}Section Title}{47}{section.7.1}
-\contentsline {subsection}{\numberline {7.1.1}Subsection Title}{47}{subsection.7.1.1}
-\contentsline {subsection}{\numberline {7.1.2}Subsection Title}{47}{subsection.7.1.2}
-\contentsline {section}{\numberline {7.2}Section Title}{47}{section.7.2}
-\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Chapter Title}}{49}{chapter.8}
-\contentsline {section}{\numberline {8.1}Section Title}{49}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Subsection Title}{49}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Subsection Title}{49}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Section Title}{49}{section.8.2}
-\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{51}{part.4}
-\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Chapter Title}}{53}{chapter.9}
-\contentsline {section}{\numberline {9.1}Section Title}{53}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Subsection Title}{53}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Subsection Title}{53}{subsection.9.1.2}
-\contentsline {section}{\numberline {9.2}Section Title}{53}{section.9.2}
-\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Chapter Title}}{55}{chapter.10}
-\contentsline {section}{\numberline {10.1}Section Title}{55}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Subsection Title}{55}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}Subsection Title}{55}{subsection.10.1.2}
-\contentsline {section}{\numberline {10.2}Section Title}{55}{section.10.2}
-\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{57}{part.5}
-\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Chapter Title}}{59}{chapter.11}
-\contentsline {section}{\numberline {11.1}Section Title}{59}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Subsection Title}{59}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}Subsection Title}{59}{subsection.11.1.2}
-\contentsline {section}{\numberline {11.2}Section Title}{59}{section.11.2}
-\contentsline {part}{vi\hspace {1em}\spacedlowsmallcaps {Appendix}}{61}{part.6}
-\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{63}{appendix.A}
-\contentsline {section}{\numberline {A.1}Appendix Section Test}{63}{section.A.1}
-\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{64}{section.A.2}
+\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Especificaci\IeC {\'o}n de requerimientos}}{47}{chapter.7}
+\contentsline {section}{\numberline {7.1}Actores}{47}{section.7.1}
+\contentsline {section}{\numberline {7.2}Requerimientos Funcionales del Protocolo}{47}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}HTTP SEND Cache}{47}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}HTTP GET Distribuido}{48}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}HTTP SEND Distribuido}{48}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Requerimientos Funcionales del Servidor Web Cach\IeC {\'e}}{48}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Administraci\IeC {\'o}n de Contenido}{49}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Administraci\IeC {\'o}n de Miembros de la Comunidad }{50}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Implementaci\IeC {\'o}n de Modelo de Consistencia}{51}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}Requerimientos Funcionales del Cliente Web Cach\IeC {\'e}}{51}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Administraci\IeC {\'o}n de Cach\IeC {\'e}}{52}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Administraci\IeC {\'o}n de la velocidad de conexi\IeC {\'o}n}{52}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Modos de Operaci\IeC {\'o}n de la Cach\IeC {\'e}}{52}{subsection.7.4.3}
+\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Chapter Title}}{53}{chapter.8}
+\contentsline {section}{\numberline {8.1}Section Title}{53}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Subsection Title}{53}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}Subsection Title}{53}{subsection.8.1.2}
+\contentsline {section}{\numberline {8.2}Section Title}{53}{section.8.2}
+\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{55}{part.4}
+\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Chapter Title}}{57}{chapter.9}
+\contentsline {section}{\numberline {9.1}Section Title}{57}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Subsection Title}{57}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Subsection Title}{57}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Section Title}{57}{section.9.2}
+\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Chapter Title}}{59}{chapter.10}
+\contentsline {section}{\numberline {10.1}Section Title}{59}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Subsection Title}{59}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Subsection Title}{59}{subsection.10.1.2}
+\contentsline {section}{\numberline {10.2}Section Title}{59}{section.10.2}
+\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{61}{part.5}
+\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Chapter Title}}{63}{chapter.11}
+\contentsline {section}{\numberline {11.1}Section Title}{63}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Subsection Title}{63}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Subsection Title}{63}{subsection.11.1.2}
+\contentsline {section}{\numberline {11.2}Section Title}{63}{section.11.2}
+\contentsline {part}{vi\hspace {1em}\spacedlowsmallcaps {Appendix}}{65}{part.6}
+\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{67}{appendix.A}
+\contentsline {section}{\numberline {A.1}Appendix Section Test}{67}{section.A.1}
+\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{68}{section.A.2}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{65}{dummy.7}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{69}{dummy.7}
