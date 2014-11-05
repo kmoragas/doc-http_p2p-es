@@ -48,39 +48,58 @@
 \contentsline {subsection}{\numberline {7.2.1}HTTP SEND Cache}{47}{subsection.7.2.1}
 \contentsline {subsection}{\numberline {7.2.2}HTTP GET Distribuido}{48}{subsection.7.2.2}
 \contentsline {subsection}{\numberline {7.2.3}HTTP SEND Distribuido}{48}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}Requerimientos Funcionales del Servidor Web Cach\IeC {\'e}}{48}{section.7.3}
+\contentsline {section}{\numberline {7.3}Requerimientos Funcionales del Servidor Web Cach\IeC {\'e}}{49}{section.7.3}
 \contentsline {subsection}{\numberline {7.3.1}Administraci\IeC {\'o}n de Contenido}{49}{subsection.7.3.1}
 \contentsline {subsection}{\numberline {7.3.2}Administraci\IeC {\'o}n de Miembros de la Comunidad }{50}{subsection.7.3.2}
 \contentsline {subsection}{\numberline {7.3.3}Implementaci\IeC {\'o}n de Modelo de Consistencia}{51}{subsection.7.3.3}
-\contentsline {section}{\numberline {7.4}Requerimientos Funcionales del Cliente Web Cach\IeC {\'e}}{51}{section.7.4}
+\contentsline {section}{\numberline {7.4}Requerimientos Funcionales del Cliente Web Cach\IeC {\'e}}{52}{section.7.4}
 \contentsline {subsection}{\numberline {7.4.1}Administraci\IeC {\'o}n de Cach\IeC {\'e}}{52}{subsection.7.4.1}
 \contentsline {subsection}{\numberline {7.4.2}Administraci\IeC {\'o}n de la velocidad de conexi\IeC {\'o}n}{52}{subsection.7.4.2}
 \contentsline {subsection}{\numberline {7.4.3}Modos de Operaci\IeC {\'o}n de la Cach\IeC {\'e}}{52}{subsection.7.4.3}
-\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Chapter Title}}{53}{chapter.8}
-\contentsline {section}{\numberline {8.1}Section Title}{53}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Subsection Title}{53}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}Subsection Title}{53}{subsection.8.1.2}
-\contentsline {section}{\numberline {8.2}Section Title}{53}{section.8.2}
-\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{55}{part.4}
-\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Chapter Title}}{57}{chapter.9}
-\contentsline {section}{\numberline {9.1}Section Title}{57}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}Subsection Title}{57}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}Subsection Title}{57}{subsection.9.1.2}
-\contentsline {section}{\numberline {9.2}Section Title}{57}{section.9.2}
-\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Chapter Title}}{59}{chapter.10}
-\contentsline {section}{\numberline {10.1}Section Title}{59}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Subsection Title}{59}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}Subsection Title}{59}{subsection.10.1.2}
-\contentsline {section}{\numberline {10.2}Section Title}{59}{section.10.2}
-\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{61}{part.5}
-\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Chapter Title}}{63}{chapter.11}
-\contentsline {section}{\numberline {11.1}Section Title}{63}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}Subsection Title}{63}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}Subsection Title}{63}{subsection.11.1.2}
-\contentsline {section}{\numberline {11.2}Section Title}{63}{section.11.2}
-\contentsline {part}{vi\hspace {1em}\spacedlowsmallcaps {Appendix}}{65}{part.6}
-\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{67}{appendix.A}
-\contentsline {section}{\numberline {A.1}Appendix Section Test}{67}{section.A.1}
-\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{68}{section.A.2}
+\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Dise\IeC {\~n}o del Protocolo CWC}}{53}{chapter.8}
+\contentsline {section}{\numberline {8.1}Estructura de los Mensajes}{53}{section.8.1}
+\contentsline {section}{\numberline {8.2}Operaciones del Protocolo}{54}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}ACK}{54}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}GetClientId}{54}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}UpdateMembership}{54}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}GetObjectInfo}{55}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}ModifyObject}{56}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}Enable-Disable Object}{56}{subsection.8.2.6}
+\contentsline {subsection}{\numberline {8.2.7}DeleteObject}{57}{subsection.8.2.7}
+\contentsline {subsection}{\numberline {8.2.8}GetMemberStatus}{57}{subsection.8.2.8}
+\contentsline {subsection}{\numberline {8.2.9}ChangeMemberStatus}{58}{subsection.8.2.9}
+\contentsline {subsection}{\numberline {8.2.10}GetListOfFiles}{58}{subsection.8.2.10}
+\contentsline {subsection}{\numberline {8.2.11}GetStats}{59}{subsection.8.2.11}
+\contentsline {subsection}{\numberline {8.2.12}SendStats}{59}{subsection.8.2.12}
+\contentsline {subsection}{\numberline {8.2.13}GetTopCachesbyObject}{59}{subsection.8.2.13}
+\contentsline {subsection}{\numberline {8.2.14}GetConfParams}{60}{subsection.8.2.14}
+\contentsline {subsection}{\numberline {8.2.15}IsAlive}{60}{subsection.8.2.15}
+\contentsline {section}{\numberline {8.3}Seguimiento de los miembros conectados}{61}{section.8.3}
+\contentsline {section}{\numberline {8.4}Recuperaci\IeC {\'o}n de fallas}{61}{section.8.4}
+\contentsline {subsection}{\numberline {8.4.1}\IeC {\textquestiondown }C\IeC {\'o}mo descubrir una falla?}{61}{subsection.8.4.1}
+\contentsline {subsection}{\numberline {8.4.2}Falla del Servidor}{62}{subsection.8.4.2}
+\contentsline {subsection}{\numberline {8.4.3}Falla un Cliente}{62}{subsection.8.4.3}
+\contentsline {section}{\numberline {8.5}Implementaci\IeC {\'o}n del Modelo de Consistencia}{63}{section.8.5}
+\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{65}{part.4}
+\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Chapter Title}}{67}{chapter.9}
+\contentsline {section}{\numberline {9.1}Section Title}{67}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}Subsection Title}{67}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}Subsection Title}{67}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Section Title}{67}{section.9.2}
+\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Chapter Title}}{69}{chapter.10}
+\contentsline {section}{\numberline {10.1}Section Title}{69}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Subsection Title}{69}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Subsection Title}{69}{subsection.10.1.2}
+\contentsline {section}{\numberline {10.2}Section Title}{69}{section.10.2}
+\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{71}{part.5}
+\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Chapter Title}}{73}{chapter.11}
+\contentsline {section}{\numberline {11.1}Section Title}{73}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}Subsection Title}{73}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}Subsection Title}{73}{subsection.11.1.2}
+\contentsline {section}{\numberline {11.2}Section Title}{73}{section.11.2}
+\contentsline {part}{vi\hspace {1em}\spacedlowsmallcaps {Appendix}}{75}{part.6}
+\contentsline {chapter}{\numberline {A}\spacedlowsmallcaps {Appendix Test}}{77}{appendix.A}
+\contentsline {section}{\numberline {A.1}Appendix Section Test}{77}{section.A.1}
+\contentsline {section}{\numberline {A.2}Another Appendix Section Test}{78}{section.A.2}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{69}{dummy.7}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{79}{dummy.7}

@@ -60,32 +60,51 @@
 \BOOKMARK [2][-]{subsection.7.4.1}{7.4.1 Administraci\363n de Cach\351}{section.7.4}% 60
 \BOOKMARK [2][-]{subsection.7.4.2}{7.4.2 Administraci\363n de la velocidad de conexi\363n}{section.7.4}% 61
 \BOOKMARK [2][-]{subsection.7.4.3}{7.4.3 Modos de Operaci\363n de la Cach\351}{section.7.4}% 62
-\BOOKMARK [0][]{chapter.8}{8 Chapter Title}{part.3}% 63
-\BOOKMARK [1][-]{section.8.1}{8.1 Section Title}{chapter.8}% 64
-\BOOKMARK [2][-]{subsection.8.1.1}{8.1.1 Subsection Title}{section.8.1}% 65
-\BOOKMARK [2][-]{subsection.8.1.2}{8.1.2 Subsection Title}{section.8.1}% 66
-\BOOKMARK [1][-]{section.8.2}{8.2 Section Title}{chapter.8}% 67
-\BOOKMARK [-1][]{part.4}{An\341lisis y Resultados}{}% 68
-\BOOKMARK [0][]{chapter.9}{9 Chapter Title}{part.4}% 69
-\BOOKMARK [1][-]{section.9.1}{9.1 Section Title}{chapter.9}% 70
-\BOOKMARK [2][-]{subsection.9.1.1}{9.1.1 Subsection Title}{section.9.1}% 71
-\BOOKMARK [2][-]{subsection.9.1.2}{9.1.2 Subsection Title}{section.9.1}% 72
-\BOOKMARK [1][-]{section.9.2}{9.2 Section Title}{chapter.9}% 73
-\BOOKMARK [0][]{chapter.10}{10 Chapter Title}{part.4}% 74
-\BOOKMARK [1][-]{section.10.1}{10.1 Section Title}{chapter.10}% 75
-\BOOKMARK [2][-]{subsection.10.1.1}{10.1.1 Subsection Title}{section.10.1}% 76
-\BOOKMARK [2][-]{subsection.10.1.2}{10.1.2 Subsection Title}{section.10.1}% 77
-\BOOKMARK [1][-]{section.10.2}{10.2 Section Title}{chapter.10}% 78
-\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 79
-\BOOKMARK [0][]{chapter.11}{11 Chapter Title}{part.5}% 80
-\BOOKMARK [1][-]{section.11.1}{11.1 Section Title}{chapter.11}% 81
-\BOOKMARK [2][-]{subsection.11.1.1}{11.1.1 Subsection Title}{section.11.1}% 82
-\BOOKMARK [2][-]{subsection.11.1.2}{11.1.2 Subsection Title}{section.11.1}% 83
-\BOOKMARK [1][-]{section.11.2}{11.2 Section Title}{chapter.11}% 84
-\BOOKMARK [-1][]{part.6}{Appendix}{}% 85
-\BOOKMARK [0][]{appendix.A}{A Appendix Test}{part.6}% 86
-\BOOKMARK [1][-]{section.A.1}{A.1 Appendix Section Test}{appendix.A}% 87
-\BOOKMARK [1][-]{section.A.2}{A.2 Another Appendix Section Test}{appendix.A}% 88
-\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.6}% 89
-\BOOKMARK [0][]{colophon.0}{Colophon}{part.6}% 90
-\BOOKMARK [0][]{Declaraci\IeC {\'o}n.0}{Declaraci\363n}{part.6}% 91
+\BOOKMARK [0][]{chapter.8}{8 Dise\361o del Protocolo CWC}{part.3}% 63
+\BOOKMARK [1][-]{section.8.1}{8.1 Estructura de los Mensajes}{chapter.8}% 64
+\BOOKMARK [1][-]{section.8.2}{8.2 Operaciones del Protocolo}{chapter.8}% 65
+\BOOKMARK [2][-]{subsection.8.2.1}{8.2.1 ACK}{section.8.2}% 66
+\BOOKMARK [2][-]{subsection.8.2.2}{8.2.2 GetClientId}{section.8.2}% 67
+\BOOKMARK [2][-]{subsection.8.2.3}{8.2.3 UpdateMembership}{section.8.2}% 68
+\BOOKMARK [2][-]{subsection.8.2.4}{8.2.4 GetObjectInfo}{section.8.2}% 69
+\BOOKMARK [2][-]{subsection.8.2.5}{8.2.5 ModifyObject}{section.8.2}% 70
+\BOOKMARK [2][-]{subsection.8.2.6}{8.2.6 Enable-Disable Object}{section.8.2}% 71
+\BOOKMARK [2][-]{subsection.8.2.7}{8.2.7 DeleteObject}{section.8.2}% 72
+\BOOKMARK [2][-]{subsection.8.2.8}{8.2.8 GetMemberStatus}{section.8.2}% 73
+\BOOKMARK [2][-]{subsection.8.2.9}{8.2.9 ChangeMemberStatus}{section.8.2}% 74
+\BOOKMARK [2][-]{subsection.8.2.10}{8.2.10 GetListOfFiles}{section.8.2}% 75
+\BOOKMARK [2][-]{subsection.8.2.11}{8.2.11 GetStats}{section.8.2}% 76
+\BOOKMARK [2][-]{subsection.8.2.12}{8.2.12 SendStats}{section.8.2}% 77
+\BOOKMARK [2][-]{subsection.8.2.13}{8.2.13 GetTopCachesbyObject}{section.8.2}% 78
+\BOOKMARK [2][-]{subsection.8.2.14}{8.2.14 GetConfParams}{section.8.2}% 79
+\BOOKMARK [2][-]{subsection.8.2.15}{8.2.15 IsAlive}{section.8.2}% 80
+\BOOKMARK [1][-]{section.8.3}{8.3 Seguimiento de los miembros conectados}{chapter.8}% 81
+\BOOKMARK [1][-]{section.8.4}{8.4 Recuperaci\363n de fallas}{chapter.8}% 82
+\BOOKMARK [2][-]{subsection.8.4.1}{8.4.1 \277C\363mo descubrir una falla?}{section.8.4}% 83
+\BOOKMARK [2][-]{subsection.8.4.2}{8.4.2 Falla del Servidor}{section.8.4}% 84
+\BOOKMARK [2][-]{subsection.8.4.3}{8.4.3 Falla un Cliente}{section.8.4}% 85
+\BOOKMARK [1][-]{section.8.5}{8.5 Implementaci\363n del Modelo de Consistencia}{chapter.8}% 86
+\BOOKMARK [-1][]{part.4}{An\341lisis y Resultados}{}% 87
+\BOOKMARK [0][]{chapter.9}{9 Chapter Title}{part.4}% 88
+\BOOKMARK [1][-]{section.9.1}{9.1 Section Title}{chapter.9}% 89
+\BOOKMARK [2][-]{subsection.9.1.1}{9.1.1 Subsection Title}{section.9.1}% 90
+\BOOKMARK [2][-]{subsection.9.1.2}{9.1.2 Subsection Title}{section.9.1}% 91
+\BOOKMARK [1][-]{section.9.2}{9.2 Section Title}{chapter.9}% 92
+\BOOKMARK [0][]{chapter.10}{10 Chapter Title}{part.4}% 93
+\BOOKMARK [1][-]{section.10.1}{10.1 Section Title}{chapter.10}% 94
+\BOOKMARK [2][-]{subsection.10.1.1}{10.1.1 Subsection Title}{section.10.1}% 95
+\BOOKMARK [2][-]{subsection.10.1.2}{10.1.2 Subsection Title}{section.10.1}% 96
+\BOOKMARK [1][-]{section.10.2}{10.2 Section Title}{chapter.10}% 97
+\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 98
+\BOOKMARK [0][]{chapter.11}{11 Chapter Title}{part.5}% 99
+\BOOKMARK [1][-]{section.11.1}{11.1 Section Title}{chapter.11}% 100
+\BOOKMARK [2][-]{subsection.11.1.1}{11.1.1 Subsection Title}{section.11.1}% 101
+\BOOKMARK [2][-]{subsection.11.1.2}{11.1.2 Subsection Title}{section.11.1}% 102
+\BOOKMARK [1][-]{section.11.2}{11.2 Section Title}{chapter.11}% 103
+\BOOKMARK [-1][]{part.6}{Appendix}{}% 104
+\BOOKMARK [0][]{appendix.A}{A Appendix Test}{part.6}% 105
+\BOOKMARK [1][-]{section.A.1}{A.1 Appendix Section Test}{appendix.A}% 106
+\BOOKMARK [1][-]{section.A.2}{A.2 Another Appendix Section Test}{appendix.A}% 107
+\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.6}% 108
+\BOOKMARK [0][]{colophon.0}{Colophon}{part.6}% 109
+\BOOKMARK [0][]{Declaraci\IeC {\'o}n.0}{Declaraci\363n}{part.6}% 110

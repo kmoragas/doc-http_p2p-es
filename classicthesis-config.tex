@@ -136,25 +136,65 @@
 %----------------------------------------------------------------------------------------
 %	CODE LISTINGS SETUP
 %----------------------------------------------------------------------------------------
+\usepackage{color}
+\usepackage[usenames,dvipsnames,svgnames,table]{xcolor}
+\definecolor{gray}{rgb}{0.4,0.4,0.4}
+\definecolor{darkblue}{rgb}{0.0,0.0,0.6}
+\definecolor{cyan}{rgb}{0.0,0.6,0.6}
+\definecolor{brown}{HTML}{8A4A0B}
+\definecolor{maroon}{rgb}{0.5,0,0}
 
 \usepackage{listings} 
 %\lstset{emph={trueIndex,root},emphstyle=\color{BlueViolet}}%\underbar} % for special keywords
-\lstset{language=[LaTeX]Tex, % Specify the language for listings here
-keywordstyle=\color{RoyalBlue}, % Add \bfseries for bold
-basicstyle=\small\ttfamily, % Makes listings a smaller font size and a different font
-%identifierstyle=\color{NavyBlue}, % Color of text inside brackets
-commentstyle=\color{Green}\ttfamily, % Color of comments
-stringstyle=\rmfamily, % Font type to use for strings
-numbers=left, % Change left to none to remove line numbers
-numberstyle=\scriptsize, % Font size of the line numbers
-stepnumber=5, % Increment of line numbers
-numbersep=8pt, % Distance of line numbers from code listing
-showstringspaces=false, % Sets whether spaces in strings should appear underlined
-breaklines=true, % Force the code to stay in the confines of the listing box
-%frameround=ftff, % Uncomment for rounded frame
-frame=single, % Frame border - none/leftline/topline/bottomline/lines/single/shadowbox/L
-belowcaptionskip=.75\baselineskip % Space after the "Listing #: Desciption" text and the listing box
+%\lstset{language=[LaTeX]Tex, % Specify the language for listings here
+%keywordstyle=\color{RoyalBlue}, % Add \bfseries for bold
+%basicstyle=\small\ttfamily, % Makes listings a smaller font size and a different font
+%%identifierstyle=\color{NavyBlue}, % Color of text inside brackets
+%commentstyle=\color{Green}\ttfamily, % Color of comments
+%stringstyle=\rmfamily, % Font type to use for strings
+%numbers=left, % Change left to none to remove line numbers
+%numberstyle=\scriptsize, % Font size of the line numbers
+%stepnumber=5, % Increment of line numbers
+%numbersep=8pt, % Distance of line numbers from code listing
+%showstringspaces=false, % Sets whether spaces in strings should appear underlined
+%breaklines=true, % Force the code to stay in the confines of the listing box
+%%frameround=ftff, % Uncomment for rounded frame
+%frame=single, % Frame border - none/leftline/topline/bottomline/lines/single/shadowbox/L
+%belowcaptionskip=.75\baselineskip % Space after the "Listing #: Desciption" text and the listing box
+%}
+
+\lstset{
+  basicstyle=\ttfamily,
+  columns=fullflexible,
+  showstringspaces=false,
+  commentstyle=\color{gray}\upshape
 }
+
+\lstdefinelanguage{XML}
+{
+  basicstyle=\ttfamily,
+  morestring=[s]{"}{"},
+  morecomment=[s]{?}{?},
+  morecomment=[s]{!--}{--},
+  commentstyle=\color{darkgreen},
+  moredelim=[s][\color{black}]{>}{<},
+  %moredelim=[s][\color{cyan}]{\ }{=},
+  stringstyle=\color{maroon},
+  identifierstyle=\color{darkblue},
+  keywordstyle=\color{cyan},
+  morekeywords={xmlns,version,clientid,requestid,responseid}% list your attributes here
+}
+
+%\lstdefinelanguage{XML}
+%{
+%  morestring=[b]",
+%  morestring=[s]{>}{<},
+%  morecomment=[s]{<?}{?>},
+%  stringstyle=\color{dark},
+%  identifierstyle=\color{darkblue},
+%  keywordstyle=\color{cyan},
+%  morekeywords={xmlns,version,type,clientid,requestid,responseid}% list your attributes here
+%}
 
 %----------------------------------------------------------------------------------------
 %	HYPERREFERENCES
