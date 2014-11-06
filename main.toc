@@ -126,7 +126,7 @@
 \contentsline {chapter}{\numberline {12}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{89}{chapter.12}
 \contentsline {section}{\numberline {12.1}Prototipo CWC}{89}{section.12.1}
 \contentsline {section}{\numberline {12.2}Resultados de Rendimiento}{89}{section.12.2}
-\contentsline {section}{\numberline {12.3}An\IeC {\'a}lisis de rendimiento de velocidad del entorno de CWC}{90}{section.12.3}
+\contentsline {section}{\numberline {12.3}An\IeC {\'a}lisis de rendimiento de velocidad del entorno de CWC}{89}{section.12.3}
 \contentsline {section}{\numberline {12.4}Resultados de Costo}{90}{section.12.4}
 \contentsline {section}{\numberline {12.5}An\IeC {\'a}lisis de costos del Entorno de CW}{90}{section.12.5}
 \contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{91}{part.5}
