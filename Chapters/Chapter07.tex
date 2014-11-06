@@ -1,4 +1,4 @@
-% Chapter X
+% Chapter 7
 
 \chapter{Especificación de requerimientos} % Chapter title
 
@@ -36,7 +36,7 @@ Las ventajas del HTTP Send Distribuido, como se puede concluir es que se reduce 
 
 \section{Requerimientos Funcionales del Servidor Web Caché}
 
-Es necesario que CWCServer sea ejecutado como un módulo de un servidor web existente. Este módulo deberá comunicarse con las cachés por medio de un puerto que deberá ser configurable, por medio de este puerto se intercambiará el protocolo CWC el cual será definido en la sección \cite{protocolo_cwc}. 
+Es necesario que CWCServer sea ejecutado como un módulo de un servidor web existente. Este módulo deberá comunicarse con las cachés por medio de un puerto que deberá ser configurable, por medio de este puerto se intercambiará el protocolo CWC el cual será definido en la sección \cite{ch:diseno_protocolo_cwc}. 
 
 El módulo deber contar con una interfaz de consola por medio de la cual el éste pueda ser detenido, reiniciado, habilitado o deshabilitado.
 
@@ -45,7 +45,7 @@ El módulo deber contar con una interfaz de consola por medio de la cual el ést
 Cuando se hace alusión al contenido, se refiere a cualquier objeto que pueda ser servido por medio de CWC, en este caso se debe proveer las siguientes interacciones:
 
 \begin{description}
-\item[Agregar un contenido] Cuando se agrega un contenido al servidor Apache, este no es agregado automáticamente a la CWC, por el contrario se debe agregar explícitamente. Esto debido a que puede existir contenido que no pueda ser compartido, ya sea por porque el autor no lo desea, porque sean archivos dinámicos (está fuera del alcance de esta tesis) o porque sean archivos demasiado pequeños los cuales no tienen ningún sentido ser servidos por medio de múltiples clientes. Cuando se agrega un contenido a la CWC se debe generar un suma de verificación (checksum) del objeto, establecer una fecha de expiración y crear las estructuras necesarias para manejar las caches que la tienen.
+\item[Agregar un contenido] Cuando se agrega un contenido al servidor web, este no es agregado automáticamente a la CWC, por el contrario se debe agregar explícitamente. Esto debido a que puede existir contenido que no pueda ser compartido, ya sea por porque el autor no lo desea, porque sean archivos dinámicos (está fuera del alcance de esta tesis) o porque sean archivos demasiado pequeños los cuales no tienen ningún sentido ser servidos por medio de múltiples clientes. Cuando se agrega un contenido a la CWC se debe generar un suma de verificación (checksum) del objeto, establecer una fecha de expiración y crear las estructuras necesarias para manejar las caches que la tienen.
 
 \item[Borrar un contenido] Borrar un contenido, no significa eliminarlo del servidor Web, simplemente que no será servido más por medio de la CWC, esto tiene las siguiente implicaciones: 1) Terminar de servir los clientes que estén tomando el archivo por medio de CWC y 2) Invalidar todas las copias del objeto que ya no va a ser servido mediante CWC.
 

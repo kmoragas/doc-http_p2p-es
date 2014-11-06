@@ -1,29 +1,249 @@
-% Chapter X
+% Chapter 10
 
-\chapter{Chapter Title} % Chapter title
+\chapter{Diseño del CWC} % Chapter title
 
-\label{ch:name} % For referencing the chapter elsewhere, use \autoref{ch:name} 
+\label{ch:diseno_cwc} % For referencing the chapter elsewhere, use \autoref{ch:name} 
 
+CWC es un modelo de web caching distribuido, el cual busca hacer un uso eficiente de los recursos computacionales disponibles tanto en el servidor como en los clientes mediante el establecimiento de una comunidad. Esta comunidad tiene como objetivo que los clientes proporcionen una cantidad finita de recursos para establecer una Web Cache Distribuida la cual permita reducir el tráfico sobre el servidor, ya que los archivos serán servidos desde múltiples localizaciones y en una mayoría de casos, sin trabajo adicional por parte del servidor, más que indicar donde se encuentra el archivo y como accederlo. 
+
+Con el establecimiento de la Web Cache Distribuida y al reducir el tráfico sobre el servidor, se permitirá atender a más clientes y hacer la comunidad mucho más grande. Lo cual, en última instancia, implica una Web Cache Distribuida mucho más grande y con más recursos.
 %----------------------------------------------------------------------------------------
 
-\section{Section Title}
+\section{CWC Server}
 
-Content
+El CWC Server es una aplicación que se Integra con el servidor web, su función consiste en realizar la administración de la CWC e interceptar las peticiones de los clientes que utilizan CWC. Entre las funciones del CWC Server se encuentran: 
+
+\begin{itemize}
+\item Administración del Caché local
+\item Administración del CWC
+\item Estadísticas
+\item Segmentación de Archivos
+\item Administración Remota de Caché
+\end{itemize}
 
 %------------------------------------------------
 
-\subsection{Subsection Title}
+\subsection{Administración de Objetos en la Caché local}
 
-Content
+En un servidor web existen gran cantidad de objetos, que van desde los documentos HTML y CSS más comunes hasta lo que hoy conocemos como multimedia, que incluye un gran número de archivos de gran tamaño como video y música. Además también existen de aplicaciones de tiempo real como video conferencias y streaming de video y audio. La administración de Objetos en la caché local se refiere a como identificar cuales objetos se pueden agregar a la caché del CWC y cuales no. Cada objeto contara con los siguientes atributos:
+
+\begin{itemize}
+\item \textit{Checksum}: Esto con el objetivo de saber si el archivo esta corrupto. No nos preocuparemos por el cálculo del Checksum.
+\item \textit{Id}: El archivo tendrá su identificador único, generado automáticamente.
+\item \textit{Localización}: URI relativo al URL del sitio web.
+\item \textit{Cachés}: Cuáles clientes CWC poseen una copia de este objeto. 
+\item \textit{En Caché}: Bandera que indica si el objeto puede ser compartirse a través del CWC o no.
+\item \textit{Tiempo expiración}: Dentro de cuanto el objeto será obsoleto. 
+\end{itemize}
+
+Todos estos atributos, excepto uno, deben de perdurar en disco, para evitar fallas eléctricas o bien el apagado del equipo. El atributo \textit{Cachés} será mantenido en memoria, pues es un dato que se calcula en tiempo de ejecución de la CWC.
+
+A continuación se presentan las acciones presentes en la Administración de Objetos en la Caché local:
+
+\begin{description}
+
+\item[Agregar un nuevo Objeto] Cuando se agrega un nuevo objeto al servidor web se deben calcular sus atributos y almacenarlos. Cuando una nueva cache obtiene un objeto se actualiza su información de caches, lo cual quiere decir que este objeto puede ser servido desde una cache más.
+
+\item [Modificar un Objeto] Existen dos tipos de modificaciones: 
+	\begin{description}
+	\item[Soft] Una modificación soft no implica que la cache tenga que volver a jalar el objeto, una modificación soft es cambiar la localización del archivo, cambiar las caches del archivo, cambiar el estado de Cacheable, cambiar su tiempo de expiración.
+	\item [Hard] La modificación hard, se refiere al cambio del tamaño del archivo lo cual implica un cambio de su Checksum.
+
+Cada atributo implica diferentes que deben ser tomadas, entre estas se tiene:
+
+		\begin{itemize}
+		\item \textit{Checksum y Tamaño}: Al darse un cambio en estos atributos se deben invalidar todas las caches de este objeto y notificar a las mismas para que borren sus copias y si es necesario que obtengan una copia fresca.
+		\item \textit{Id}: No se hacen cambios de Id.
+		\item \textit{Localización}: tiempo de expiración y Caches: Simplemente se actualiza la información no se notifica a las caches.
+		\item \textit{En Caché}: Se notifica a las caches el nuevo estado para que invaliden y borren su copia.
+		\end{itemize}
+
+\end{description}
+
+\item [Borrar un Objeto] Cuando se borra un objeto, se borra el objeto junto con sus atributos y además se notifica a las caches para que borren su copia.
+
+\item [Verificar Expiración] El CWC Server deberá estar revisando si los objetos de la cache se encuentran válidos, en el caso de que alguno sea inválido se establece el objeto como no-cacheable y se trata como una modificación. 
+
+\item [En Transferencia] Si se da una modificación hard o un borrado mientra el objeto se está transfiriendo, como política se deben invalidar todas las copias incluyendo la original y borrarlas hasta que se termine de servir a todos los clientes que están recibiendo el archivo.
+
+\end{description}
 
 %------------------------------------------------
 
-\subsection{Subsection Title}
+\subsection{Administración del CWC}
 
-Content
+Esta administración es muy relativa ya que no se tendrá control completo sobre ésta, en este caso nos referimos a los clientes que conforman la comunidad y a los objetos que pueden ser compartidos en la caché.
+
+Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a definir como \textit{fría}, lo cual quiere decir que no existen miembros en la comunidad y por ende no existen objetos cacheados. Las acciones que se pueden dar son las siguientes:
+
+\begin{description}
+\item[Agregar un nuevo miembro] Cuando se agrega un miembro se crea en memoria la estructura para este cliente y se establecen los recursos aportados por este cliente, dentro de la información importante que se debe almacenar, se encuentra:
+	\begin{itemize}
+	\item Los clientes que está sirviendo.
+	\item Los archivos que tiene en su caché.
+	\item La localización geográfica 
+	\item El estado del cache: Activa/desactiva.
+	\item El estado del cliente: online/offline.
+	\end{itemize}
+	
+\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallara, por lo que la información de las caches se perdería. O bien, que alguna de las caches fallara y se perdiera la conexión con el servidor. Esto último implicaría que la cache quedara en un estado offline, o se desactivara. Para agregar una cache existente sería necesario:
+
+	\begin{enumerate}
+	\item La cache se comunica con el servidor, ya sea porque se recupero de alguna falla o se activo de nuevo o porque el servidor fue el que fallo y ya está arriba de nuevo.
+	\item El servidor busca en su lista para ver si la cache se encuentra disponible.
+	\item En el caso de que se encuentre:
+
+		\begin{enumerate}
+		\item Se le envía la lista de archivo que debería tener cacheados y su respectivo Checksum.
+		\item La cache verifica que tiene los archivos y que son correctos.
+		\item Si todo está bien la cache confirma para ser promovida a online.
+		\item Si algún archivo esta corrupto o no existe, se borra y se envía la invalidación al servidor.
+		\item Se confirma el estado consistente para ser promovida a online.
+		\end{enumerate}	
+	
+	\item En el caso de que no se encuentre:
+		\begin{enumerate}
+		\item Se le solicita una lista de archivos cacheados y su Checksum.
+		\item Cuando la cache los envía, se verifican los archivos y su Checksum.
+		\item Si todo está bien se confirma su estado online al crear las estructuras del miembro con sus atributos.
+		\item Si alguna archivo fue borrado, modifica o esta corrupto, se indica que se invalida y una vez que se confirma la invalidación se crean las estructuras del miembro y se le notifica a la cache que esta online.
+		\end{enumerate}	
+	
+	\end{enumerate}
+	
+\item [Modificar un miembro] Cualquiera de los atributos de un miembro se puede modificar, lo más importante es conocer si éste está activo/no activo, esto se logra mediante la  revisión periódica del estado de las cachés.
+
+\end{description}
 
 %----------------------------------------------------------------------------------------
 
-\section{Section Title}
+\subsection{Estadísticas}
 
-Content
+En una comunidad al igual que en cualquiera, hay diversidad de miembros, algunos cuentan con muchos recursos, otros con pocos o algunos fallan bajo presión. La idea con las estadísticas, es que una vez que se solicita un objeto, enviar la lista de caches que lo tienen disponible, ordenada de tal manera que se presenten los que históricamente tiene mejores referencias de primero. 
+
+Esto no quiere decir que a los que tienen un bajo historial se dejarán fuera, si no que cuando se deba atender una petición tendrán menor trabajo que el resto. Tampoco quiere decir que se quedarán haciendo el peor trabajo siempre, sino más bien, se pretende implementar un sistema de puntos en el cual, presente la oportunidad de crecer en confianza y convertirse en una de las caches más altas en el ranking.
+
+Entre las estadísticas que se van a recolectar son:
+
+\begin{description}
+\item[Logs de Acceso] Se debe llevar un recuento para cada petición, de quien la atendió y tiempo de respuesta.
+
+\item[Bookkipping] Para cada una de las caches se debe tener un histórico de:
+	\begin{itemize}
+	\item Tiempo de respuesta.
+	\item Número de clientes atendidos por unidad de tiempo.
+	\item Número de veces que ha fallado.
+	\item Velocidades de trasferencia mínimas y máximas.
+	\item Archivos en cache y número de veces que han sido trasmitidos.
+	\end{itemize}
+	
+\item[Sistema de Puntos] El sistema de puntos funcionará de la siguiente manera:
+
+	\begin{description}
+	\item[Puntos estáticos] Estos puntos son dados en el transcurso normal de la vida del CWC.
+		\begin{itemize}
+		\item La máxima cantidad de puntos es 100 y la mínima es -100.
+		\item  Un miembro nuevo, recibirá una bonificación de 50 puntos por formar parte de CWC.
+		\item Cada 6 horas que el miembro permanezca online, recibirá una bonificación de 1 punto con un máximo de 4 puntos diarios. En el caso contrario perderá un punto cada 6 horas con un máximo de 4 diarios.
+		\item  Si el miembro se desactivo, perderá un punto cada 12 horas por estar desactivado. Con un máximo de 2 puntos diarios.
+		\item Por cada cliente atendido satisfactoriamente el miembro recibirá un total de 2 puntos, por cliente atendido insatisfactoriamente el miembro perderá 3 puntos.
+		\end{itemize}
+		 
+	\item[Bonificaciones] Las bonificaciones son dadas por acciones extras beneficiosas hacia los clientes. 
+	
+		\begin{itemize}
+		\item El miembro de la cache con el mejor tiempo de respuesta ganara una bonificación de 10 puntos.
+		\item Los miembros de la cache con tiempo de respuesta mayor a la media ganaran un punto adicional.
+		\item El miembro de la cache que haya transmitido el mayor número de veces el  objeto solicitado, recibirá un bono de 10 puntos.
+		\end{itemize}
+
+	\item[Cálculo total] A continuación se detallan las reglas que dictan como se realizará el cálculo total de los puntos acumulados: 
+	
+		\begin{enumerate}
+		\item Con las reglas y bonificaciones anteriormente mencionadas, se calcula el top de miembros de la cache.
+		\item Con el top de miembros listo, se eliminan todos aquellos que están atendiendo a su máximo número de clientes permitido que se calcula mediante: 
+		$$ \frac {\text{conexión de subida}}{\text{mínima velocidad para servir archivos}} $$ 
+		Esto quiere decir que si se asigna una velocidad mínima para servir archivos de 64Kbps y el miembro de la cache estableció su conexión de subida en 512Kbps, el número máximo de clientes que puede atender simultáneamente es 8.
+		\item Para evitar la sobrecarga de trabajo sobre una cache, las caches recibirán una penalización en base al número de usuarios que están atendiendo, la regla establece que una cache perderá: 
+		
+		$$ \text{número de clientes actuales} * 3 \text{puntos} $$
+		\end{enumerate}
+	
+	\end{description}
+
+\end{description}
+
+
+\subsection{Segmentación de Archivos}
+
+Cuando se va a servir un archivo desde la cache, ésta se debe descomponer en un número de segmentos. Un posible tamaño de un segmento podría ser 128Kb y éste podría corresponder al ancho de banda mínimo de la CWC. 
+
+Por ejemplo, si se desea descargar un archivo de 10Mb lo se debe de descomponer en partes de 128Kb y esta será la unidad de descarga de la caché. El segmento debe ser establecido por el administrador del sitio web, entre más pequeña mejor.
+
+\subsection{Administración Remota de Caché}
+
+Como se mencionó anteriormente, es posible que el cliente delegue la administración de la caché local al servidor. En el caso, el servidor se encargará de decir cuando se debe tener un archivo en la caché y cuando no se debe. La decisión de retirar un archivo o agregar otro a la caché, toma en cuenta si los archivos están siendo solicitados frecuentemente. Entonces el servidor envía los siguientes mensajes a las cachés:
+
+\begin{itemize}
+\item \textit{Agregar Objeto}: Envía el id archivo y la cache se encarga de solicitarlo.
+\item \textit{Borrar Objeto}: Envía el id del archivo y la cache se encarga de borrarlo.
+\end{itemize}
+
+\section{CWC Client}
+El CWC Client es una aplicación que se integra con el navegador web o agente de usuario, la principal función de este es poder obtener archivos de la CWC.  Entre las funciones del CWC Client se encuentran:
+
+\begin{itemize}
+\item Asociación a la comunidad
+\item Administración de la Caché local
+\item Otras funciones de administración
+\end{itemize}
+
+\subsection{Asociación a la comunidad}
+
+Existen diferentes dos formas para formar parte de la comunidad:
+
+\begin{description}
+\item[Contribuyente] Funciona de la siguiente manera: el usuario instala la aplicación CWC Client e inicia la navegación por diferentes páginas. Cuando se encuentra un servidor que soporta el protocolo CWC y se solicita un objeto que se pueda compartir en la caché de CWC, el cliente empieza a formar parte de la comunidad (si tiene instalado CWC Client es porque se desean compartir los recursos) con los parámetros mínimos, se podría decir que obtiene una membresía mínima.
+
+\item[Activa] En este caso, el usuario quiere ser miembro de la CWC de un sitio en específico. Por lo que el usuario crea de manera específica la membresía y establece los recursos que desea compartir.
+
+La diferencia radica en que si el usuario se convierte en miembro de manera voluntaria, la administración de la cache será realizada por el servidor. En todo caso, si la membresía es activa se puede cambiar a contribuyente.
+
+Se puede dar el caso de que no desee formar parte de la comunidad de algún sitio en especifico, entonces se puede configurar CWC Client de manera que ignore los sitios de una lista negra.
+
+Para dejar de ser un miembro de la caché, se debe:
+
+\begin{itemize}
+\item Indicar que no se quiere pertenecer más a esta (Agregarla a la lista negra).
+\item No poseer ningún archivo de en caché (involuntaria).
+\end{itemize}
+
+\end{description}
+
+
+\subsection{Administración de la Caché Local}
+
+La administración de la cache se puede dar de 3 formas, atendida por el cliente, desatendida (por defecto cuando la membresía se es contribuyente) y por último administrada por el servidor (solo se utiliza cuando la membresía es activa):
+
+\begin{description}
+\item[Desatendida] En este caso, cuando la cache está llena, la misma cache escoge el archivo menos solicitado y lo borra, así sucesivamente hasta que se libera suficiente espacio como para almacenar el archivo. 
+\item[Atendida] El usuario puede borrar archivos de la caché a su gusto. Para ello tendrá una interfaz de selección de archivos que se encuentren en la caché.
+\item[Manejada por el Servidor] El servidor por si solo decidirá cuales archivos deben estar en cache y cuáles no, sus decisiones serán transmitidas a la cache mediante el envió de mensajes. 
+\end{description}
+
+
+\subsection{Otras Funciones de Administración}
+Otras funciones de administración que posee el CWC Client son las siguientes:
+\begin{description}
+\item[Invalidar contenido] Si se recibe un mensaje de que el contenido esta inválido, automáticamente se borra el objeto y se descarga.
+
+\item [Revisión de Consistencia] Periódicamente se verifica si los contenidos de la cache son correctos, se le solicita al servidor el Checksum para los archivos que se encuentran en la cache y se comparan. Si están bien perfecto si no se procede a hacer una invalidación de contenido.
+
+\item [El servidor está vivo] Revisión constante del servidor, se debe establecer si se encuentra funcional o está fuera de línea.
+
+\item [Mensaje de Offline, activo o desactivo] En cualquiera de estos casos la caché se comunica con el servidor para indicarle su nuevo estado.
+
+\item [Transferencia de estadísticas] Periódicamente el cliente envía las estadísticas que se han producido con respecto a los objetos que se encuentran en su caché. 
+
+\item [Agregar contenido a la caché] Es una acción ejecutada en el caso que se envíe la petición por parte del servidor o porque se ingrese a algún servidor web que utiliza CWC.
+\end{description}

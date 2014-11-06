@@ -1,0 +1,52 @@
+% Chapter 13
+
+\chapter{Conclusiones y Trabajo Futuro} % Chapter title
+
+\label{ch:conclusiones} % For referencing the chapter elsewhere, use \autoref{ch:name} 
+
+%----------------------------------------------------------------------------------------
+
+\section{Conclusiones}
+
+\begin{itemize}
+\item  Al momento de comparar los trabajos relevantes relacionados con sistemas distribuidos se encontró que muchos otros proyectos han aunado el área de web caching distribuido, pero cada uno expone su propia necesidad, y la mayoría de ellos tiene ambiciones relacionadas con las LAN y no hay ninguno que trate de utilizar el software existente y aplicarlo en Internet directamente. Por lo que hace que el presente proyecto proponga un aporte del cual pueda beneficiar a un mayor número de personas. 
+
+\item Se trató de aprovechar cualquier oportunidad de mejoramiento estratégico de las plataformas existentes, por cual sólo se agregaron algunos comandos al estándar HTTP, sin dejar la compatibilidad hacia atrás con toda la infraestructura ya creada. Promoviendo más bien el uso de módulos adicionales al servidor web y al cliente web.
+
+\item Durante el transcurso de la especificación de los requerimientos de una caché web distribuida basada en HTTP fue necesario la investigación de múltiples protocolos, modelos y análisis de distintas necesidades de mercado, para poder ajustar el nuevo modelo a un Internet cada vez más creciente. Este análisis del marco teórico arrojó mucha información que sirvió de base para la creación de esta nueva propuesta.
+
+\item En el Diseño de la arquitectura de una caché distribuida fueron notables las decisiones basadas en la transparencia de ubicación de los recursos, soluciones de bajo costo y la calidad en el servicio. 
+
+	\begin{description}
+	\item[Transparencia de los recursos] el proyecto pretende proveer un sistema libre de fallas, totalmente distribuido el cual ponga a disposición los recursos de la comunidad formada a los miembros de la misma. Llevando el concepto de cliente servidor a otro nivel de una manera transparente. 
+	
+	\item [Solución de bajo costo] el proyecto impulsa el uso de software libre liberado bajo la licencia GPL de GNU o licencias compatibles como la licencia de Apache. Este mismo proyecto será liberado bajo estas licencias. Además impulsa el uso de recursos subutilizados como el nivel de procesamiento de los clientes, conexión a internet, memoria, entre otros; dotándolos de un nivel más participativo en la publicación de contenidos.
+	
+	\item [Calidad de servicio] uno de los puntos focales de este proyecto ha sido la calidad de servicio, un tema en cual están inmerso en el diseño del protocolo en sí para asegurar un servicio de alta calidad, eficaz y eficiente. 
+	
+	\item [Continuidad del Negocio] se enfocaron esfuerzos para obtener un resultado que provea un mecanismo de Continuidad en el Negocio. Y es así como el protocolo CWC permite soportar caídas de los nodos y aún así seguir sirviendo el sitio web.
+	\end{description}
+
+\item En el desarrollo de un prototipo de caché distribuida, se tomaron varias decisiones de implementación una de ella fue hacer uso de tecnologías ya existentes como bibliotecas liberadas bajo licencias GPL para acelerar el proceso de desarrollo. 
+\end{itemize}
+
+%------------------------------------------------
+
+\section{Trabajo Futuro}
+
+Se deja como trabajo futuro de el desarrollo e implementación de módulos compatibles con Apache que representen fielmente el protocolo expuesto en este documento. Además de plugins para un explorador web que cumplan la especificación del cliente cache web distribuido.
+
+Content
+
+%------------------------------------------------
+
+\section{Exclusiones}
+Quedan fuera del alcance de este proyecto:
+
+\begin{itemize}
+\item La aplicación del protocolo de CWC en un ambiente de páginas dinámicas.
+\item La aplicación del protocolo de CWC en un ambiente de flujo de video o sonido.
+\item La seguridad en general, tanto del servidor como del cliente. No se especificó ningún mecanismo que permita la comprobación y la autenticidad de los elementos.
+\end{itemize}
+
+%----------------------------------------------------------------------------------------

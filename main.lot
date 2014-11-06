@@ -2,12 +2,10 @@
 \deactivateaddvspace 
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {1}{\ignorespaces Uso de Internet por Regi\IeC {\'o}n Geogr\IeC {\'a}fica \citeauthor {itu:2014}.\relax }}{8}{table.caption.10}
+\contentsline {table}{\numberline {1}{\ignorespaces Uso de Internet por Regi\IeC {\'o}n Geogr\IeC {\'a}fica \citeauthor {itu:2014}.\relax }}{8}{table.caption.9}
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {2}{\ignorespaces M\IeC {\'e}todos de HTTP}}{20}{table.caption.12}
-\contentsline {table}{\numberline {3}{\ignorespaces M\IeC {\'e}todos de Petici\IeC {\'o}n}}{22}{table.caption.13}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
+\contentsline {table}{\numberline {2}{\ignorespaces M\IeC {\'e}todos de HTTP}}{22}{table.caption.11}
+\contentsline {table}{\numberline {3}{\ignorespaces M\IeC {\'e}todos de Petici\IeC {\'o}n}}{24}{table.caption.12}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
@@ -16,4 +14,8 @@
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
-\contentsline {table}{\numberline {4}{\ignorespaces Autem usu id}}{78}{table.caption.23}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {table}{\numberline {4}{\ignorespaces Resultados del escenario Sin Web Cach\IeC {\'e}\relax }}{89}{table.caption.33}
+\contentsline {table}{\numberline {5}{\ignorespaces Resultados del escenario Prototipo CWC\relax }}{89}{table.caption.34}
+\addvspace {10\p@ }

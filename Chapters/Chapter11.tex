@@ -1,29 +1,103 @@
-% Chapter X
+% Chapter 11
 
-\chapter{Chapter Title} % Chapter title
+\chapter{Rendimiento} % Chapter title
 
-\label{ch:name} % For referencing the chapter elsewhere, use \autoref{ch:name} 
-
-%----------------------------------------------------------------------------------------
-
-\section{Section Title}
-
-Content
-
-%------------------------------------------------
-
-\subsection{Subsection Title}
-
-Content
-
-%------------------------------------------------
-
-\subsection{Subsection Title}
-
-Content
+\label{ch:rendimiento} % For referencing the chapter elsewhere, use \autoref{ch:name} 
 
 %----------------------------------------------------------------------------------------
 
-\section{Section Title}
+\section{Herrramientas}
 
-Content
+%------------------------------------------------
+
+\subsection{httperf}
+
+Httperf es una herramienta para medir el rendimiento de aplicaciones web. Provee una menera flexibe de generar múltiples cargas de trabajo utilizando HTTP y con ellas poder medir el rendimiento Web. Puede observarse el funcionamiento de esta herramienta en la figura \ref{httperf}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.4]{gfx/httperf}
+  \caption{Funcionamiento de httperf}
+  \label{httperf}
+\end{figure}
+
+\subsection{OpenWebLoad}
+OpenWebLoad es otra herramienta muy sencilla pero poderosa, es completamente en consola y permite hacer peticiones de archivos y entre la información que arroja esta número de ejecuciones, tiempo de respuesta de cada ejecución y tiempo de ejecución promedio. Puede observarse el funcionamiento de esta herramienta en la figura \ref{OpenWebLoad}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.6]{gfx/OpenWebLoad}
+  \caption{Funcionamiento de OpenWebLoad}
+  \label{OpenWebLoad}
+\end{figure}
+
+\subsection{Time}
+El comando time puede servir para obtener el tiempo que tarda una aplicación en completarse. En este caso se puede combinar con cualquier otra aplicación, por ejemplo con el prototipo del CWC. Puede observarse el funcionamiento de esta herramienta en la figura \ref{time}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.6]{gfx/time}
+  \caption{Funcionamiento de time}
+  \label{time}
+\end{figure}
+
+%------------------------------------------------
+
+\subsection{JMeter}
+
+JMeter forma del proyecto TomCat y es una herramienta muy utilizada para realizar pruebas de carga en un sitio web, mediante esta herramienta se puede describir prácticamente todo el comportamiento de un usuario dentro de un sitio web, desde cuando se autentica hasta cuando se llenan campos de texto en un formulario. Puede observarse el funcionamiento de esta herramienta en la figura \ref{jmeter}.
+
+\begin{figure}[h]
+  \centering
+    \includegraphics[scale=0.4]{gfx/jmeter}
+  \caption{Resultados de Tiempo de Respuesta}
+  \label{jmeter}
+\end{figure}
+
+
+
+%----------------------------------------------------------------------------------------
+
+\section{Parámetros de las pruebas}
+
+\subsection{Servidor Web y Servidor Cache}
+El servidor web que utilizará será Apache, la configuración de este deberá ser:
+
+\begin{itemize}
+\item GNU/Linux Debian Wheezy.
+\item Apche2.2 con la instalación por defecto.
+\item 1GB de RAM 
+\item Un núcleo
+\item Al menos 100MB de espacio disponible.
+\item Una Interfaces de Red.
+\end{itemize}
+
+\subsection{Archivos para Realizar la Prueba}
+En este caso se utilizaran archivos de diferente tipo y de diferente tamaño para realizar las pruebas, entre los tipos de archivos que se utilizaran son:
+
+\begin{itemize}
+\item Imágenes JPEG, PNG y GIF
+\item Videos FLV, mpeg y AVI
+\item Documentos ODT, DOC y XSLT
+\item Instaladores EXE, BIN, MSI, DEB, RPM
+\end{itemize}
+
+Los tamaños de los archivos variarán, el máximo tamaño deberá ser de 600Mb y el mínimo de de 1Mb.
+
+\subsection{Estrategia de las pruebas}
+Como parte de la estrategia se limitará el ancho de banda a 200 KB/s en cada servidor. Además las pruebas que se deben ejecutar son:
+
+\begin{itemize}
+\item Con archivos pequeños, tamaños menores a los 100Mb.
+\item Archivos Grandes, tamaños superiores a 100Mb.
+\item Por tipo de archivo.
+\item Todos los archivos.
+\end{itemize}
+
+\section{Escenarios}
+
+\begin{description}
+\item[Sin Web Caché] Este es el modelo tradicional de HTTP en el cual se tiene un solo servidor web y múltiples clientes se conecta a él.
+
+\item [Prototipo de CWC] Se medirá el comportamiento de la transferencia a través del prototipo de CWC.
+\end{description}

@@ -71,7 +71,7 @@
 
 \cleardoublepage\include{FrontBackMatter/Abstract} % Abstract page
 
-\cleardoublepage\include{FrontBackMatter/Publication} % Publications from the thesis page
+%\cleardoublepage\include{FrontBackMatter/Publication} % Publications from the thesis page
 
 \cleardoublepage\include{FrontBackMatter/Acknowledgments} % Acknowledgements page
 
@@ -88,7 +88,7 @@
 %	THESIS CONTENT - CHAPTERS
 %----------------------------------------------------------------------------------------
 
-\ctparttext{En la siguiente sección se describirán las razones que impulsaron el desarrollo de ésta investigación, mostrando el problema su justificación y además cuáles son los objetivos propuestos.} % Text on the Part 1 page describing  the content in Part 1
+\ctparttext{En la siguiente sección se describirán las razones que impulsaron el desarrollo de ésta investigación, mostrando el problema, su justificación y además cuáles son los objetivos propuestos.} % Text on the Part 1 page describing  the content in Part 1
 
 \part{Introducción} % First part of the thesis
 
@@ -111,26 +111,27 @@
 
 \part{Diseño de la CWC} \label{part:diseno}% Second part of the thesis
 \include{Chapters/Chapter07} % Chapter 7 - Especificación de Requerimientos
-\include{Chapters/Chapter08} % Chapter 8 - Diseno del protocolo CWC
 \include{Chapters/Chapter09} % Chapter 9 - Arquitectura del CWC
+\include{Chapters/Chapter08} % Chapter 8 - Diseno del protocolo CWC
+\include{Chapters/Chapter10} % Chapter 10 - Diseno del CWC
 
-\ctparttext{En esta sección se mostrará el análisis realizado producto de los datos recolectados a lo largo de la investigación.} % Text on the Part 2 page describing the content in Part 3
-\part{Análisis y Resultados} % Second part of the thesis
-\include{Chapters/Chapter10} % Chapter 10 - Rendimiento
-\include{Chapters/Chapter11} % Chapter 11 - Análisis y Resultados
+%\ctparttext{En esta sección se mostrará el análisis realizado producto de los datos recolectados a lo largo de la investigación.} % Text on the Part 2 page describing the content in Part 3
+\part{Análisis y Resultados} \label{part:resultados} % Second part of the thesis
+\include{Chapters/Chapter11} % Chapter 11 - Rendimiento
+\include{Chapters/Chapter12} % Chapter 12 - Análisis y Resultados
 
-\part{Conclusiones} % Second part of the thesis
-\include{Chapters/Chapter12} % Chapter 12 - Conclusiones y Trabajo Futuro
+\part{Conclusiones}\label{part:conclusiones} % Second part of the thesis
+\include{Chapters/Chapter13} % Chapter 13 - Conclusiones y Trabajo Futuro
 
 %----------------------------------------------------------------------------------------
 %	THESIS CONTENT - APPENDICES
 %----------------------------------------------------------------------------------------
 
-\appendix
+%\appendix
 
-\part{Appendix} % New part of the thesis for the appendix
+%\part{Appendix} % New part of the thesis for the appendix
 
-\include{Chapters/Chapter0A} % Appendix A
+%\include{Chapters/Chapter0A} % Appendix A
 %\include{Chapters/Chapter0B} % Appendix B - empty template
 
 %----------------------------------------------------------------------------------------
@@ -141,7 +142,7 @@
 
 \cleardoublepage\include{FrontBackMatter/Colophon} % Colophon
 
-\cleardoublepage\include{FrontBackMatter/Declaration} % Declaration
+%\cleardoublepage\include{FrontBackMatter/Declaration} % Declaration
 
 %----------------------------------------------------------------------------------------
 

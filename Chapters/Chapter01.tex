@@ -56,9 +56,9 @@ La idea de la Comunidad Web Caché nace a partir de las siguientes premisas:
 
 La propuesta que se quiere implementar es dejar de lado el modelo tradicional de servir archivos mediante HTTP e implementar un nuevo modelo de Web Caché distinto al tradicional, utilizando las ventajas de ambos, combinado con la creación de comunidades de virtuales y la utilización de los recursos de los miembros de éstas comunidades; es posible utilizar un protocolo de transferencia distribuida de contenido, en este caso P2P, para servir archivos desde diferentes localizaciones.
 
-Basado en la imagen \ref{conexionvideo} se supondrá el siguiente ejemplo: se cuenta con el sitio www.cwc.org que sirve archivos de video de más de 30Mb, con un modelo tradicional HTTP (cliente-servidor) un cliente obtendría el archivo desde un único servidor. Ahora bien, si se tienen 1000 clientes realizando esta misma operación, serían muchas solicitudes para el servidor (en el caso que éste tuviera recursos limitados), por lo tanto es necesario analizar el aumento de los recursos del servidor, entre otras cosas. 
+Basado en la figura \ref{conexionvideo} se supondrá el siguiente ejemplo: se cuenta con el sitio www.cwc.org que sirve archivos de video de más de 30Mb, con un modelo tradicional HTTP (cliente-servidor) un cliente obtendría el archivo desde un único servidor. Ahora bien, si se tienen 1000 clientes realizando esta misma operación, serían muchas solicitudes para el servidor (en el caso que éste tuviera recursos limitados), por lo tanto es necesario analizar el aumento de los recursos del servidor, entre otras cosas. 
 
-La tesis consistiría en crear una comunidad alrededor de sitio anteriormente mencionado. En caso que al menos 30 de esos 1000 clientes formaran parte de la comunidad y que éstos tienen los recursos suficientes para servir archivos, entonces es posible servir los archivos en cuestión desde 31 lugares diferentes, en lugar que desde un único punto. Es evidente las ventajas que se pueden dar con un modelo como este. Ahora ¿Qué pasa si miembros de la comunidad no tienen suficientes recursos? En lugar de servir todo el archivo desde una sola localización, ese archivo se puede partir y servir desde múltiples ubicaciones, osea, que en lugar de servir archivos grandes de 30MB o más, se pueden servir sólo una porción de éstos. Esto siguiendo el concepto de una comunidad donde cada miembro aporta lo que puede, en beneficio de todos. 
+El presente proyecto consiste en crear una comunidad alrededor de sitio anteriormente mencionado. En caso que al menos 30 de esos 1000 clientes formaran parte de la comunidad y que éstos tienen los recursos suficientes para servir archivos, entonces es posible servir los archivos en cuestión desde 31 lugares diferentes, en lugar que desde un único punto. Es evidente las ventajas que se pueden dar con un modelo como este. Ahora ¿Qué pasa si miembros de la comunidad no tienen suficientes recursos? En lugar de servir todo el archivo desde una sola localización, ese archivo se puede partir y servir desde múltiples ubicaciones, osea, que en lugar de servir archivos grandes de 30MB o más, se pueden servir sólo una porción de éstos. Esto siguiendo el concepto de una comunidad donde cada miembro aporta lo que puede, en beneficio de todos. 
 
 \begin{figure}[h]
   \centering
@@ -95,7 +95,7 @@ Europa & 46.3\% &	66.6\% & 74.8\% \\
 
 Como se puede ver, en casi diez años se ha duplicado o más la cantidad de usuarios de Internet, lo cual implica que se dará una mayor demanda sobre los sitios web, esto se traduce en que el dueño de un sitio web que presta un servicio deberá hacer una inversión en más recursos computacionales, como por ejemplo poder procesamiento y ancho de banda para poder servir a sus usuarios de la mejor manera posible.
 
-Esto quiere decir que la publicación de un sitio web con contenido de calidad no es tan trivial (se hablará en términos de contenido de calidad, ya que el contenido justificará la cantidad de usuarios que recibirá un sitio web, o sea entre mayor sea la calidad del contenido ofrecido por un sitio web para un grupo de usuarios en particular, así será la cantidad de usuarios que recibirá) ya que se deberán tomar en cuenta aspectos de crecimiento en el número de usuarios que se visiten el sitio web y los requerimientos computacionales necesarios para poder prestar un servicio de calidad, acorde con los contenidos publicados.
+Esto quiere decir que la publicación de un sitio web con contenido de calidad no es tan trivial (se hablará en términos de contenido de calidad, ya que el contenido justificará la cantidad de usuarios que recibirá un sitio web, o sea entre mayor sea la calidad del contenido ofrecido por un sitio web para un grupo de usuarios en particular, así será la cantidad de usuarios que recibirá) ya que se deberán tomar en cuenta aspectos de crecimiento en el número de usuarios que visiten el sitio web y los requerimientos computacionales necesarios para poder prestar un servicio de calidad, acorde con los contenidos publicados.
 
 Tomando en cuenta que realizar una publicación en Internet implica un costo para el publicador y éste se incrementa conforme aumenta el número de usuarios que soliciten los contenidos del sitio web, se podría elaborar una función de costo donde se incluyan las variables anteriormente expresadas en función de una calidad de servicio aceptable.
 
@@ -103,7 +103,7 @@ Este costo se traduce en que los interesados en publicar, deban de pagar por con
 
 Ahora ¿Qué pasa con las pequeñas compañías, instituciones sin fines de lucro e individuos que quieren crear un sitio web con contenido de calidad y no cuentan con suficientes recursos para sufragar los gastos generados por un alto número de usuarios?. Una opción es buscar financiamiento o poner precio a sus contenidos o simplemente buscar la forma de ganar dinero mediante el bombardeo de publicidad en los sitios web, lo cual es un aspecto negativo para los usuarios.
 
-Una vez que se han visto las necesidades de recursos computacionales para publicar contenido en Internet que es accedido por un alto número de usuarios, ¿Qué pasa con los recursos computacionales que tiene el usuario/cliente?, ¿Los recursos del cliente tienen una utilización de un 100\% en todo momento o se encuentran ociosos la mayoría del tiempo?, ya se notó que la cantidad de usuarios con acceso al World Wide Web crece enormemente, esto implica que un gran número de usuarios cuentan con una conexión a Internet con una velocidad aceptable para acceder a los contenidos de "moda" (como videos, música, entre otros). Además también implica que cada uno de esos usuarios cuenta con una o más computadoras, las cuales obviamente cuentan con recursos computacionales aceptables para poder visualizar los contenidos ofrecidos por los sitios web, entonces se tendría la siguiente pregunta: ¿Qué sucede con todos éstos recursos de cómputo (limitado al ancho de banda, procesamiento y memoria) mientras se accede a alguna comunidad virtual, se utiliza una aplicación de ofimática, se reproduce algún contenido de multimedia en Internet o simplemente se ejecuta una aplicación de chat modo texto?  Y la respuesta es simple: se desperdician los recursos, están ociosos y están esperando a ser utilizados.
+Una vez que se han visto las necesidades de recursos computacionales para publicar contenido en Internet que es accedido por un alto número de usuarios, ¿Qué pasa con los recursos computacionales que tiene el usuario/cliente?, ¿Los recursos del cliente tienen una utilización de un 100\% en todo momento o se encuentran ociosos la mayoría del tiempo?, ya se notó que la cantidad de usuarios con acceso al World Wide Web crece enormemente, esto implica que un gran número de usuarios cuentan con una conexión a Internet con una velocidad aceptable para acceder a los contenidos de cotidianos (como videos, música, entre otros). Además también implica que cada uno de esos usuarios cuenta con una o más computadoras, las cuales obviamente cuentan con recursos computacionales aceptables para poder visualizar los contenidos ofrecidos por los sitios web, entonces se tendría la siguiente pregunta: ¿Qué sucede con todos éstos recursos de cómputo (limitado al ancho de banda, procesamiento y memoria) mientras se accede a alguna comunidad virtual, se utiliza una aplicación de ofimática, se reproduce algún contenido de multimedia en Internet o simplemente se ejecuta una aplicación de chat modo texto?  Y la respuesta es simple: se desperdician los recursos, están ociosos y están esperando a ser utilizados.
 
 En términos de definición de la problemática, éste se encuentra compuesto por cinco partes esenciales:
 \begin{enumerate}
@@ -159,7 +159,7 @@ Uno de los puntos focales del CWC es precisamente la parte comunitaria y es por 
 \item Apoyo: Si alguno de los miembros de la comunidad falla otro podrá tomar su lugar (tolerancia a fallos).
 \end{enumerate}
 
-En general, el CWC busca el establecimiento de una comunidad cooperativa sobre Internet utilizando los navegadores y servidores web actuales, y se diferencia de otras soluciones ya existente. Por ejemplo, los Proxys buscan mejorar el rendimiento sobre una red de área local. 
+En general, el CWC busca el establecimiento de una comunidad cooperativa sobre Internet utilizando los navegadores y servidores web actuales, y se diferencia de otras soluciones ya existentes. Por ejemplo, los Proxys buscan mejorar el rendimiento sobre una red de área local. 
 
 Por otro lado, uno de los modelos más parecidos a CWC son los Proxy Federados, mejor conocidos como "Cooperative Web Caching". Éstos buscan tener un conjunto de servidores proxy que se comuniquen y que compartan los contenidos que tienen en cache sobre cualquier tipo de red, podrían utilizar en una WAN o incluso en Internet. Pero en comparación a éste último, en el CWC cualquier usuario puede formar parte de la comunidad, sin necesidad de tener que configurar un Proxy dedicado.
 
@@ -173,18 +173,31 @@ El proyecto en impactará tanto al publicador de contenido de calidad en Interne
 
 
 \begin{itemize}
-\item Instalar un componente a su servidor web que le permita especificar los contenidos de calidad que serán mantenidos por la cache y que controle la consistencia de la cache, al final cada petición de un archivo llegara al servidor web y este se encargara de decir cuáles son los miembros de la cache que servirán estos.
 \item Conforme el número de miembros de la comunidad crezca, se podrá experimentar menos carga en el los servidores, por consiguiente se podrán servir muchos más usuarios.
 \end{itemize}
  
 
 \paragraph{Usuario}
 \begin{itemize}
-\item Instalar un componente en el  explorador web de su preferencia.
-\item Establecer qué cantidad de recursos desea aportar a la caché.
 \item Conforme el número de miembros de la comunidad crezca, se podrá experimentar una utilización más eficiente de sus recursos computacionales, una mejora en los tiempos de respuesta cuando se hace una petición a un servidor web y una mayor tolerancia a fallos, dándole continuidad al negocio. 
 \end{itemize}
 
+\subsection{Profundidad}
+En relación a los temas que cubrirá el presente proyecto son:
+\begin{itemize}
+\item Se realizará una investigación del estado del arte, en relación a los protocolos, algoritmos y mecanismo que ayuden a soportar el diseño del CWC.
+\item Se realizará un levantamiento de requerimientos relacionado a las necesidades entorno a CWC.
+\item Se creará un diseño completo de la implementación de CWC.
+\item Se realizarán modelos que prueben el rendimiento y costos de la CWC.
+\end{itemize}
+
+Quedan fuera del alcance de este proyecto:
+
+\begin{itemize}
+\item La aplicación del protocolo de CWC en un ambiente de páginas dinámicas.
+\item La aplicación del protocolo de CWC en un ambiente de flujo de video o sonido.
+\item La seguridad en general, tanto del servidor como del cliente. No se especificó ningún mecanismo que permita la comprobación y la autenticidad de los elementos.
+\end{itemize}
 
 \section{Hipótesis}
 El desarrollo de una caché web distribuida que permita compartir de manera transparente y eficiente los recursos computacionales distribuidos ofrecidos colaborativamente mediante una comunidad de servidores, tendrá un impacto positivo en el bajar los costos y mejorar la continuidad del negocio para las comunidades virtuales.
@@ -195,11 +208,24 @@ Desarrollar una caché web distribuida que permita compartir de manera transpare
 
 \subsection{Objetivos Específicos}
 \begin{itemize}
-\item Investigar y comparar trabajos relevantes relacionados con sistemas distribuidos
-\item Identificar las oportunidades de mejoramiento estratégico de las plataformas existentes.
-\item Especificar los requerimientos de la caché web distribuida basada en HTTP.
+\item Compilar y comparar trabajos relevantes relacionados con sistemas distribuidos
+\item Examinar las oportunidades de mejoramiento estratégico de las plataformas existentes.
+\item Determinar los requerimientos de la caché web distribuida basada en HTTP.
 \item Diseñar una arquitectura de una caché web distribuida bajo un conjunto de principios tales como: transparencia de ubicación de los recursos, solución de bajo costo y calidad de servicio.
 \item Desarrollar un prototipo de la caché web distribuida.
+\item Analizar el rendimiento de velocidad y el costo del entorno de CWC.
+\end{itemize}
+
+\section{Alcances}
+
+\begin{itemize}
+\item Investigación del funcionamiento de Protocolos P2P y HTTP.
+\item Investigación de los diferentes modelos de caching existentes con el fin de identificar sus características, arquitectura, funcionamiento, debilidades y fortalezas. Esto ayudará en una etapa posterior para realizar el diseño de la Comunidad Web Caché.
+\item Investigación sobre el establecimiento de comunidades virtuales y las implicaciones de estas.
+\item Investigación  a soluciones que utilicen los diferentes modelos de web caching, esto permitirá tener un punto de comparación para nuestros modelo y establecerá los umbrales a mejorar.
+\item Investigación de modelos de consistencia.
+\item Elaboración del diseño del CWC el análisis de las investigaciones previas. Este modelo se limitará únicamente a contenido estático y no se desarrollará el diseño para la compatiblidad de contenido dinámico y contenidos de flujo de video o sonido, los cuales implican modelos de consistencia mucho más complejos, además de algoritmos de reemplazo y muchas otras implicaciones de diseño que necesitan de una investigación aún mayor.
+\item Elaboración de prototipo de sistema para compartir archivos de manera distribuida tomando en cuenta ciertas partes del diseño. Este prototipo pretende convertirse en la base para el desarrollo del CWC.
 \end{itemize}
 
 \section{Entregables}
@@ -209,13 +235,12 @@ Desarrollar una caché web distribuida que permita compartir de manera transpare
 \item Informe investigación de modelos de Web Caché existentes.
 \item Informe investigación sobre comunidades virtuales.
 \item Informe investigación de aplicaciones que utilicen los diferentes modelos de Web Caché.
-\item Informe de benchmarks realizados a las diferentes aplicaciones que utilizan Web Caché.
 \item Informe investigación de modelos de consistencia.
 \item Documento de requerimientos de Comunidad Web Caché.
-\item Prototipo de CWCCliente.
-\item Prototipo de CWCServer.
+\item Prototipo de CWC Cliente.
+\item Prototipo de CWC Server.
 \item Análisis de rendimiento de velocidad del entorno de CWC.
-\item Análisis de rendimiento de costos del Entorno de CWC.
+\item Análisis de costos del Entorno de CWC.
 \end{enumerate}  
 
 %----------------------------------------------------------------------------------------

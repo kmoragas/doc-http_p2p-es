@@ -2,25 +2,37 @@
 \deactivateaddvspace 
 \select@language {spanish}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {1}{\ignorespaces Ejemplo de Conexi\IeC {\'o}n de Video\relax }}{7}{figure.caption.9}
+\contentsline {figure}{\numberline {1}{\ignorespaces Ejemplo de Conexi\IeC {\'o}n de Video\relax }}{7}{figure.caption.8}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {2}{\ignorespaces Conexi\IeC {\'o}n HTTP\relax }}{17}{figure.caption.11}
+\contentsline {figure}{\numberline {2}{\ignorespaces Conexi\IeC {\'o}n HTTP\relax }}{19}{figure.caption.10}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {3}{\ignorespaces Directorio Centralizado\relax }}{26}{figure.caption.14}
-\contentsline {figure}{\numberline {4}{\ignorespaces Soluci\IeC {\'o}n Distribuida\relax }}{27}{figure.caption.15}
-\contentsline {figure}{\numberline {5}{\ignorespaces Directorio H\IeC {\'\i }brido\relax }}{27}{figure.caption.16}
+\contentsline {figure}{\numberline {3}{\ignorespaces Directorio Centralizado\relax }}{28}{figure.caption.13}
+\contentsline {figure}{\numberline {4}{\ignorespaces Soluci\IeC {\'o}n Distribuida\relax }}{29}{figure.caption.14}
+\contentsline {figure}{\numberline {5}{\ignorespaces Directorio H\IeC {\'\i }brido\relax }}{29}{figure.caption.15}
 \addvspace {10\p@ }
-\contentsline {figure}{\numberline {6}{\ignorespaces Conexi\IeC {\'o}n Directa\relax }}{30}{figure.caption.17}
-\contentsline {figure}{\numberline {7}{\ignorespaces Proxy Simple\relax }}{30}{figure.caption.18}
-\contentsline {figure}{\numberline {8}{\ignorespaces Proxy Jer\IeC {\'a}rquico\relax }}{31}{figure.caption.19}
-\contentsline {figure}{\numberline {9}{\ignorespaces Proxy Descentralizado\relax }}{32}{figure.caption.20}
-\contentsline {figure}{\numberline {10}{\ignorespaces Red CDN\relax }}{33}{figure.caption.21}
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\addvspace {10\p@ }
-\contentsline {figure}{\numberline {11}{\ignorespaces Estructura de un mensaje\relax }}{53}{figure.caption.22}
+\contentsline {figure}{\numberline {6}{\ignorespaces Conexi\IeC {\'o}n Directa\relax }}{32}{figure.caption.16}
+\contentsline {figure}{\numberline {7}{\ignorespaces Proxy Simple\relax }}{32}{figure.caption.17}
+\contentsline {figure}{\numberline {8}{\ignorespaces Proxy Jer\IeC {\'a}rquico\relax }}{33}{figure.caption.18}
+\contentsline {figure}{\numberline {9}{\ignorespaces Proxy Descentralizado\relax }}{34}{figure.caption.19}
+\contentsline {figure}{\numberline {10}{\ignorespaces Red CDN\relax }}{34}{figure.caption.20}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {11}{\ignorespaces Comunidad Web Cach\IeC {\'e}\relax }}{53}{figure.caption.21}
+\contentsline {figure}{\numberline {12}{\ignorespaces Comunicaci\IeC {\'o}n del CWC Server\relax }}{54}{figure.caption.22}
+\contentsline {figure}{\numberline {13}{\ignorespaces Arquitectura CWC Server\relax }}{55}{figure.caption.23}
+\contentsline {figure}{\numberline {14}{\ignorespaces Comunicaci\IeC {\'o}n del CWC Client\relax }}{58}{figure.caption.24}
+\contentsline {figure}{\numberline {15}{\ignorespaces Arquitectura CWC Client\relax }}{59}{figure.caption.25}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {16}{\ignorespaces Funcionamiento del DGET\relax }}{62}{figure.caption.26}
+\contentsline {figure}{\numberline {17}{\ignorespaces Estructura de un mensaje\relax }}{63}{figure.caption.27}
+\addvspace {10\p@ }
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {18}{\ignorespaces Funcionamiento de httperf\relax }}{85}{figure.caption.28}
+\contentsline {figure}{\numberline {19}{\ignorespaces Funcionamiento de OpenWebLoad\relax }}{86}{figure.caption.29}
+\contentsline {figure}{\numberline {20}{\ignorespaces Funcionamiento de time\relax }}{86}{figure.caption.30}
+\contentsline {figure}{\numberline {21}{\ignorespaces Resultados de Tiempo de Respuesta\relax }}{87}{figure.caption.31}
+\addvspace {10\p@ }
+\contentsline {figure}{\numberline {22}{\ignorespaces Prototipo de CWC\relax }}{89}{figure.caption.32}
 \addvspace {10\p@ }

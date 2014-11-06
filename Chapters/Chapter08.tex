@@ -1,12 +1,60 @@
-% Chapter X
+% Chapter 8
 
 \chapter{Diseño del Protocolo CWC} % Chapter title
 
-\label{ch:diseno_cwc} % For referencing the chapter elsewhere, use \autoref{ch:name} 
+\label{ch:diseno_protocolo_cwc} % For referencing the chapter elsewhere, use \autoref{ch:name} 
 
 %----------------------------------------------------------------------------------------
 
-\section{Estructura de los Mensajes}
+\section{Mensajes HTTP del Protocolo CWC}
+
+\subsection{DGET}
+Esta tal vez es una de los métodos de mayor importancia en el CWC, pues establece como obtener un archivo desde múltiples cachés. Este método se rige bajo el siguiente flujo:
+
+\begin{enumerate}
+\item Se verifica que el servidor web soporte el protocolo CWC.
+\item Se solicita el top de miembros que tienen el archivo que se desea descargar. El número de miembros que se enviarán por petición se limitará a 100.
+\item Se solicitan los atributos, Checksum y tamaño al servidor.
+\item Si el tamaño del archivo es menor a 1MB, se solicita desde un solo miembro.
+\item Si el tamaño del archivo es mayor a un MB, se divide en segmentos y se asigna de la siguiente manera:
+
+	\begin{enumerate}
+	\item Al primer miembro del top se le asigna un equivalente al 10\% del tamaño del archivo en partes, si un 10\% es menor a un 1MB, se le asigna el tamaño correspondiente a 1MB.
+	\item Al segundo se le asigna el equivalente a un 10\% del tamaño del archivo en partes, si un 10\% es menor a 1MB, se le asigna el tamaño correspondiente a 1MB. 
+	\item Se realiza este procedimiento hasta llegar al quinto de la lista, después de esto se reparte equitativamente entre el resto de miembros.
+	\item Si se da el caso de que el número de miembros es menor a 10, se reparte el total del archivo en partes iguales entre todos los miembros. 
+	\end{enumerate}
+
+\item Se inicia la descarga simultánea desde todos los miembros. En la figura \ref{DGET} se puede observar este proceso.
+
+\item En el caso de que alguno de los miembros falle, se recurrirá al siguiente de mayor rango (mejor posicionado en el top) si se diera el caso de que no se tienen más miembros a quien recurrir se solicitaré el archivo o el segmento al servidor.
+
+\item Cuando se ha terminado la descarga, se unen todas las partes y se envía el archivo al navegador web, como si el archivo fuera servido por un servidor web local.
+
+\end{enumerate}
+
+\begin{figure}
+  \centering
+    \includegraphics[scale=0.75]{gfx/DGET}
+  \caption{Funcionamiento del DGET}
+  \label{DGET}
+\end{figure}
+
+
+El DGET recibirá los siguientes parámetros:
+
+\begin{enumerate}
+\item Id del archivo.
+\item Offset en partes.
+\item Tamaño que debe leer.
+\end{enumerate}
+
+Por ejemplo, el archivo que se desea leer es el Id 10, y se debe leer a partir del byte 95, más los 50 bytes siguientes, entonces la llamada sería DGET(10, 95,50).
+
+\subsection{DSEND}
+Este es el caso contrario de DGET, es necesario recordar que un DGET tiene como parámetros el Id del archivo, el offset en partes y por último el tamaño que se debe leer en segmentos. Data esta información se puede enviar un flujo de segmentos hacia quien hizo el DGET.
+
+\section{Estructura de los Mensajes CWC}
 \label{sec:estructura_protocolo_cwc}
 
 El protocolo de comunicación se basará en XML para realizar el envío y recepción de mensajes entre el servidor, los clientes y las cachés. En el presente apartado se definirá los mensajes que se intercambiarán y sus respuestas.
@@ -33,7 +81,7 @@ En la figura \ref{EstructuraMensajeCWC} se observan los componentes del mensaje,
 
 %------------------------------------------------
 
-\section{Operaciones del Protocolo}
+\section{Operaciones del Protocolo CWC}
 
 En el presente apartado se definirán las operaciones necesarias para el funcionamiento del protocolo CWC. Aquí de detallará tanto valores de entrada, como de salida y además la estructura esperada. 
 
