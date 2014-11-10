@@ -25,7 +25,7 @@ El CWC Server es una aplicación que se Integra con el servidor web, su función
 
 \subsection{Administración de Objetos en la Caché local}
 
-En un servidor web existen gran cantidad de objetos, que van desde los documentos HTML y CSS más comunes hasta lo que hoy conocemos como multimedia, que incluye un gran número de archivos de gran tamaño como video y música. Además también existen de aplicaciones de tiempo real como video conferencias y streaming de video y audio. La administración de Objetos en la caché local se refiere a como identificar cuales objetos se pueden agregar a la caché del CWC y cuales no. Cada objeto contara con los siguientes atributos:
+En un servidor web existen gran cantidad de objetos, que van desde los documentos HTML y CSS más comunes hasta lo que hoy conocemos como multimedia, que incluye un gran número de archivos de gran tamaño como video y música. Además también existen de aplicaciones de tiempo real como video conferencias y streaming de video y audio. La administración de Objetos en la caché local se refiere a como identificar cuales objetos se pueden agregar a la caché del CWC y cuales no. Cada objeto contará con los siguientes atributos:
 
 \begin{itemize}
 \item \textit{Checksum}: Esto con el objetivo de saber si el archivo esta corrupto. No nos preocuparemos por el cálculo del Checksum.
@@ -86,7 +86,7 @@ Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a def
 	\item El estado del cliente: online/offline.
 	\end{itemize}
 	
-\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallara, por lo que la información de las cachés se perdería. O bien, que alguna de las cachés fallara y se perdiera la conexión con el servidor. Esto último implicaría que la caché quedara en un estado offline, o se desactivara. Para agregar una caché existente sería necesario:
+\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallase, por lo que la información de las cachés se perdería. O bien, que alguna de las cachés fallara y se perdiera la conexión con el servidor. Esto último implicaría que la caché quedase en un estado offline, o se desactivara. Para agregar una caché existente sería necesario:
 
 	\begin{enumerate}
 	\item La caché se comunica con el servidor, ya sea porque se recuperó de alguna falla o se activó de nuevo o porque el servidor fue el que falló y ya se encuentra en línea de nuevo.

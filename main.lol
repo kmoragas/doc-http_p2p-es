@@ -6,7 +6,7 @@
 \contentsline {lstlisting}{\numberline {3}L\IeC {\'\i }nea de petici\IeC {\'o}n}{21}{lstlisting.3}
 \contentsline {lstlisting}{\numberline {4}URI-Solicitada}{22}{lstlisting.4}
 \contentsline {lstlisting}{\numberline {5}Mensaje de respuesta HTTP}{23}{lstlisting.5}
-\contentsline {lstlisting}{\numberline {6}L\IeC {\'\i }nea de Estado}{25}{lstlisting.6}
+\contentsline {lstlisting}{\numberline {6}L\IeC {\'\i }nea de Estado}{23}{lstlisting.6}
 \addvspace {10\p@ }
 \addvspace {10\p@ }
 \addvspace {10\p@ }
