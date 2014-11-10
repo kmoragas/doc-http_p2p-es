@@ -12,10 +12,10 @@ Como primer acercamiento, es necesario definir el el significado de caché web (
 
 En resumen, se podría entender una caché web como una forma de almacenar temporalmente documentos que son concurrentemente solicitado con el fin de reducir el ancho de banda saliente. Por otro lado, la presente investigación se centra en modelos que comparten dinámicamente éstos documentos. 
 
-Un concepto muy parecido es el de caché web cooperativo. Según Rowstron A. \cite{rowstron:2001} mediante esta técnica, el almacenamiento dedicado a la caché de una serie de servidores-proxy adyacentes se gestiona conjuntamente como si se tratase de una única cache distribuida. Las políticas de gestión de esta cache se realiza teniendo en cuenta el estado y los contenidos de todos los servidores-proxy que la componen. Por ejemplo, las políticas de reemplazo en la cache cooperativa tendrán en cuenta las estadísticas de acceso en todos los servidores-proxy cooperantes.
+Un concepto muy parecido es el de caché web cooperativo. Según Rowstron A. \cite{rowstron:2001} mediante esta técnica, el almacenamiento dedicado a la caché de una serie de servidores-proxy adyacentes se gestiona conjuntamente como si se tratase de una única caché distribuida. Las políticas de gestión de esta caché se realiza teniendo en cuenta el estado y los contenidos de todos los servidores-proxy que la componen. Por ejemplo, las políticas de reemplazo en la caché cooperativa tendrán en cuenta las estadísticas de acceso en todos los servidores-proxy cooperantes.
 
 El caché web cooperativo permite incrementar considerablemente el tamaño de la caché, pero a costa de
-reducir la probabilidad de acierto local. Bajo éste esquema, un único servidor-proxy no dispone de los contenidos más populares, provocando un aumento del porcentaje de peticiones que se tienen que servir remotamente desde los otros servidores que componen la cache ó desde el servidor principal.
+reducir la probabilidad de acierto local. Bajo éste esquema, un único servidor-proxy no dispone de los contenidos más populares, provocando un aumento del porcentaje de peticiones que se tienen que servir remotamente desde los otros servidores que componen la caché ó desde el servidor principal.
 
 Basado en la investigación del estado del arte, se han podido identificar proyectos que giran alrededor de la presente tesis. Entre ellos están: CoralCDN \cite{freedman:2004}, Transparent Distributed Web Caching \cite{liang:2001}, Dalesa \cite{wathsala:2009} y Squirrel \cite{rowstron:2001}.
 
@@ -63,7 +63,7 @@ La figura \ref{proxy_jerarquico} muestra el modelo de proxy jerárquico o tambi�
 
 \subsection{Proxy Descentralizado}
 
-Bajo este modelo se encuentran los proyectos de Squirrel y Dalesa. Estos proyectos intentan utilizar los conceptos de P2P para implementar y compartir una cache distribuida a través de una LAN. Como se muestra en la figura \ref{proxy_descentralizado}. Cada computadora forma parte del proxy descentralizado, y utilizando un software creado por los respectivos participantes del proyecto, pueden compartir la cache. Este modelo es el que más se acerca al modelo que se propone como tesis aunque todavía dista en ciertas características.
+Bajo este modelo se encuentran los proyectos de Squirrel y Dalesa. Estos proyectos intentan utilizar los conceptos de P2P para implementar y compartir una caché distribuida a través de una LAN. Como se muestra en la figura \ref{proxy_descentralizado}. Cada computadora forma parte del proxy descentralizado, y utilizando un software creado por los respectivos participantes del proyecto, pueden compartir la caché. Este modelo es el que más se acerca al modelo que se propone como tesis aunque todavía dista en ciertas características.
 
 \begin{figure}[h]
   \centering

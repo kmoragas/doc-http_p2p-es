@@ -35,7 +35,7 @@
 \contentsline {subsection}{\numberline {4.1.2}Proxy Jer\IeC {\'a}rquico}{32}{subsection.4.1.2}
 \contentsline {subsection}{\numberline {4.1.3}Proxy Descentralizado}{33}{subsection.4.1.3}
 \contentsline {section}{\numberline {4.2}Redes CDN}{33}{section.4.2}
-\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Modelos de Cosistencia}}{35}{chapter.5}
+\contentsline {chapter}{\numberline {5}\spacedlowsmallcaps {Modelos de Consistencia}}{35}{chapter.5}
 \contentsline {section}{\numberline {5.1}Razones para Replicar}{35}{section.5.1}
 \contentsline {section}{\numberline {5.2}Modelos de Consistencia sin Sincronizaci\IeC {\'o}n}{35}{section.5.2}
 \contentsline {section}{\numberline {5.3}Modelos de Consistencia con Sincronizaci\IeC {\'o}n}{37}{section.5.3}
@@ -43,96 +43,96 @@
 \contentsline {section}{\numberline {6.1}Definici\IeC {\'o}n de una Comunidad Virtual}{39}{section.6.1}
 \contentsline {section}{\numberline {6.2}Caracter\IeC {\'\i }sticas de una Comunidad Virtual}{39}{section.6.2}
 \contentsline {section}{\numberline {6.3}Tipos de Comunidades Vituales}{40}{section.6.3}
-\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o de la CWC}}{45}{part.3}
-\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Especificaci\IeC {\'o}n de requerimientos}}{47}{chapter.7}
-\contentsline {section}{\numberline {7.1}Actores}{47}{section.7.1}
-\contentsline {section}{\numberline {7.2}Requerimientos Funcionales del Protocolo}{47}{section.7.2}
-\contentsline {subsection}{\numberline {7.2.1}HTTP SEND Cache}{47}{subsection.7.2.1}
-\contentsline {subsection}{\numberline {7.2.2}HTTP GET Distribuido}{48}{subsection.7.2.2}
-\contentsline {subsection}{\numberline {7.2.3}HTTP SEND Distribuido}{48}{subsection.7.2.3}
-\contentsline {section}{\numberline {7.3}Requerimientos Funcionales del Servidor Web Cach\IeC {\'e}}{49}{section.7.3}
-\contentsline {subsection}{\numberline {7.3.1}Administraci\IeC {\'o}n de Contenido}{49}{subsection.7.3.1}
-\contentsline {subsection}{\numberline {7.3.2}Administraci\IeC {\'o}n de Miembros de la Comunidad }{50}{subsection.7.3.2}
-\contentsline {subsection}{\numberline {7.3.3}Implementaci\IeC {\'o}n de Modelo de Consistencia}{51}{subsection.7.3.3}
-\contentsline {section}{\numberline {7.4}Requerimientos Funcionales del Cliente Web Cach\IeC {\'e}}{52}{section.7.4}
-\contentsline {subsection}{\numberline {7.4.1}Administraci\IeC {\'o}n de Cach\IeC {\'e}}{52}{subsection.7.4.1}
-\contentsline {subsection}{\numberline {7.4.2}Administraci\IeC {\'o}n de la velocidad de conexi\IeC {\'o}n}{52}{subsection.7.4.2}
-\contentsline {subsection}{\numberline {7.4.3}Modos de Operaci\IeC {\'o}n de la Cach\IeC {\'e}}{52}{subsection.7.4.3}
-\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Arquitectura del CWC}}{53}{chapter.8}
-\contentsline {section}{\numberline {8.1}CWC Server}{54}{section.8.1}
-\contentsline {subsection}{\numberline {8.1.1}Data Access}{54}{subsection.8.1.1}
-\contentsline {subsection}{\numberline {8.1.2}CWC Data Management}{55}{subsection.8.1.2}
-\contentsline {subsection}{\numberline {8.1.3}CWC Core}{56}{subsection.8.1.3}
-\contentsline {subsection}{\numberline {8.1.4}CWC Caches Catalog}{56}{subsection.8.1.4}
-\contentsline {subsection}{\numberline {8.1.5}CWC Protocol Interpreter}{57}{subsection.8.1.5}
-\contentsline {subsection}{\numberline {8.1.6}CWC Web Interface}{57}{subsection.8.1.6}
-\contentsline {section}{\numberline {8.2}CWC Client}{57}{section.8.2}
-\contentsline {subsection}{\numberline {8.2.1}Data Access}{58}{subsection.8.2.1}
-\contentsline {subsection}{\numberline {8.2.2}CWC Data Management}{58}{subsection.8.2.2}
-\contentsline {subsection}{\numberline {8.2.3}CWC Client Core}{60}{subsection.8.2.3}
-\contentsline {subsection}{\numberline {8.2.4}CWC Cache Catalog}{60}{subsection.8.2.4}
-\contentsline {subsection}{\numberline {8.2.5}CWC HTTP Interpreter}{60}{subsection.8.2.5}
-\contentsline {subsection}{\numberline {8.2.6}CWC Web Browser Interface}{60}{subsection.8.2.6}
-\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Dise\IeC {\~n}o del Protocolo CWC}}{61}{chapter.9}
-\contentsline {section}{\numberline {9.1}Mensajes HTTP del Protocolo CWC}{61}{section.9.1}
-\contentsline {subsection}{\numberline {9.1.1}DGET}{61}{subsection.9.1.1}
-\contentsline {subsection}{\numberline {9.1.2}DSEND}{62}{subsection.9.1.2}
-\contentsline {section}{\numberline {9.2}Estructura de los Mensajes CWC}{63}{section.9.2}
-\contentsline {section}{\numberline {9.3}Operaciones del Protocolo CWC}{63}{section.9.3}
-\contentsline {subsection}{\numberline {9.3.1}ACK}{64}{subsection.9.3.1}
-\contentsline {subsection}{\numberline {9.3.2}GetClientId}{64}{subsection.9.3.2}
-\contentsline {subsection}{\numberline {9.3.3}UpdateMembership}{64}{subsection.9.3.3}
-\contentsline {subsection}{\numberline {9.3.4}GetObjectInfo}{65}{subsection.9.3.4}
-\contentsline {subsection}{\numberline {9.3.5}ModifyObject}{66}{subsection.9.3.5}
-\contentsline {subsection}{\numberline {9.3.6}Enable-Disable Object}{66}{subsection.9.3.6}
-\contentsline {subsection}{\numberline {9.3.7}DeleteObject}{67}{subsection.9.3.7}
-\contentsline {subsection}{\numberline {9.3.8}GetMemberStatus}{67}{subsection.9.3.8}
-\contentsline {subsection}{\numberline {9.3.9}ChangeMemberStatus}{68}{subsection.9.3.9}
-\contentsline {subsection}{\numberline {9.3.10}GetListOfFiles}{68}{subsection.9.3.10}
-\contentsline {subsection}{\numberline {9.3.11}GetStats}{69}{subsection.9.3.11}
-\contentsline {subsection}{\numberline {9.3.12}SendStats}{69}{subsection.9.3.12}
-\contentsline {subsection}{\numberline {9.3.13}GetTopCachesbyObject}{70}{subsection.9.3.13}
-\contentsline {subsection}{\numberline {9.3.14}GetConfParams}{70}{subsection.9.3.14}
-\contentsline {subsection}{\numberline {9.3.15}IsAlive}{71}{subsection.9.3.15}
-\contentsline {section}{\numberline {9.4}Seguimiento de los miembros conectados}{71}{section.9.4}
-\contentsline {section}{\numberline {9.5}Recuperaci\IeC {\'o}n de fallas}{72}{section.9.5}
-\contentsline {subsection}{\numberline {9.5.1}\IeC {\textquestiondown }C\IeC {\'o}mo descubrir una falla?}{72}{subsection.9.5.1}
-\contentsline {subsection}{\numberline {9.5.2}Falla del Servidor}{72}{subsection.9.5.2}
-\contentsline {subsection}{\numberline {9.5.3}Falla un Cliente}{73}{subsection.9.5.3}
-\contentsline {section}{\numberline {9.6}Implementaci\IeC {\'o}n del Modelo de Consistencia}{73}{section.9.6}
-\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Dise\IeC {\~n}o del CWC}}{75}{chapter.10}
-\contentsline {section}{\numberline {10.1}CWC Server}{75}{section.10.1}
-\contentsline {subsection}{\numberline {10.1.1}Administraci\IeC {\'o}n de Objetos en la Cach\IeC {\'e} local}{75}{subsection.10.1.1}
-\contentsline {subsection}{\numberline {10.1.2}Administraci\IeC {\'o}n del CWC}{77}{subsection.10.1.2}
-\contentsline {subsection}{\numberline {10.1.3}Estad\IeC {\'\i }sticas}{78}{subsection.10.1.3}
-\contentsline {subsection}{\numberline {10.1.4}Segmentaci\IeC {\'o}n de Archivos}{80}{subsection.10.1.4}
-\contentsline {subsection}{\numberline {10.1.5}Administraci\IeC {\'o}n Remota de Cach\IeC {\'e}}{80}{subsection.10.1.5}
-\contentsline {section}{\numberline {10.2}CWC Client}{81}{section.10.2}
-\contentsline {subsection}{\numberline {10.2.1}Asociaci\IeC {\'o}n a la comunidad}{81}{subsection.10.2.1}
-\contentsline {subsection}{\numberline {10.2.2}Administraci\IeC {\'o}n de la Cach\IeC {\'e} Local}{82}{subsection.10.2.2}
-\contentsline {subsection}{\numberline {10.2.3}Otras Funciones de Administraci\IeC {\'o}n}{82}{subsection.10.2.3}
-\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{83}{part.4}
-\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Rendimiento}}{85}{chapter.11}
-\contentsline {section}{\numberline {11.1}Herrramientas}{85}{section.11.1}
-\contentsline {subsection}{\numberline {11.1.1}httperf}{85}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}OpenWebLoad}{85}{subsection.11.1.2}
-\contentsline {subsection}{\numberline {11.1.3}Time}{86}{subsection.11.1.3}
-\contentsline {subsection}{\numberline {11.1.4}JMeter}{86}{subsection.11.1.4}
-\contentsline {section}{\numberline {11.2}Par\IeC {\'a}metros de las pruebas}{87}{section.11.2}
-\contentsline {subsection}{\numberline {11.2.1}Servidor Web y Servidor Cache}{87}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Archivos para Realizar la Prueba}{87}{subsection.11.2.2}
-\contentsline {subsection}{\numberline {11.2.3}Estrategia de las pruebas}{88}{subsection.11.2.3}
-\contentsline {section}{\numberline {11.3}Escenarios}{88}{section.11.3}
-\contentsline {chapter}{\numberline {12}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{89}{chapter.12}
-\contentsline {section}{\numberline {12.1}Prototipo CWC}{89}{section.12.1}
-\contentsline {section}{\numberline {12.2}Resultados de Rendimiento}{89}{section.12.2}
-\contentsline {section}{\numberline {12.3}An\IeC {\'a}lisis de rendimiento de velocidad del entorno de CWC}{89}{section.12.3}
-\contentsline {section}{\numberline {12.4}Resultados de Costo}{90}{section.12.4}
-\contentsline {section}{\numberline {12.5}An\IeC {\'a}lisis de costos del Entorno de CW}{90}{section.12.5}
-\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{91}{part.5}
-\contentsline {chapter}{\numberline {13}\spacedlowsmallcaps {Conclusiones y Trabajo Futuro}}{93}{chapter.13}
-\contentsline {section}{\numberline {13.1}Conclusiones}{93}{section.13.1}
-\contentsline {section}{\numberline {13.2}Trabajo Futuro}{94}{section.13.2}
-\contentsline {section}{\numberline {13.3}Exclusiones}{94}{section.13.3}
+\contentsline {part}{iii\hspace {1em}\spacedlowsmallcaps {Dise\IeC {\~n}o de la CWC}}{43}{part.3}
+\contentsline {chapter}{\numberline {7}\spacedlowsmallcaps {Especificaci\IeC {\'o}n de requerimientos}}{45}{chapter.7}
+\contentsline {section}{\numberline {7.1}Actores}{45}{section.7.1}
+\contentsline {section}{\numberline {7.2}Requerimientos Funcionales del Protocolo}{45}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}HTTP SEND Cach\IeC {\'e}}{45}{subsection.7.2.1}
+\contentsline {subsection}{\numberline {7.2.2}HTTP GET Distribuido}{46}{subsection.7.2.2}
+\contentsline {subsection}{\numberline {7.2.3}HTTP SEND Distribuido}{46}{subsection.7.2.3}
+\contentsline {section}{\numberline {7.3}Requerimientos Funcionales del Servidor Web Cach\IeC {\'e}}{47}{section.7.3}
+\contentsline {subsection}{\numberline {7.3.1}Administraci\IeC {\'o}n de Contenido}{47}{subsection.7.3.1}
+\contentsline {subsection}{\numberline {7.3.2}Administraci\IeC {\'o}n de Miembros de la Comunidad }{48}{subsection.7.3.2}
+\contentsline {subsection}{\numberline {7.3.3}Implementaci\IeC {\'o}n de Modelo de Consistencia}{49}{subsection.7.3.3}
+\contentsline {section}{\numberline {7.4}Requerimientos Funcionales del Cliente Web Cach\IeC {\'e}}{50}{section.7.4}
+\contentsline {subsection}{\numberline {7.4.1}Administraci\IeC {\'o}n de Cach\IeC {\'e}}{50}{subsection.7.4.1}
+\contentsline {subsection}{\numberline {7.4.2}Administraci\IeC {\'o}n de la velocidad de conexi\IeC {\'o}n}{50}{subsection.7.4.2}
+\contentsline {subsection}{\numberline {7.4.3}Modos de Operaci\IeC {\'o}n de la Cach\IeC {\'e}}{50}{subsection.7.4.3}
+\contentsline {chapter}{\numberline {8}\spacedlowsmallcaps {Arquitectura del CWC}}{51}{chapter.8}
+\contentsline {section}{\numberline {8.1}CWC Server}{52}{section.8.1}
+\contentsline {subsection}{\numberline {8.1.1}Data Access}{52}{subsection.8.1.1}
+\contentsline {subsection}{\numberline {8.1.2}CWC Data Management}{53}{subsection.8.1.2}
+\contentsline {subsection}{\numberline {8.1.3}CWC Core}{54}{subsection.8.1.3}
+\contentsline {subsection}{\numberline {8.1.4}CWC Cach\IeC {\'e}s Catalog}{54}{subsection.8.1.4}
+\contentsline {subsection}{\numberline {8.1.5}CWC Protocol Interpreter}{55}{subsection.8.1.5}
+\contentsline {subsection}{\numberline {8.1.6}CWC Web Interface}{55}{subsection.8.1.6}
+\contentsline {section}{\numberline {8.2}CWC Client}{55}{section.8.2}
+\contentsline {subsection}{\numberline {8.2.1}Data Access}{56}{subsection.8.2.1}
+\contentsline {subsection}{\numberline {8.2.2}CWC Data Management}{56}{subsection.8.2.2}
+\contentsline {subsection}{\numberline {8.2.3}CWC Client Core}{58}{subsection.8.2.3}
+\contentsline {subsection}{\numberline {8.2.4}CWC Cach\IeC {\'e} Catalog}{58}{subsection.8.2.4}
+\contentsline {subsection}{\numberline {8.2.5}CWC HTTP Interpreter}{58}{subsection.8.2.5}
+\contentsline {subsection}{\numberline {8.2.6}CWC Web Browser Interface}{58}{subsection.8.2.6}
+\contentsline {chapter}{\numberline {9}\spacedlowsmallcaps {Dise\IeC {\~n}o del Protocolo CWC}}{59}{chapter.9}
+\contentsline {section}{\numberline {9.1}Mensajes HTTP del Protocolo CWC}{59}{section.9.1}
+\contentsline {subsection}{\numberline {9.1.1}DGET}{59}{subsection.9.1.1}
+\contentsline {subsection}{\numberline {9.1.2}DSEND}{60}{subsection.9.1.2}
+\contentsline {section}{\numberline {9.2}Estructura de los Mensajes CWC}{61}{section.9.2}
+\contentsline {section}{\numberline {9.3}Operaciones del Protocolo CWC}{61}{section.9.3}
+\contentsline {subsection}{\numberline {9.3.1}ACK}{62}{subsection.9.3.1}
+\contentsline {subsection}{\numberline {9.3.2}GetClientId}{62}{subsection.9.3.2}
+\contentsline {subsection}{\numberline {9.3.3}UpdateMembership}{62}{subsection.9.3.3}
+\contentsline {subsection}{\numberline {9.3.4}GetObjectInfo}{63}{subsection.9.3.4}
+\contentsline {subsection}{\numberline {9.3.5}ModifyObject}{64}{subsection.9.3.5}
+\contentsline {subsection}{\numberline {9.3.6}Enable-Disable Object}{64}{subsection.9.3.6}
+\contentsline {subsection}{\numberline {9.3.7}DeleteObject}{65}{subsection.9.3.7}
+\contentsline {subsection}{\numberline {9.3.8}GetMemberStatus}{65}{subsection.9.3.8}
+\contentsline {subsection}{\numberline {9.3.9}ChangeMemberStatus}{66}{subsection.9.3.9}
+\contentsline {subsection}{\numberline {9.3.10}GetListOfFiles}{66}{subsection.9.3.10}
+\contentsline {subsection}{\numberline {9.3.11}GetStats}{67}{subsection.9.3.11}
+\contentsline {subsection}{\numberline {9.3.12}SendStats}{67}{subsection.9.3.12}
+\contentsline {subsection}{\numberline {9.3.13}GetTopCachesbyObject}{68}{subsection.9.3.13}
+\contentsline {subsection}{\numberline {9.3.14}GetConfParams}{68}{subsection.9.3.14}
+\contentsline {subsection}{\numberline {9.3.15}IsAlive}{69}{subsection.9.3.15}
+\contentsline {section}{\numberline {9.4}Seguimiento de los miembros conectados}{69}{section.9.4}
+\contentsline {section}{\numberline {9.5}Recuperaci\IeC {\'o}n de fallas}{70}{section.9.5}
+\contentsline {subsection}{\numberline {9.5.1}\IeC {\textquestiondown }C\IeC {\'o}mo descubrir una falla?}{70}{subsection.9.5.1}
+\contentsline {subsection}{\numberline {9.5.2}Falla del Servidor}{70}{subsection.9.5.2}
+\contentsline {subsection}{\numberline {9.5.3}Falla un Cliente}{71}{subsection.9.5.3}
+\contentsline {section}{\numberline {9.6}Implementaci\IeC {\'o}n del Modelo de Consistencia}{71}{section.9.6}
+\contentsline {chapter}{\numberline {10}\spacedlowsmallcaps {Dise\IeC {\~n}o del CWC}}{73}{chapter.10}
+\contentsline {section}{\numberline {10.1}CWC Server}{73}{section.10.1}
+\contentsline {subsection}{\numberline {10.1.1}Administraci\IeC {\'o}n de Objetos en la Cach\IeC {\'e} local}{73}{subsection.10.1.1}
+\contentsline {subsection}{\numberline {10.1.2}Administraci\IeC {\'o}n del CWC}{75}{subsection.10.1.2}
+\contentsline {subsection}{\numberline {10.1.3}Estad\IeC {\'\i }sticas}{76}{subsection.10.1.3}
+\contentsline {subsection}{\numberline {10.1.4}Segmentaci\IeC {\'o}n de Archivos}{78}{subsection.10.1.4}
+\contentsline {subsection}{\numberline {10.1.5}Administraci\IeC {\'o}n Remota de Cach\IeC {\'e}}{78}{subsection.10.1.5}
+\contentsline {section}{\numberline {10.2}CWC Client}{79}{section.10.2}
+\contentsline {subsection}{\numberline {10.2.1}Asociaci\IeC {\'o}n a la comunidad}{79}{subsection.10.2.1}
+\contentsline {subsection}{\numberline {10.2.2}Administraci\IeC {\'o}n de la Cach\IeC {\'e} Local}{80}{subsection.10.2.2}
+\contentsline {subsection}{\numberline {10.2.3}Otras Funciones de Administraci\IeC {\'o}n}{80}{subsection.10.2.3}
+\contentsline {part}{iv\hspace {1em}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{81}{part.4}
+\contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Rendimiento}}{83}{chapter.11}
+\contentsline {section}{\numberline {11.1}Herrramientas}{83}{section.11.1}
+\contentsline {subsection}{\numberline {11.1.1}httperf}{83}{subsection.11.1.1}
+\contentsline {subsection}{\numberline {11.1.2}OpenWebLoad}{83}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.3}Time}{84}{subsection.11.1.3}
+\contentsline {subsection}{\numberline {11.1.4}JMeter}{84}{subsection.11.1.4}
+\contentsline {section}{\numberline {11.2}Par\IeC {\'a}metros de las pruebas}{85}{section.11.2}
+\contentsline {subsection}{\numberline {11.2.1}Servidor Web y Servidor Cach\IeC {\'e}}{85}{subsection.11.2.1}
+\contentsline {subsection}{\numberline {11.2.2}Archivos para Realizar la Prueba}{85}{subsection.11.2.2}
+\contentsline {subsection}{\numberline {11.2.3}Estrategia de las pruebas}{86}{subsection.11.2.3}
+\contentsline {section}{\numberline {11.3}Escenarios}{86}{section.11.3}
+\contentsline {chapter}{\numberline {12}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{87}{chapter.12}
+\contentsline {section}{\numberline {12.1}Prototipo CWC}{87}{section.12.1}
+\contentsline {section}{\numberline {12.2}Resultados de Rendimiento}{87}{section.12.2}
+\contentsline {section}{\numberline {12.3}An\IeC {\'a}lisis de rendimiento de velocidad del entorno de CWC}{87}{section.12.3}
+\contentsline {section}{\numberline {12.4}Resultados de Costo}{88}{section.12.4}
+\contentsline {section}{\numberline {12.5}An\IeC {\'a}lisis de costos del Entorno de CW}{88}{section.12.5}
+\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{89}{part.5}
+\contentsline {chapter}{\numberline {13}\spacedlowsmallcaps {Conclusiones y Trabajo Futuro}}{91}{chapter.13}
+\contentsline {section}{\numberline {13.1}Conclusiones}{91}{section.13.1}
+\contentsline {section}{\numberline {13.2}Trabajo Futuro}{92}{section.13.2}
+\contentsline {section}{\numberline {13.3}Exclusiones}{92}{section.13.3}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{95}{dummy.7}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{93}{dummy.7}

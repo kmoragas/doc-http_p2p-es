@@ -75,12 +75,12 @@ Debido a que el periodo de tiempo entre cada descarga es configurable, si se des
 En la capa CWC Core es donde se implementa toda la funcionalidad de la Comunidad Web Caché, en esta capa se implementará:
 
 \begin{itemize}
-\item Administración de Objetos Cacheables.
+\item Administración de Objetos Cachéables.
 \item Administración de miembros de la CWC.
 \item Administración de estadísticas.
 \item Se contará con un módulo para toma de decisiones en base a las estadísticas recolectadas.
 \item Comunicación con el servidor web.
-\item Comunicación con los miembros de las caches.
+\item Comunicación con los miembros de las cachés.
 \end{itemize}
 
 La capa CWC Core implementará toda la funcionalidad fundamental de la Comunidad Web Caché, ésta tendrá interacción con:
@@ -88,11 +88,11 @@ La capa CWC Core implementará toda la funcionalidad fundamental de la Comunidad
 \item La capa CWC Data Management para escribir y leer datos.
 \item La capa CWC Web Interface para comunicarse con el servicio web.
 \item La capa CWC HTTP Interpreter para recibir las peticiones, analizarlas y determinar si éstas son válidas y utilizan el Protocolo CWC. Además enviará mensajes utilizando el este mismo protocolo.
-\item La capa CWC Cache Catalog para comunicarse con las caches, para recibir y enviar mensajes con estas, tendrá una conexión permanente con éstas para realizar la comunicación.
+\item La capa CWC Caché Catalog para comunicarse con las cachés, para recibir y enviar mensajes con estas, tendrá una conexión permanente con éstas para realizar la comunicación.
 \end{itemize}
 
-\subsection{CWC Caches Catalog}
-Esta capa es la que se encarga de tener una conexión permanente con las caches y también de intercambiar cualquier mensaje con éstas, es el módulo que se comunica a través del protocolo CWC, está constantemente intercambiando mensajes con las cachés para recolectar estadísticas, para indicar cambios de estados en los objetos, entre otros. 
+\subsection{CWC Cachés Catalog}
+Esta capa es la que se encarga de tener una conexión permanente con las cachés y también de intercambiar cualquier mensaje con éstas, es el módulo que se comunica a través del protocolo CWC, está constantemente intercambiando mensajes con las cachés para recolectar estadísticas, para indicar cambios de estados en los objetos, entre otros. 
 
 \subsection{CWC Protocol Interpreter}
 En esta capa se realiza el análisis de cualquier petición utilizando el protocolo HTTP,  se identifica si la petición utiliza correctamente el protocolo CWC, si es así se pasa el mensaje a la capa CWC Core para que sea atendida. Cuando su atención termine recibirá la respuesta y la enviará al cliente que realizó la petición, en el caso de que la petición no utilice el protocolo CWC será enviada al CWC Web Interface que actuará como un simple puente hacia el servidor web.
@@ -103,7 +103,7 @@ Como se ha mencionado anteriormente, el CWC Server se implementará como un mód
 Este módulo será una capa que actuará como un interfaz para intercambiar datos con las estructuras internas del servicio web y para reenviar las solicitudes que deban ser atendidas por éste.
 
 \section{CWC Client}
-En la figura \ref{ComunicacionCWCClient} se muestra el esquema general del mecanismo de comunicación del CWC Client. Este actuará como un "proxy web cache" para las peticiones que envía el cliente. 
+En la figura \ref{ComunicacionCWCClient} se muestra el esquema general del mecanismo de comunicación del CWC Client. Este actuará como un "proxy web caché" para las peticiones que envía el cliente. 
 
 Por ejemplo, si se envía una petición a http://www.cwc.com esta petición será interceptada por el CWC Client y resuelta mediante el protcolo CWC, al final el CWC Client se encarga de obtener el archivo desde las diferentes cachés y ensamblarlo, además también se ocupa de servirlo al navegador web. El uso de una Comunidad Web Caché es totalmente trasparente para el usuario y el navegador web. Una versión más detallada de lo que sucede es la siguiente:
 
@@ -143,7 +143,7 @@ La arquitectura del CWC Client es muy similar al de CWC Server. En la figura \re
 En esta capa se implementará toda la lógica para el acceso a datos, en este caso solo se realizarán accesos a disco, por lo mencionado anteriormente, pues no cuenta con una base de datos del lado del cliente y además porque la principal funcionalidad de ésta es realizar la transmisión de archivos a disco. 
 
 \subsection{CWC Data Management}
-Esta capa también como en el CWC Server, funciona como una cache de los datos, esto para reducir los accesos a disco que son sumamente costos.
+Esta capa también como en el CWC Server, funciona como una caché de los datos, esto para reducir los accesos a disco que son sumamente costos.
 En caso que un archivo sea leído desde multiples localizaciones, éste acceso se agilizará a través un la memoria de acceso aleatoria (RAM).
 
 \subsection{CWC Client Core}
@@ -151,14 +151,14 @@ La capa CWC Client Core, implementará toda la funcionalidad básica de la Comun
 
 \begin{enumerate}
 \item Interacción con el navegador web o agente de usuario.
-\item Administración de la cache.
+\item Administración de la caché.
 \item Verificación de Consistencia.
 \item Administración de la membresía a la comunidad.
 \item Servir un archivo.
 \end{enumerate}
 
-\subsection{CWC Cache Catalog}
-Esta capa implementa el protocolo CWC en forma pura, cuando se trata de una caché, ésta capa se encarga de realizar toda la comunicación entre la cache y el servidor, mantiene una conexión con el servidor e intercambia mensajes. 
+\subsection{CWC Caché Catalog}
+Esta capa implementa el protocolo CWC en forma pura, cuando se trata de una caché, ésta capa se encarga de realizar toda la comunicación entre la caché y el servidor, mantiene una conexión con el servidor e intercambia mensajes. 
 
 \subsection{CWC HTTP Interpreter}
 Esta capa implementa de manera muy básica el protocolo HTTP, sirve como cliente para hacer los HTTP Distributed Get y para servir partes de archivos. Además sus funciones son:

@@ -21,8 +21,8 @@ A continuación se detallará la lista de Actores que interactuarán con CWC.
 
 %------------------------------------------------
 
-\subsection{HTTP SEND Cache}
-Este método se deberá implementar para permitir el envío de partes del caché entre la comunidad de caché web. Cuando un cliente envía una petición mediante el HTTP GET Distribuido, cualquier nodo que contenga el caché caliente puede enviar trozos del archivo mediante una respuesta HTTP SEND Cache. Por otro lado, el funcionamiento de este método se podría interpretar como un \textit{push} hacia los clientes, en caso que éstos se encuentra detrás de un \textit{firewall}. 
+\subsection{HTTP SEND Caché}
+Este método se deberá implementar para permitir el envío de partes del caché entre la comunidad de caché web. Cuando un cliente envía una petición mediante el HTTP GET Distribuido, cualquier nodo que contenga el caché caliente puede enviar trozos del archivo mediante una respuesta HTTP SEND Caché. Por otro lado, el funcionamiento de este método se podría interpretar como un \textit{push} hacia los clientes, en caso que éstos se encuentra detrás de un \textit{firewall}. 
 
 \subsection{HTTP GET Distribuido}
 El cliente debería de reemplazar el método GET común, por uno que permita la obtención de un archivo no sólo del servidor principal, sino también de toda la comunidad de web caching. Este proceso debería de ser transparente y además debería de administrar la descarga desde múltiples ubicaciones; incluyendo manejo de reanudaciones, cambio de servidor en caso que un nodo pierda la conexión, verificación de consistencia del archivo y mecanismos de recuperación de información.
@@ -45,14 +45,14 @@ El módulo deber contar con una interfaz de consola por medio de la cual éste p
 Cuando se hace alusión al contenido, se refiere a cualquier objeto que pueda ser servido por medio de CWC, en este caso se debe proveer las siguientes interacciones:
 
 \begin{description}
-\item[Agregar un contenido] Cuando se agrega un contenido al servidor web, este no es agregado automáticamente a la CWC, por el contrario se debe agregar explícitamente. Esto debido a que puede existir contenido que no pueda ser compartido, ya sea porque el autor no lo desea, porque sean archivos dinámicos (está fuera del alcance de esta tesis) o porque sean archivos demasiado pequeños los cuales no tienen ningún sentido ser servidos por medio de múltiples clientes. Cuando se agrega un contenido a la CWC se debe generar una suma de verificación (checksum) del objeto, establecer una fecha de expiración y crear las estructuras necesarias para manejar las caches que la tienen.
+\item[Agregar un contenido] Cuando se agrega un contenido al servidor web, este no es agregado automáticamente a la CWC, por el contrario se debe agregar explícitamente. Esto debido a que puede existir contenido que no pueda ser compartido, ya sea porque el autor no lo desea, porque sean archivos dinámicos (está fuera del alcance de esta tesis) o porque sean archivos demasiado pequeños los cuales no tienen ningún sentido ser servidos por medio de múltiples clientes. Cuando se agrega un contenido a la CWC se debe generar una suma de verificación (checksum) del objeto, establecer una fecha de expiración y crear las estructuras necesarias para manejar las cachés que la tienen.
 
 \item[Borrar un contenido] Borrar un contenido, no significa eliminarlo del servidor Web, simplemente que no será servido más por medio de la CWC, esto tiene las siguiente implicaciones: 1) Terminar de servir los clientes que estén tomando el archivo por medio de CWC y 2) Invalidar todas las copias del objeto que ya no va a ser servido mediante CWC.
 
 \item [Modificar contenido] Este tipo de interacción puede suceder cuando se cambie la fecha de expiración, que se modifique el objeto, sea necesario generar de nuevo el checksum o que se habilite/deshabilite el contenido. Cuando se modifica algún objeto se debe enviar la notificación a las cachés para que lo deshabiliten y lo vuelvan a solicitar.
 
-\item [Expirar contenido] Cada uno de los objetos de contenido tiene asociado un tiempo de expiración, el modulo deberá estar revisando cada cierto tiempo este tiempo de expiración para deshabilitar el contenido que ya no pueda ser servido. Las implicaciones cuando un contenido se expira son: 1) Esperar a que los clientes que estaban tomando el contenido expirado terminen, 2) Deshabilitar el contenido en la cache, marcándolo como expirado y 3) Enviar el aviso a las cachés que tienen el contenido para que lo deshabiliten y lo borren.
-Si CWC recibe alguna notificación de alguna de las caches de que se ha borrado algún objeto, deberá de actualizar el objeto indicando que esa cache no tiene una copia del objeto.
+\item [Expirar contenido] Cada uno de los objetos de contenido tiene asociado un tiempo de expiración, el modulo deberá estar revisando cada cierto tiempo este tiempo de expiración para deshabilitar el contenido que ya no pueda ser servido. Las implicaciones cuando un contenido se expira son: 1) Esperar a que los clientes que estaban tomando el contenido expirado terminen, 2) Deshabilitar el contenido en la caché, marcándolo como expirado y 3) Enviar el aviso a las cachés que tienen el contenido para que lo deshabiliten y lo borren.
+Si CWC recibe alguna notificación de alguna de las cachés de que se ha borrado algún objeto, deberá de actualizar el objeto indicando que esa caché no tiene una copia del objeto.
 
 \item[Estadísticas de los Contenidos] Se deberá llevar estadísticas de cuantas veces se ha servido un objeto, desde donde se ha solicitado y cuales cachés lo han proporcionado.
 \end{description}
@@ -63,13 +63,13 @@ Los miembros de la comunidad son las cachés, es en éste módulo donde se hace 
 \begin{description}
 \item[Agregar un nuevo miembro a la comunidad] La comunidad debe crearse de una manera dinámica y voluntaria. Cuando un usuario cuyo navegador web cuenta con CWCClient, que tiene los recursos computacionales mínimos para formar parte de la comunidad, que solicite un objeto manejado mediante CWC y además desee mantener este objeto en su caché, empezará a formar parte de la comunidad. Esto no quiere decir que un cliente que no cuenta con estas condiciones mínimas no pueda utilizar el protocolo y aprovechar las ventajas de obtener el archivo desde varias localizaciones en lugar de solo una. 
 
-También se podrá agregar cachés desde una consola de administración de la CWC, esto con el fin de que el dueño de un Website pueda agregar sus propias caches, ya sea en diferentes localizaciones geográficas o bien como mecanismo de redundancia. Éstas cachés se verán como un servidor que tendrá CWCClient ejecutándose y se le asignarán todos los recursos computacionales disponibles. Cuando un nuevo miembro empieza a formar parte de la comunidad, se actualiza la información de los objetos que contiene y puede ser elegido para servir archivos. Cuando se agrega un nuevo miembro se guardará información, como el ancho de banda, el espacio disponible para almacenar, entre otros datos. 
+También se podrá agregar cachés desde una consola de administración de la CWC, esto con el fin de que el dueño de un Website pueda agregar sus propias cachés, ya sea en diferentes localizaciones geográficas o bien como mecanismo de redundancia. Éstas cachés se verán como un servidor que tendrá CWCClient ejecutándose y se le asignarán todos los recursos computacionales disponibles. Cuando un nuevo miembro empieza a formar parte de la comunidad, se actualiza la información de los objetos que contiene y puede ser elegido para servir archivos. Cuando se agrega un nuevo miembro se guardará información, como el ancho de banda, el espacio disponible para almacenar, entre otros datos. 
 
-\item[Modificar un miembro de la cache] En este caso cuando un miembro deja de poseer un objeto o se agrega otro se debe actualizar la información de este, además si se modifican los recursos computacionales asignados por el cliente a la cache se deberá actualizar esta información.
+\item[Modificar un miembro de la caché] En este caso cuando un miembro deja de poseer un objeto o se agrega otro se debe actualizar la información de este, además si se modifican los recursos computacionales asignados por el cliente a la caché se deberá actualizar esta información.
 
-\item[Eliminar un miembro de la comunidad] Esto se puede realizarse de dos maneras: 1) Que el miembro desinstale el CWCClient o que se quede sin un objeto de la comunidad a la que pertenece (es necesario recordar  que una comunidad se crea alrededor de un sitio web), 2) Que el administrador de la CWC decida eliminar un miembro por alguna razón específica, esta acción se realizaría mediante una consola de administración. Las implicaciones de esta última acción serían: se debe eliminar la cache de la comunidad y además se debe actualizar la información de los objetos que éste contenía.
+\item[Eliminar un miembro de la comunidad] Esto se puede realizarse de dos maneras: 1) Que el miembro desinstale el CWCClient o que se quede sin un objeto de la comunidad a la que pertenece (es necesario recordar  que una comunidad se crea alrededor de un sitio web), 2) Que el administrador de la CWC decida eliminar un miembro por alguna razón específica, esta acción se realizaría mediante una consola de administración. Las implicaciones de esta última acción serían: se debe eliminar la caché de la comunidad y además se debe actualizar la información de los objetos que éste contenía.
 
-\item[Deshabilitar o habilitar una caché] En el caso de que un cliente apague su computadora, deshabilite la cache en su navegador, se pierda contacto con la caché o se decida deshabilitar por el administrador de la caché; se deberá deshabilitar la caché en cuestión, esta última acción implicaría que si se recibe una petición por un objeto que ésta contiene, ya no será enviado como parte de la lista de caches disponibles. En los casos contrarios se habilitarán.
+\item[Deshabilitar o habilitar una caché] En el caso de que un cliente apague su computadora, deshabilite la caché en su navegador, se pierda contacto con la caché o se decida deshabilitar por el administrador de la caché; se deberá deshabilitar la caché en cuestión, esta última acción implicaría que si se recibe una petición por un objeto que ésta contiene, ya no será enviado como parte de la lista de cachés disponibles. En los casos contrarios se habilitarán.
 
 \item [Bookkeeping] Se refiere a llevar estadísticas de los miembros de la caché, con el fin de poder sacar un ranking de los participantes. Cuando se recibe una petición, se puede enviar al cliente la lista de los mejores miembros de la comunidad, lo que se traduce en los más confiables, que tienen más o mejores recursos, entre otros.
 
@@ -89,7 +89,7 @@ Esto debería ser suficiente para asegurar la consistencia del contenido en las 
 
 Este cliente debe de comunicarse con el CWCServer mediante el protocolo HTTP y registrarse como un nodo más de la red distribuida de cachés.
 
-Además debe de proveer una interfaz donde se pueda administrar el ancho de banda que se destinará para el Comunidad Web Caché. También ésta interfaz deberá de permitir definir el tamaño total del cache local.
+Además debe de proveer una interfaz donde se pueda administrar el ancho de banda que se destinará para el Comunidad Web Caché. También ésta interfaz deberá de permitir definir el tamaño total del caché local.
 
 \subsection{Administración de Caché}
 El usuario debe ser capaz de administrar el espacio que tenga asignado para almacenamiento para la caché. Este caché podría estar tanto en memoria o bien en disco, en el caso de que el navegador se cierre.
@@ -102,7 +102,7 @@ El cliente debe de proveer una interfaz donde se pueda establecer la velocidad d
 
 \subsection{Modos de Operación de la Caché}
 \begin{description}
-\item[Administrada por Usuario] Esta modalidad especifica que el usuario cada vez que accede a un contenido, éste quedará dentro de la cache y podrá ser servido. El usuario decidirá si lo mantiene o si lo borra.
+\item[Administrada por Usuario] Esta modalidad especifica que el usuario cada vez que accede a un contenido, éste quedará dentro de la caché y podrá ser servido. El usuario decidirá si lo mantiene o si lo borra.
 
 \item[Administrada por Servidor] En este caso el usuario entra a formar parte de la caché de un sitio en particular, con los parámetros especificados en el cliente CWC. Por ejemplo, dependiendo de cuántos recursos se desea aportar a la caché y el servidor web envía archivos que considere necesiten estar en caché. Por otro lado, el servidor también podrá borrar contenido en la caché.
 

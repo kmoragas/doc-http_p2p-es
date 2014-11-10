@@ -4,9 +4,9 @@
 
 \label{ch:diseno_cwc} % For referencing the chapter elsewhere, use \autoref{ch:name} 
 
-CWC es un modelo de web caching distribuido, el cual busca hacer un uso eficiente de los recursos computacionales disponibles tanto en el servidor como en los clientes mediante el establecimiento de una comunidad. Esta comunidad tiene como objetivo que los clientes proporcionen una cantidad finita de recursos para establecer una Web Cache Distribuida la cual permita reducir el tráfico sobre el servidor, ya que los archivos serán servidos desde múltiples localizaciones y en una mayoría de casos, sin trabajo adicional por parte del servidor, más que indicar donde se encuentra el archivo y como accederlo. 
+CWC es un modelo de web caching distribuido, el cual busca hacer un uso eficiente de los recursos computacionales disponibles tanto en el servidor como en los clientes mediante el establecimiento de una comunidad. Esta comunidad tiene como objetivo que los clientes proporcionen una cantidad finita de recursos para establecer una Web Caché Distribuida la cual permita reducir el tráfico sobre el servidor, ya que los archivos serán servidos desde múltiples localizaciones y en una mayoría de casos, sin trabajo adicional por parte del servidor, más que indicar donde se encuentra el archivo y como accederlo. 
 
-Con el establecimiento de la Web Cache Distribuida y al reducir el tráfico sobre el servidor, se permitirá atender a más clientes y hacer la comunidad mucho más grande. Lo cual, en última instancia, implica una Web Cache Distribuida mucho más grande y con más recursos.
+Con el establecimiento de la Web Caché Distribuida y al reducir el tráfico sobre el servidor, se permitirá atender a más clientes y hacer la comunidad mucho más grande. Lo cual, en última instancia, implica una Web Caché Distribuida mucho más grande y con más recursos.
 %----------------------------------------------------------------------------------------
 
 \section{CWC Server}
@@ -42,27 +42,27 @@ A continuación se presentan las acciones presentes en la Administración de Obj
 
 \begin{description}
 
-\item[Agregar un nuevo Objeto] Cuando se agrega un nuevo objeto al servidor web se deben calcular sus atributos y almacenarlos. Cuando una nueva cache obtiene un objeto se actualiza su información de caches, lo cual quiere decir que este objeto puede ser servido desde una cache más.
+\item[Agregar un nuevo Objeto] Cuando se agrega un nuevo objeto al servidor web se deben calcular sus atributos y almacenarlos. Cuando una nueva caché obtiene un objeto se actualiza su información de cachés, lo cual quiere decir que este objeto puede ser servido desde una caché más.
 
 \item [Modificar un Objeto] Existen dos tipos de modificaciones: 
 	\begin{description}
-	\item[Soft] Una modificación soft no implica que la cache tenga que volver a obtener el objeto, una modificación soft es cambiar la localización del archivo, cambiar las caches del archivo, cambiar el estado de Cacheable, cambiar su tiempo de expiración.
+	\item[Soft] Una modificación soft no implica que la caché tenga que volver a obtener el objeto, una modificación soft es cambiar la localización del archivo, cambiar las cachés del archivo, cambiar el estado de Cachéable, cambiar su tiempo de expiración.
 	\item [Hard] La modificación hard, se refiere al cambio del tamaño del archivo lo cual implica un cambio de su Checksum.
 
 Cada atributo implica diferentes que deben ser tomadas, entre estas se tiene:
 
 		\begin{itemize}
-		\item \textit{Checksum y Tamaño}: Al darse un cambio en estos atributos se deben invalidar todas las caches de este objeto y notificar a las mismas para que borren sus copias y si es necesario que obtengan una copia fresca.
+		\item \textit{Checksum y Tamaño}: Al darse un cambio en estos atributos se deben invalidar todas las cachés de este objeto y notificar a las mismas para que borren sus copias y si es necesario que obtengan una copia fresca.
 		\item \textit{Id}: No se hacen cambios de Id.
-		\item \textit{Localización}: tiempo de expiración y Caches: Simplemente se actualiza la información no se notifica a las caches.
-		\item \textit{En Caché}: Se notifica a las caches el nuevo estado para que invaliden y borren su copia.
+		\item \textit{Localización}: tiempo de expiración y Cachés: Simplemente se actualiza la información no se notifica a las cachés.
+		\item \textit{En Caché}: Se notifica a las cachés el nuevo estado para que invaliden y borren su copia.
 		\end{itemize}
 
 \end{description}
 
-\item [Borrar un Objeto] Cuando se borra un objeto, se borra el objeto junto con sus atributos y además se notifica a las caches para que borren su copia.
+\item [Borrar un Objeto] Cuando se borra un objeto, se borra el objeto junto con sus atributos y además se notifica a las cachés para que borren su copia.
 
-\item [Verificar Expiración] El CWC Server deberá estar revisando si los objetos de la cache se encuentran válidos, en el caso de que alguno sea inválido se establece el objeto como no-cacheable y se trata como una modificación. 
+\item [Verificar Expiración] El CWC Server deberá estar revisando si los objetos de la caché se encuentran válidos, en el caso de que alguno sea inválido se establece el objeto como no-cacheable y se trata como una modificación. 
 
 \item [En Transferencia] Si se da una modificación hard o un borrado mientra el objeto se está transfiriendo, como política se deben invalidar todas las copias incluyendo la original y borrarlas hasta que se termine de servir a todos los clientes que están recibiendo el archivo.
 
@@ -74,7 +74,7 @@ Cada atributo implica diferentes que deben ser tomadas, entre estas se tiene:
 
 Esta administración es muy relativa ya que no se tendrá control completo sobre ésta, en este caso nos referimos a los clientes que conforman la comunidad y a los objetos que pueden ser compartidos en la caché.
 
-Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a definir como \textit{fría}, lo cual quiere decir que no existen miembros en la comunidad y por ende no existen objetos cacheados. Las acciones que se pueden dar son las siguientes:
+Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a definir como \textit{fría}, lo cual quiere decir que no existen miembros en la comunidad y por ende no existen objetos cachéados. Las acciones que se pueden dar son las siguientes:
 
 \begin{description}
 \item[Agregar un nuevo miembro] Cuando se agrega un miembro se crea en memoria la estructura para este cliente y se establecen los recursos aportados por este cliente, dentro de la información importante que se debe almacenar, se encuentra:
@@ -82,31 +82,31 @@ Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a def
 	\item Los clientes que está sirviendo.
 	\item Los archivos que tiene en su caché.
 	\item La localización geográfica 
-	\item El estado del cache: Activa/Inactiva.
+	\item El estado del caché: Activa/Inactiva.
 	\item El estado del cliente: online/offline.
 	\end{itemize}
 	
-\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallara, por lo que la información de las caches se perdería. O bien, que alguna de las caches fallara y se perdiera la conexión con el servidor. Esto último implicaría que la cache quedara en un estado offline, o se desactivara. Para agregar una cache existente sería necesario:
+\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallara, por lo que la información de las cachés se perdería. O bien, que alguna de las cachés fallara y se perdiera la conexión con el servidor. Esto último implicaría que la caché quedara en un estado offline, o se desactivara. Para agregar una caché existente sería necesario:
 
 	\begin{enumerate}
-	\item La cache se comunica con el servidor, ya sea porque se recuperó de alguna falla o se activó de nuevo o porque el servidor fue el que falló y ya se encuentra en línea de nuevo.
-	\item El servidor busca en su lista para ver si la cache se encuentra disponible.
+	\item La caché se comunica con el servidor, ya sea porque se recuperó de alguna falla o se activó de nuevo o porque el servidor fue el que falló y ya se encuentra en línea de nuevo.
+	\item El servidor busca en su lista para ver si la caché se encuentra disponible.
 	\item En el caso de que se encuentre:
 
 		\begin{enumerate}
-		\item Se le envía la lista de archivo que debería tener cacheados y su respectivo Checksum.
-		\item La cache verifica que tiene los archivos y que son correctos.
-		\item Si todo está bien la cache confirma para ser promovida a online.
+		\item Se le envía la lista de archivo que debería tener cachéados y su respectivo Checksum.
+		\item La caché verifica que tiene los archivos y que son correctos.
+		\item Si todo está bien la caché confirma para ser promovida a online.
 		\item Si algún archivo esta corrupto o no existe, se borra y se envía la invalidación al servidor.
 		\item Se confirma el estado consistente para ser promovida a online.
 		\end{enumerate}	
 	
 	\item En el caso de que no se encuentre:
 		\begin{enumerate}
-		\item Se le solicita una lista de archivos cacheados y su Checksum.
-		\item Cuando la cache los envía, se verifican los archivos y su Checksum.
+		\item Se le solicita una lista de archivos cachéados y su Checksum.
+		\item Cuando la caché los envía, se verifican los archivos y su Checksum.
 		\item Si todo está bien se confirma su estado online al crear las estructuras del miembro con sus atributos.
-		\item Si alguna archivo fue borrado, modifica o esta corrupto, se indica que se invalida y una vez que se confirma la invalidación se crean las estructuras del miembro y se le notifica a la cache que esta online.
+		\item Si alguna archivo fue borrado, modifica o esta corrupto, se indica que se invalida y una vez que se confirma la invalidación se crean las estructuras del miembro y se le notifica a la caché que esta online.
 		\end{enumerate}	
 	
 	\end{enumerate}
@@ -119,22 +119,22 @@ Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a def
 
 \subsection{Estadísticas}
 
-En una comunidad al igual que en cualquiera, hay diversidad de miembros, algunos cuentan con muchos recursos, otros con pocos o algunos fallan bajo presión. La idea con las estadísticas, es que una vez que se solicita un objeto, enviar la lista de caches que lo tienen disponible, ordenada de tal manera que se presenten los que históricamente tiene mejores referencias de primero. 
+En una comunidad al igual que en cualquiera, hay diversidad de miembros, algunos cuentan con muchos recursos, otros con pocos o algunos fallan bajo presión. La idea con las estadísticas, es que una vez que se solicita un objeto, enviar la lista de cachés que lo tienen disponible, ordenada de tal manera que se presenten los que históricamente tiene mejores referencias de primero. 
 
-Esto no quiere decir que a los que tienen un bajo historial se dejarán fuera, si no que cuando se deba atender una petición tendrán menor trabajo que el resto. Tampoco quiere decir que se quedarán haciendo el peor trabajo siempre, sino más bien, se pretende implementar un sistema de puntos en el cual, presente la oportunidad de crecer en confianza y convertirse en una de las caches más altas en el ranking.
+Esto no quiere decir que a los que tienen un bajo historial se dejarán fuera, si no que cuando se deba atender una petición tendrán menor trabajo que el resto. Tampoco quiere decir que se quedarán haciendo el peor trabajo siempre, sino más bien, se pretende implementar un sistema de puntos en el cual, presente la oportunidad de crecer en confianza y convertirse en una de las cachés más altas en el ranking.
 
 Entre las estadísticas que se van a recolectar son:
 
 \begin{description}
 \item[Logs de Acceso] Se debe llevar un recuento para cada petición, de quien la atendió y tiempo de respuesta.
 
-\item[Bookkeeping] Para cada una de las caches se debe tener un histórico de:
+\item[Bookkeeping] Para cada una de las cachés se debe tener un histórico de:
 	\begin{itemize}
 	\item Tiempo de respuesta.
 	\item Número de clientes atendidos por unidad de tiempo.
 	\item Número de veces que ha fallado.
 	\item Velocidades de trasferencia mínimas y máximas.
-	\item Archivos en cache y número de veces que han sido trasmitidos.
+	\item Archivos en caché y número de veces que han sido trasmitidos.
 	\end{itemize}
 	
 \item[Sistema de Puntos] El sistema de puntos funcionará de la siguiente manera:
@@ -152,19 +152,19 @@ Entre las estadísticas que se van a recolectar son:
 	\item[Bonificaciones] Las bonificaciones son dadas por acciones extras beneficiosas hacia los clientes. 
 	
 		\begin{itemize}
-		\item El miembro de la cache con el mejor tiempo de respuesta ganará una bonificación de 10 puntos.
-		\item Los miembros de la cache con tiempo de respuesta mayor a la media ganará	n un punto adicional.
-		\item El miembro de la cache que haya transmitido el mayor número de veces el  objeto solicitado, recibirá un bono de 10 puntos.
+		\item El miembro de la caché con el mejor tiempo de respuesta ganará una bonificación de 10 puntos.
+		\item Los miembros de la caché con tiempo de respuesta mayor a la media ganará	n un punto adicional.
+		\item El miembro de la caché que haya transmitido el mayor número de veces el  objeto solicitado, recibirá un bono de 10 puntos.
 		\end{itemize}
 
 	\item[Cálculo total] A continuación se detallan las reglas que dictan como se realizará el cálculo total de los puntos acumulados: 
 	
 		\begin{enumerate}
-		\item Con las reglas y bonificaciones anteriormente mencionadas, se calcula el top de miembros de la cache.
+		\item Con las reglas y bonificaciones anteriormente mencionadas, se calcula el top de miembros de la caché.
 		\item Con el top de miembros listo, se eliminan todos aquellos que están atendiendo a su máximo número de clientes permitido que se calcula mediante: 
 		$$ \frac {\text{conexión de subida}}{\text{mínima velocidad para servir archivos}} $$ 
-		Esto quiere decir que si se asigna una velocidad mínima para servir archivos de 64Kbps y el miembro de la cache estableció su conexión de subida en 512Kbps, el número máximo de clientes que puede atender simultáneamente es 8.
-		\item Para evitar la sobrecarga de trabajo sobre una cache, las caches recibirán una penalización con base al número de usuarios que están atendiendo, la regla establece que una cache perderá: 
+		Esto quiere decir que si se asigna una velocidad mínima para servir archivos de 64Kbps y el miembro de la caché estableció su conexión de subida en 512Kbps, el número máximo de clientes que puede atender simultáneamente es 8.
+		\item Para evitar la sobrecarga de trabajo sobre una caché, las cachés recibirán una penalización con base al número de usuarios que están atendiendo, la regla establece que una caché perderá: 
 		
 		$$ \text{número de clientes actuales} * 3 \text{puntos} $$
 		\end{enumerate}
@@ -176,7 +176,7 @@ Entre las estadísticas que se van a recolectar son:
 
 \subsection{Segmentación de Archivos}
 
-Cuando se va a servir un archivo desde la cache, ésta se debe descomponer en un número de segmentos. Un posible tamaño de un segmento podría ser 128Kb y éste podría corresponder al ancho de banda mínimo de la CWC. 
+Cuando se va a servir un archivo desde la caché, ésta se debe descomponer en un número de segmentos. Un posible tamaño de un segmento podría ser 128Kb y éste podría corresponder al ancho de banda mínimo de la CWC. 
 
 Por ejemplo, si se desea descargar un archivo de 10Mb, se debe de descomponer en partes de 128KB y ésta será la unidad de descarga de la caché. El segmento debe ser establecido por el administrador del sitio web, entre más pequeña mejor.
 
@@ -185,8 +185,8 @@ Por ejemplo, si se desea descargar un archivo de 10Mb, se debe de descomponer en
 Como se mencionó anteriormente, es posible que el cliente delegue la administración de la caché local al servidor. En el caso, el servidor se encargará de decir cuando se debe tener un archivo en la caché y cuando no se debe. La decisión de retirar un archivo o agregar otro a la caché, toma en cuenta si los archivos están siendo solicitados frecuentemente. Entonces el servidor envía los siguientes mensajes a las cachés:
 
 \begin{itemize}
-\item \textit{Agregar Objeto}: Envía el id archivo y la cache se encarga de solicitarlo.
-\item \textit{Borrar Objeto}: Envía el id del archivo y la cache se encarga de borrarlo.
+\item \textit{Agregar Objeto}: Envía el id archivo y la caché se encarga de solicitarlo.
+\item \textit{Borrar Objeto}: Envía el id del archivo y la caché se encarga de borrarlo.
 \end{itemize}
 
 \section{CWC Client}
@@ -207,7 +207,7 @@ Existen dos formas diferentes para formar parte de la comunidad:
 
 \item[Activa] En este caso, el usuario quiere ser miembro de la CWC de un sitio en específico. Por lo que el usuario crea de manera específica la membresía y establece los recursos que desea compartir.
 
-La diferencia radica en que si el usuario se convierte en miembro de manera voluntaria, la administración de la cache será realizada por el servidor. En todo caso, si la membresía es activa se puede cambiar a contribuyente.
+La diferencia radica en que si el usuario se convierte en miembro de manera voluntaria, la administración de la caché será realizada por el servidor. En todo caso, si la membresía es activa se puede cambiar a contribuyente.
 
 Se puede dar el caso de que no desee formar parte de la comunidad de algún sitio en especifico, entonces se puede configurar CWC Client de manera que ignore los sitios de una lista negra.
 
@@ -223,12 +223,12 @@ Para dejar de ser un miembro de la caché, se debe:
 
 \subsection{Administración de la Caché Local}
 
-La administración de la cache se puede dar de 3 formas, atendida por el cliente, desatendida (por defecto cuando la membresía es de tipo contribuyente) y por último administrada por el servidor (solo se utiliza cuando la membresía es activa):
+La administración de la caché se puede dar de 3 formas, atendida por el cliente, desatendida (por defecto cuando la membresía es de tipo contribuyente) y por último administrada por el servidor (solo se utiliza cuando la membresía es activa):
 
 \begin{description}
-\item[Desatendida] En este caso, cuando la cache está llena, la misma cache escoge el archivo menos solicitado y lo borra, así sucesivamente hasta que se libera suficiente espacio como para almacenar el archivo. 
+\item[Desatendida] En este caso, cuando la caché está llena, la misma caché escoge el archivo menos solicitado y lo borra, así sucesivamente hasta que se libera suficiente espacio como para almacenar el archivo. 
 \item[Atendida] El usuario puede borrar archivos de la caché a su gusto. Para ello tendrá una interfaz de selección de archivos que se encuentren en la caché.
-\item[Manejada por el Servidor] El servidor por si solo decidirá cuales archivos deben estar en cache y cuáles no, sus decisiones serán transmitidas a la cache mediante el envió de mensajes. 
+\item[Manejada por el Servidor] El servidor por si solo decidirá cuales archivos deben estar en caché y cuáles no, sus decisiones serán transmitidas a la caché mediante el envió de mensajes. 
 \end{description}
 
 
@@ -237,7 +237,7 @@ Otras funciones de administración que posee el CWC Client son las siguientes:
 \begin{description}
 \item[Invalidar contenido] Si se recibe un mensaje de que el contenido esta inválido, automáticamente se borra el objeto y se descarga.
 
-\item [Revisión de Consistencia] Periódicamente se verifica si los contenidos de la cache son correctos, se le solicita al servidor el Checksum para los archivos que se encuentran en la cache y se comparan. Si están bien perfecto si no se procede a hacer una invalidación de contenido.
+\item [Revisión de Consistencia] Periódicamente se verifica si los contenidos de la caché son correctos, se le solicita al servidor el Checksum para los archivos que se encuentran en la caché y se comparan. Si están bien perfecto si no se procede a hacer una invalidación de contenido.
 
 \item [El servidor está vivo] Revisión constante del servidor, se debe establecer si se encuentra funcional o está fuera de línea.
 

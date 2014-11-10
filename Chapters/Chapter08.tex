@@ -155,7 +155,7 @@ Los valores que pueden tomar estas variables son:
 \end{description}
 
 \subsection{GetObjectInfo}
-Este mensaje se utiliza para obtener la información de un objeto cacheable. La estructura del mensaje se muestra en el listado \ref{lst:mensaje_getobjectinfo}:
+Este mensaje se utiliza para obtener la información de un objeto cachéable. La estructura del mensaje se muestra en el listado \ref{lst:mensaje_getobjectinfo}:
 
 \begin{lstlisting}[language=XML,caption={Mensaje de GetObjectInfo},label={lst:mensaje_getobjectinfo}]
 <GetObjectInfo clientid="X" requestid="-1" responseid="Y"> 
@@ -168,7 +168,7 @@ Los valores que pueden tomar estas variables son:
 
 \begin{itemize}
 \item \textbf{objectId}: El identificador único del objeto.
-\item \textbf{objectLocation}: El URI relativo del objeto cacheable.
+\item \textbf{objectLocation}: El URI relativo del objeto cachéable.
 \end{itemize}
 
 Es posible que se incluya solo uno o ambos.
@@ -245,7 +245,7 @@ Este mensaje es utilizado ya sea por los clientes o por el servidor, cuando un o
 </DeleteObject>
 \end{lstlisting}
 
-Se envía el identificador del objeto y se registra el borrado, en el caso del cliente borra el objeto de la cache, en el caso del servidor borra la relación entre la cache y el objeto.
+Se envía el identificador del objeto y se registra el borrado, en el caso del cliente borra el objeto de la caché, en el caso del servidor borra la relación entre la caché y el objeto.
 
 \begin{description}
 \item[Respuesta] La respuesta esperada por parte del cliente o servidor, según corresponda, es un ACK.
@@ -276,7 +276,7 @@ El status puede tomar los siguientes valores 0 = desconocido, 1 = activo, 2 = no
 Se espera un ACK por parte de quien solicitó el status.
 
 \subsection{ChangeMemberStatus}
-Este mensaje es utilizado para cambiar el status de un miembro de la cache, este solo puede ser ejecutado por parte del servidor hacia cualquiera de los clientes o  por parte del cliente hacia el servidor para cambiar su estatus. La estructura del mensaje se muestra en el listado \ref{lst:mensaje_changememberstatus}:
+Este mensaje es utilizado para cambiar el status de un miembro de la caché, este solo puede ser ejecutado por parte del servidor hacia cualquiera de los clientes o  por parte del cliente hacia el servidor para cambiar su estatus. La estructura del mensaje se muestra en el listado \ref{lst:mensaje_changememberstatus}:
 
 \begin{lstlisting}[language=XML,caption={Mensaje de ChangeMemberStatus},label={lst:mensaje_changememberstatus}]
 <ChangeMemberStatus clientid="0" requestid="X" \\
@@ -424,7 +424,7 @@ Este mensaje se utiliza para saber si algún miembro del sistema está vivo. La 
 \end{lstlisting}
 
 \begin{description}
-\item[Respuesta] Para este mensaje es espera un ACK por parte de la cache representada por clientId.
+\item[Respuesta] Para este mensaje es espera un ACK por parte de la caché representada por clientId.
 \end{description}
 
 \section{Seguimiento de los miembros conectados}
@@ -432,14 +432,14 @@ Este mensaje se utiliza para saber si algún miembro del sistema está vivo. La 
 Es de suma importancia saber si alguno de los miembros de la CWC se encuentra bien, para esto se deberá estar revisando que los miembros estén en línea, para lograrlo, se seguirá:
 
 \begin{enumerate}
-\item El servidor tendrá una estampa de tiempo para cada cache, la cual indicara la última vez que se recibió un mensaje por parte de esta.
-\item Cada cache tendrá una estampa de tiempo del servidor que indicara la última vez que este envió un mensaje.
+\item El servidor tendrá una estampa de tiempo para cada caché, la cual indicara la última vez que se recibió un mensaje por parte de esta.
+\item Cada caché tendrá una estampa de tiempo del servidor que indicara la última vez que este envió un mensaje.
 \item Existirá un parámetro configurable llamado "tiempo sin respuesta", el cual establece cuanto tiempo debe pasar después de que se recibió un mensaje para preocuparse.
 \item Cada vez que se recibe un mensaje por parte de alguna caché o el servidor, se establece esta estampa a la hora en la cual se recibió el mensaje.
 \item Se estará revisando periódicamente si alguna estampa ya es lo suficientemente antigua como para que el tiempo actual menos la estampa del último mensaje se mayor o igual al "tiempo sin respuesta".
 \item Si ha pasado más tiempo del establecido por "tiempo sin respuesta", se envía un mensaje de IsAlive.
 \item Si no se recibe respuesta después de tres intentos se establece que esa caché o servidor esta caído.
-\item En el caso de una cache, se seguirá revisando periódicamente en tiempos no menores a "tiempo sin respuesta" hasta que se descubra que está arriba.
+\item En el caso de una caché, se seguirá revisando periódicamente en tiempos no menores a "tiempo sin respuesta" hasta que se descubra que está arriba.
 \item En el caso del servidor se actualizará la caché como offline y se esperaré a que ésta se comunique.
 \end{enumerate}
 
@@ -449,7 +449,7 @@ Cuando se presenta una falla, se puede dar ya sea en el lado del servidor como d
 \subsection{¿Cómo descubrir una falla?}
 Para descubrir una falla se deben de dar las siguientes condiciones:
 \begin{enumerate}
-\item En el caso del servidor perder contacto con todas las caches y con Internet (una implica a la otra).
+\item En el caso del servidor perder contacto con todas las cachés y con Internet (una implica a la otra).
 \item En el caso de un cliente perder la conexión con el servidor o con Internet (una implica a la otra). 
 \end{enumerate}
 
@@ -465,25 +465,25 @@ En cualquier caso este es el protocolo:
 
 \begin{enumerate}
 \item Si es sin pérdida de información volátil: Se debe hacer un flush inmediatamente.
-\item Una vez que nos hallamos recuperado de la falla, en este caso nos damos cuenta de que fue así ya que tenemos comunicación con las caches y con Internet, dejamos a todas las cache en un estado desactivadas.
+\item Una vez que nos hallamos recuperado de la falla, en este caso nos damos cuenta de que fue así ya que tenemos comunicación con las cachés y con Internet, dejamos a todas las caché en un estado desactivadas.
 \item Cargamos la información a memoria.
 \item Esperamos la petición por estado, cuando el estado es desactivado se procede a revisar la consistencia.
-\item Esperamos que recibir los mensajes por parte de las caches, que ante esta eventualidad, enviaran mensajes GetListOfFiles.
-\item Esperamos hasta que las caches envíen un cambio (ChangeStatus) de estado a en línea.
+\item Esperamos que recibir los mensajes por parte de las cachés, que ante esta eventualidad, enviaran mensajes GetListOfFiles.
+\item Esperamos hasta que las cachés envíen un cambio (ChangeStatus) de estado a en línea.
 \item Esperamos que se repita esto las veces que sean necesarias.
-\item Después de que las caches estén en línea, retomaran los mensajes donde habían quedado (recordemos se guarda el último mensaje enviado, si no se recibe respuesta se declara que está abajo el servidor hasta que responda y se retoma la comunicación en el último mensaje enviado)
+\item Después de que las cachés estén en línea, retomaran los mensajes donde habían quedado (recordemos se guarda el último mensaje enviado, si no se recibe respuesta se declara que está abajo el servidor hasta que responda y se retoma la comunicación en el último mensaje enviado)
 \end{enumerate}
 
 \subsection{Falla un Cliente}
-En este caso la cache por alguna razón perdió comunicación y el servidor la marco como inactiva, cuando se recupera la comunicación lo primero que se solicita es el estado de la cache, este recibirá un desactivada entonces pedirá los archivos para revisar la consistencia, cuando todo esté correcto solicitara volver a estar en estado en línea y seguirá la comunicación como estaba anteriormente.
-Para reconstruir el DGET, el cliente deberá evaluar la cantidad de partes descargadas y solicitar la lista de caches disponibles al servidor para retomar la descarga.
+En este caso la caché por alguna razón perdió comunicación y el servidor la marco como inactiva, cuando se recupera la comunicación lo primero que se solicita es el estado de la caché, este recibirá un desactivada entonces pedirá los archivos para revisar la consistencia, cuando todo esté correcto solicitara volver a estar en estado en línea y seguirá la comunicación como estaba anteriormente.
+Para reconstruir el DGET, el cliente deberá evaluar la cantidad de partes descargadas y solicitar la lista de cachés disponibles al servidor para retomar la descarga.
 
 \section{Implementación del Modelo de Consistencia}
 Como se mencionó anteriormente el modelo de consistencia no es tan complejo debido a que solo un actor es el que modifica los objetos que se incluyen en la caché, este actor es el CWCServer, el modelo de consistencia bastará con:
 
 \begin{itemize}
-\item Si se modifica un objeto en el servidor, este ejecutara un ModifyObject hacia todas las caches que tienen copias de este objeto, si es un cambio de archivo tamaño, entre otros. Decidirá si es necesario eliminar el archivo y volver a solicitarlo.
-\item Las caches estarán revisando periódicamente, la consistencia, esto quiere decir que solicitara al servidor el Checksum de los archivos que tiene en su cache, lo calculara y lo comparara.
+\item Si se modifica un objeto en el servidor, este ejecutara un ModifyObject hacia todas las cachés que tienen copias de este objeto, si es un cambio de archivo tamaño, entre otros. Decidirá si es necesario eliminar el archivo y volver a solicitarlo.
+\item Las cachés estarán revisando periódicamente, la consistencia, esto quiere decir que solicitara al servidor el Checksum de los archivos que tiene en su caché, lo calculara y lo comparara.
 \item Si hay algo extraño, simplemente solicita que se envíe el archivo de nuevo, si todo está bien pues no hay ningún problema.
-\item Después de una falla se revisa la consistencia, esto aplica para todas las caches en el caso de que sea una falla de servidor o para la cache que fallo.
+\item Después de una falla se revisa la consistencia, esto aplica para todas las cachés en el caso de que sea una falla de servidor o para la caché que fallo.
 \end{itemize}
