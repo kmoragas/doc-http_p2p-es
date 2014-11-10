@@ -14,7 +14,7 @@
 
 El protocolo HTTP es un protocolo petición/respuesta. Un cliente envía una petición al servidor en la forma de un método de petición, URI, versión de protocolo, seguido de un mensaje estilo-
 MIME conteniendo los modificadores de la petición, información del cliente y posiblemente el contenido del cuerpo sobre una conexión con el servidor, el servidor resuelve con un mensaje de estatus, incluyendo la versión del protocolo del mensaje y el código de error o éxito, seguido de un mensaje estilo-MIME que contiene la información del servidor, la meta-información de la entidad y posiblemente el contenido del cuerpo de la entidad.
-La conexión más simple sería en la cual el agente de usuario realice una conexión directa con el servidor de origen, entonces la conexión de una petición sería:
+La conexión más simple sería cuando el agente de usuario realice una conexión directa con el servidor de origen. Un ejemplo de la conexión de una petición se muestra en la figura \ref{conexionhttp}.
 
 \begin{figure}[h]
   \centering
@@ -41,9 +41,9 @@ En conexiones más complejas pueden intervenir uno o más intermediarios, como l
 
 Los tipos de mensajes HTTP son de petición de un cliente hacia el servidor y de respuesta de un servidor hacia el cliente.
 
-\begin{verbatim}
-“HTTP-message = Request | Response ; HTTP/1.1 messages”
-\end{verbatim}
+\begin{lstlisting}[caption={Tipos de mensajes HTTP},label={lst:mensajes_http}]
+"HTTP-message = Request | Response ; HTTP/1.1 messages"
+\end{lstlisting}
 
 Los mensajes Request y Response utilizan la forma genérica de mensajes, definido en RFC822 para transferencia de mensajes. Ambos mensajes consisten una línea de inicio, uno o más valores de encabezado, una línea vacía que indica el final de los valores de encabezado y posiblemente un cuerpo del mensaje \cite{rfc2616}.
 
@@ -76,24 +76,24 @@ El transfer-length de un mensaje es el largo del cuerpo del mensaje a como este 
 \section{Petición}
 Un mensaje de petición de un cliente hacia un servidor incluye, en la primera línea de ese mensaje, el método a ser aplicado al recurso, el identificador del recurso y la versión del protocolo en uso \cite{rfc2616}.
 
-\begin{verbatim}
-"Request = Request-Line *(( general-header |  \\
+\begin{lstlisting}[caption={Mensaje de petición},label={lst:mensajes_peticion}]
+"Request = Request-Line * (( general-header |  \\
  request-header | entity-header ) CRLF) \\  
  CRLF
- [message-body ]"
-\end{verbatim}
+ [message-body]"
+\end{lstlisting}
 
 \begin{description}
 \item [Línea de Petición: ]
 La línea de petición inicia con un token de método, seguido por la URI que se está pidiendo y la versión del protocolo y terminando con CRLF (retorno de carro y cambio de línea). Los elementos son separados por caracteres SP \cite{rfc2616}.
 
-\begin{verbatim}
-"Request-Line = Método SP URI-pedida SP \\ 
+\begin{lstlisting}[caption={Línea de petición},label={lst:linea_peticion}]
+"Request-Line = Method SP Request-URI SP \\ 
 HTTP-Version CRLF"
-\end{verbatim}
+\end{lstlisting}
 
 \item[Método] 
-El token de método indica el método a ser aplicado al recurso identificado por la URI-pedida. El método es case-sensitive.
+El token de método indica el método a ser aplicado al recurso identificado por la URI-pedida. El método es case-sensitive. El listado de los métodos del protocolo HTTP se puede observar en la tabla \ref{tab:metodos_http}.
 
 \begin{table}
 \myfloatalign
@@ -113,11 +113,12 @@ extension-method & Definidos por alguna aplicación. \\
 \label{tab:metodos_http}
 \end{table}
 
-\item[URI-Pedida]
-La URI-Pedida es un identificador uniforme de recurso (URI) e identifica el recurso sobre el cual se va a aplicar el mensaje de petición.
-\begin{verbatim}
-“Request-URI = "*" | absoluteURI | abs_path | authority”
-\end{verbatim}
+\item[URI-Solicitada]
+La URI-Solicitada es un identificador uniforme de recurso (URI) e identifica el recurso sobre el cual se va a aplicar el mensaje de petición.
+
+\begin{lstlisting}[caption={URI-Solicitada},label={lst:uri_solicitada}]
+"Request-URI = "*" | absoluteURI | abs_path | authority"
+\end{lstlisting}
 
 Las opciones del URI-pedida dependen de la naturaleza de la petición. El asterisco significa que la petición no aplica a ningún recurso en particular, pero al servidor en sí mismo y solo es permitido cuando el método utilizado no necesariamente aplica a un recurso \cite{rfc2616}.
 
@@ -133,7 +134,7 @@ Un servidor de origen que no diferencie recursos de acuerdo en el host solicitad
 
 \item[Campos de encabezado de una Petición]
 
-El encabezado de la petición permite a el cliente pasar información adicional acerca de la petición y acerca del cliente al servidor. Estos campos actúan como modificadores de la petición, con semántica equivalente a los parámetros en la invocación de métodos en los lenguajes de programación. Entre las más importantes se encuentran:
+El encabezado de la petición permite a el cliente pasar información adicional acerca de la petición y acerca del cliente al servidor. Estos campos actúan como modificadores de la petición, con semántica equivalente a los parámetros en la invocación de métodos en los lenguajes de programación. Un ejemplo de los campos de encabezado más importantes se pueden ver en la tabla \ref{tab:encabezado_peticion}.
 
 \begin{table}
 \myfloatalign
@@ -163,22 +164,22 @@ Server & Información sobre el servidor web. \\
 \section{Respuesta}
 Después de recibir el interpretar un mensaje de petición, el servidor responde con un mensaje de respuesta HTTP.
 
-\begin{verbatim}
+\begin{lstlisting}[caption={Mensaje de respuesta HTTP},label={lst:respuesta_http}]
 "Response = Status-Line *(( general-header |  \\
 response-header | entity-header ) CRLF) 
 CRLF 
 [message-body ]"
-\end{verbatim}
+\end{lstlisting}
 
 \begin{description}
 
 \item[Línea de Estado: ]
 La primera línea de un mensaje de respuesta es Status-Line, la cual se encuentra conformada por una versión de protocolo seguida por un código numérico de estatus y su frase de texto asociada, con cada elemento separado por caracteres SP \cite{rfc2616}.
 
-\begin{verbatim}
+\begin{lstlisting}[caption={Línea de Estado},label={lst:linea_estado}]
 "Status-Line = HTTP-Version SP Status-Code \\ 
 SP Reason-Phrase CRLF"
-\end{verbatim}
+\end{lstlisting}
 
 \item[Código de Estado y Frase: ]
 El código de estado es un código de resultado de 3 dígitos que indica el intento de entender y satisfacer la petición. Esos códigos ya se encuentran definidos. La frase intenta dar una corta descripción textual del Código de estado \cite{rfc2616}.

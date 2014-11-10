@@ -1,11 +1,11 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013) (format=pdflatex 2013.10.16)  3 NOV 2013 15:22
+This is pdfTeX, Version 3.1415926-2.6-1.40.14 (TeX Live 2014/dev) (format=pdflatex 2014.9.3)  9 NOV 2014 16:44
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
 **Titlepage.tex
 (./Titlepage.tex
 LaTeX2e <2011/06/27>
-Babel <3.9g> and hyphenation patterns for 78 languages loaded.
+Babel <3.9h> and hyphenation patterns for 3 languages loaded.
 
 ! LaTeX Error: Environment titlepage undefined.
 
@@ -121,24 +121,13 @@ and I'll forget about whatever was undefined.
 
 ! Undefined control sequence.
 l.20 \includegraphics
-                     [width=6cm]{gfx/ITCRLogo} \\ \medskip % Picture
+                     {gfx/ITCRLogo} \\ \medskip % Picture
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
 spelling (e.g., `I\hbox'). Otherwise just continue,
 and I'll forget about whatever was undefined.
 
-Missing character: There is no [ in font nullfont!
-Missing character: There is no w in font nullfont!
-Missing character: There is no i in font nullfont!
-Missing character: There is no d in font nullfont!
-Missing character: There is no t in font nullfont!
-Missing character: There is no h in font nullfont!
-Missing character: There is no = in font nullfont!
-Missing character: There is no 6 in font nullfont!
-Missing character: There is no c in font nullfont!
-Missing character: There is no m in font nullfont!
-Missing character: There is no ] in font nullfont!
 Missing character: There is no g in font nullfont!
 Missing character: There is no f in font nullfont!
 Missing character: There is no x in font nullfont!
@@ -153,7 +142,7 @@ Missing character: There is no g in font nullfont!
 Missing character: There is no o in font nullfont!
 ! Undefined control sequence.
 l.22 \mySubtitle
-                 \\ \medskip % Thesis subtitle
+                 \\ \bigskip \bigskip % Thesis subtitle
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
 misspelled it (e.g., `\hobx'), type `I' and the correct
@@ -168,13 +157,134 @@ Type  H <return>  for immediate help.
  ...                                              
                                                   
 l.22 \mySubtitle \\
-                    \medskip % Thesis subtitle
+                    \bigskip \bigskip % Thesis subtitle
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+
+Overfull \hbox (37.57747pt too wide) in paragraph at lines 23--23
+ []\OT1/cmr/m/it/10 Proyecto 
+ []
+
+
+Overfull \hbox (18.52763pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 para 
+ []
+
+
+Overfull \hbox (13.79991pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 op- 
+ []
+
+
+Overfull \hbox (12.6499pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 tar 
+ []
+
+
+Overfull \hbox (13.92767pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 por 
+ []
+
+
+Overfull \hbox (7.1555pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 el 
+ []
+
+
+Overfull \hbox (23.63872pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 grado 
+ []
+
+
+Overfull \hbox (10.46243pt too wide) in paragraph at lines 23--23
+ \OT1/cmr/m/it/10 de 
+ []
+
+! Undefined control sequence.
+<recently read> \myDegree 
+                          
+l.24 \textit{\myDegree}
+                        \\ \bigskip \bigskip
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+! Undefined control sequence.
+l.25 \myDepartment
+                   \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.25 \myDepartment \\
+                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 ! Undefined control sequence.
-l.28 \myTime
+<recently read> \myFaculty 
+                           
+l.26 \myFaculty
+               \\
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.26 \myFaculty\\
+                 
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+<recently read> \myUni 
+                       
+l.27 \myUni
+            \\ \bigskip
+The control sequence at the end of the top line
+of your error message was never \def'ed. If you have
+misspelled it (e.g., `\hobx'), type `I' and the correct
+spelling (e.g., `I\hbox'). Otherwise just continue,
+and I'll forget about whatever was undefined.
+
+
+! LaTeX Error: There's no line here to end.
+
+See the LaTeX manual or LaTeX Companion for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.27 \myUni \\
+               \bigskip
+Your command was ignored.
+Type  I <command> <return>  to replace it with another command,
+or  <return>  to continue without it.
+
+! Undefined control sequence.
+l.29 \myTime
             \ -- \myVersion % Time and version
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -185,7 +295,7 @@ and I'll forget about whatever was undefined.
 Missing character: There is no - in font nullfont!
 Missing character: There is no - in font nullfont!
 ! Undefined control sequence.
-l.28 \myTime\ -- \myVersion
+l.29 \myTime\ -- \myVersion
                             % Time and version
 The control sequence at the end of the top line
 of your error message was never \def'ed. If you have
@@ -200,7 +310,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.33 \end{addmargin}
+l.34 \end{addmargin}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -213,7 +323,7 @@ See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
  ...                                              
                                                   
-l.35 \end{titlepage}
+l.36 \end{titlepage}
                     
 Your command was ignored.
 Type  I <command> <return>  to replace it with another command,
@@ -227,11 +337,11 @@ or  <return>  to continue without it.
 
  
 Here is how much of TeX's memory you used:
- 9 strings out of 493308
- 176 string characters out of 6137815
- 52269 words of memory out of 5000000
- 3568 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
- 957 hyphenation exceptions out of 8191
- 6i,1n,6p,81b,72s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 15 strings out of 495016
+ 230 string characters out of 6180923
+ 45993 words of memory out of 5000000
+ 3330 multiletter control sequences out of 15000+600000
+ 3986 words of font info for 15 fonts, out of 8000000 for 9000
+ 14 hyphenation exceptions out of 8191
+ 13i,1n,10p,81b,123s stack positions out of 5000i,500n,10000p,200000b,80000s
 !  ==> Fatal error occurred, no output PDF file produced!

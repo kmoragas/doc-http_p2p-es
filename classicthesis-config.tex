@@ -23,17 +23,17 @@
 
 \newcommand{\myTitle}{Comunidad Web Cach\'{e}\xspace}
 \newcommand{\mySubtitle}{Un Modelo de Cach\'{e} Web Distribuido Sobre el protocolo HTTP y P2P\xspace}
-\newcommand{\myDegree}{Maest\'{i}a Cient\'{i}fica (MSc.)\xspace}
+\newcommand{\myDegree}{Maestr\'{i}a Cient\'{i}fica en Telem\'{a}tica\xspace}
 \newcommand{\myName}{Kevin Moraga\xspace}
 \newcommand{\myProf}{Isaac Ram\'{i}rez\xspace}
 \newcommand{\myOtherProf}{Put name here\xspace}
 \newcommand{\mySupervisor}{Put name here\xspace}
 \newcommand{\myFaculty}{Escuela de Ingenier\'{i}a en Computaci\'{o}n\xspace}
-\newcommand{\myDepartment}{Mestr\'{i}a en Telem\'{a}tica\xspace}
-\newcommand{\myUni}{TEC\xspace}
+\newcommand{\myDepartment}{Programa de Maestr\'{i}a\xspace}
+\newcommand{\myUni}{Instituto Tecnol\'{o}gico de Costa Rica\xspace}
 \newcommand{\myLocation}{San Jos\'{e}, Costa Rica\xspace}
-\newcommand{\myTime}{Noviembre 2014\xspace}
-\newcommand{\myVersion}{Version 1.0\xspace}
+\newcommand{\myTime}{Noviembre, 2014\xspace}
+\newcommand{\myVersion}{Versi\'{o}n 1.0\xspace}
 
 %----------------------------------------------------------------------------------------
 %	USEFUL COMMANDS
@@ -142,6 +142,8 @@
 \definecolor{darkblue}{rgb}{0.0,0.0,0.6}
 \definecolor{cyan}{rgb}{0.0,0.6,0.6}
 \definecolor{brown}{HTML}{8A4A0B}
+\definecolor{tecblue}{HTML}{0D436F}
+\definecolor{lightgray}{HTML}{E3E3E3}
 \definecolor{maroon}{rgb}{0.5,0,0}
 
 \usepackage{listings} 
@@ -167,7 +169,12 @@
   basicstyle=\ttfamily,
   columns=fullflexible,
   showstringspaces=false,
-  commentstyle=\color{gray}\upshape
+  commentstyle=\color{gray}\upshape,
+  backgroundcolor=\color{lightgray},
+  frame=lines, % Frame border - none/leftline/topline/bottomline/lines/single/shadowbox/L
+  captionpos=b,
+  %inputencoding=latin1,
+  literate={é}{{\'e}}1,
 }
 
 \lstdefinelanguage{XML}

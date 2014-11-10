@@ -91,8 +91,8 @@ En el presente apartado se definirán las operaciones necesarias para el funcion
 
 Este mensaje es una confirmación. Además puede ser enviado por cualquiera de las partes involucradas en la comunicación: Servidor o Cliente. Éste tiene la siguiente estructura:
 
-\begin{lstlisting}[language=XML,caption=Mensaje ACK]
-<ack clientid="XXXX" requestid="XXXX" responseid="-1"> </ack>
+\begin{lstlisting}[language=XML,caption={Mensaje ACK},label={lst:mensaje_ack}]
+<ack clientid="X" requestid="X" responseid="-1"> </ack>
 \end{lstlisting}
 
 \begin{description}
@@ -105,8 +105,8 @@ Este mensaje es una confirmación. Además puede ser enviado por cualquiera de l
 
 Este mensaje se utiliza cuando un nuevo CWCClient quiere formar parte de la comunidad. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje GetClientId]
-<getClientId clientid="-1" requestid="-1" responseid="XXXX"> 
+\begin{lstlisting}[language=XML,caption={Mensaje GetClientId},label={lst:mensaje_getclientid}]
+<getClientId clientid="-1" requestid="-1" responseid="X"> 
 </getClientId>
 \end{lstlisting}
 
@@ -117,9 +117,9 @@ Como se puede observar el clientId es -1 ya que es un cliente nuevo, el requestI
 \item[Respuesta] La Respuesta esperada por parte del servidor es:
 \end{description}
 
- \begin{lstlisting}[language=XML,caption=Mensaje de Respuesta GetClientId]
-<getClientId clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<client> ZZZZ </client>
+ \begin{lstlisting}[language=XML,caption={Mensaje de Respuesta GetClientId},label={lst:respuesta_getclientid}]
+<getClientId clientid="0" requestid="X" responseid="Y"> 
+	<client> Z </client>
 </getClientId>
 \end{lstlisting}
 
@@ -129,13 +129,14 @@ Para terminar la comunicación se espera por parte del cliente un ACK con su nue
 
 Este mensaje se utiliza para establecer el tipo de membresía, recursos que se están prestando a la caché y tipo de administración. La primera vez que se utiliza, lo que se busca es crear la membresía, lo usos subsecuentes son básicamente para actualizar la información. La estructura del mensaje debería ser:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de UpdateMembership]
-<UpdateMembership clientid="XXXX" requestid="-1" responseid="YYYY"> 
-	<type> ZZZZ </type>
-	<manage> ZZZZ </manage>
-	<disk> ZZZZ </disk>
-	<mem> ZZZZ </mem>
-	<upload> ZZZZ </upload>
+\begin{lstlisting}[language=XML,caption={Mensaje de UpdateMembership},label={lst:mensaje_updatemembership}]
+<UpdateMembership clientid="X" requestid="-1" \\
+		 responseid="Y"> 
+	<type> Z </type>
+	<manage> Z </manage>
+	<disk> Z </disk>
+	<mem> Z </mem>
+	<upload> Z </upload>
 </UpdateMembership>
 \end{lstlisting}
 
@@ -156,10 +157,10 @@ Los valores que pueden tomar estas variables son:
 \subsection{GetObjectInfo}
 Este mensaje se utiliza para obtener la información de un objeto cacheable. La estructura es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de GetObjectInfo]
-<GetObjectInfo clientid="XXXX" requestid="-1" responseid="YYYY"> 
-	<objectId> ZZZZ </objectId>
-	<objectLocation> ZZZZ </objectLocation>
+\begin{lstlisting}[language=XML,caption={Mensaje de GetObjectInfo},label={lst:mensaje_getobjectinfo}]
+<GetObjectInfo clientid="X" requestid="-1" responseid="Y"> 
+	<objectId> Z </objectId>
+	<objectLocation> Z </objectLocation>
 </GetObjectInfo>
 \end{lstlisting}
 
@@ -176,13 +177,13 @@ Es posible que se incluya solo uno o ambos.
 \item[Respuesta] La Respuesta esperada por parte del servidor es:
 \end{description}
 
-\begin{lstlisting}[language=XML,caption=Mensaje de Respuesta de GetObjectInfo]
-<response clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<checksum> ZZZZ </checksum>
-	<id> ZZZZ </id>
-	<location> ZZZZ </location>
-	<size> ZZZZ </size>
-	<expdate> ZZZZ </expdate>
+\begin{lstlisting}[language=XML,caption={Mensaje de Respuesta de GetObjectInfo},label={lst:respuesta_getobjectinfo}]
+<response clientid="0" requestid="X" responseid="Y"> 
+	<checksum> Z </checksum>
+	<id> Z </id>
+	<location> Z </location>
+	<size> Z </size>
+	<expdate> Z </expdate>
 </response>
 \end{lstlisting}
 
@@ -202,14 +203,14 @@ La respuesta esperada por parte del cliente es un ACK.
 \subsection{ModifyObject}
 Este mensaje es enviado por el servidor, en este caso se ha realizado un cambio del lado del servidor que debe ser propagado hacia los clientes. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de ModifyObject]
-<ModifyObject clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<checksum> ZZZZ </checksum>
-	<id> ZZZZ </id>
-	<location> ZZZZ </location>
-	<size> ZZZZ </size>
-	<expdate> ZZZZ </expdate>
-	<type> ZZZZ </type>
+\begin{lstlisting}[language=XML,caption={Mensaje de ModifyObject},label={lst:mensaje_modifyobject}]
+<ModifyObject clientid="0" requestid="X" responseid="Y"> 
+	<checksum> Z </checksum>
+	<id> Z </id>
+	<location> Z </location>
+	<size> Z </size>
+	<expdate> Z </expdate>
+	<type> Z </type>
 </ModifyObject>
 \end{lstlisting}
 
@@ -223,9 +224,9 @@ La única diferencia con el anterior es el type, el cual especifica el tipo de m
 
 En este caso el mensaje se utiliza para habilitar o deshabilitar un objeto que se encuentra en la caché. Este mensaje puede ser enviado tanto por el servidor como por el cliente. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de EnableObject]
-<EnableObject clientid="XXXX" requestid="-1" responseid="YYYY"> 
-	<objectId> ZZZZ </objectId>
+\begin{lstlisting}[language=XML,caption={Mensaje de EnableObject},label={lst:mensaje_enableobject}]
+<EnableObject clientid="X" requestid="-1" responseid="Y"> 
+	<objectId> Z </objectId>
 </EnableObject>
 \end{lstlisting}
 
@@ -238,9 +239,9 @@ Se envía el identificador del objeto, si el objeto esta Enable se cambia a Disa
 \subsection{DeleteObject}
 Este mensaje es utilizado ya sea por los clientes o por el servidor, cuando un objeto se borra en alguno de los dos. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de DeleteObject]
-<DeleteObject clientid="XXXX" requestid="-1" responseid="YYYY"> 
-	<objectId> ZZZZ </objectId>
+\begin{lstlisting}[language=XML,caption={Mensaje de DeleteObject},label={lst:mensaje_deleteobject}]
+<DeleteObject clientid="X" requestid="-1" responseid="Y"> 
+	<objectId> Z </objectId>
 </DeleteObject>
 \end{lstlisting}
 
@@ -254,9 +255,9 @@ Se envía el identificador del objeto y se registra el borrado, en el caso del c
 \label{GetMemberStatus} 
 Este mensaje es utilizado para solicitar el estado de un miembro de la caché (no del servidor), se puede ejecutar tanto por el servidor como por cualquier miembro de la caché. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de GetMemberStatus]
-<GetMemberStatus clientid="XXXX" requestid="-1" responseid="YYYY"> 
-	<memberId> ZZZZ </memberId>
+\begin{lstlisting}[language=XML,caption={Mensaje de GetMemberStatus},label={lst:mensaje_getmemberstatus}]
+<GetMemberStatus clientid="X" requestid="-1" responseid="Y"> 
+	<memberId> Z </memberId>
 </GetMemberStatus>
 \end{lstlisting}
 
@@ -264,9 +265,9 @@ Este mensaje es utilizado para solicitar el estado de un miembro de la caché (n
 \item[Respuesta] Se envía el memberId que es igual al clientId, se espera la siguiente respuesta:
 \end{description}
 
-\begin{lstlisting}[language=XML,caption=Mensaje de Respuesta de GetMemberStatus]
-<response clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<status> ZZZZ </status>
+\begin{lstlisting}[language=XML,caption={Mensaje de Respuesta de GetMemberStatus},label={lst:respuesta_getmemberstatus}]
+<response clientid="0" requestid="X" responseid="Y"> 
+	<status> Z </status>
 </response>
 \end{lstlisting}
 
@@ -277,10 +278,11 @@ Se espera un ACK por parte de quien solicitó el status.
 \subsection{ChangeMemberStatus}
 Este mensaje es utilizado para cambiar el status de un miembro de la cache, este solo puede ser ejecutado por parte del servidor hacia cualquiera de los clientes o  por parte del cliente hacia el servidor para cambiar su estatus. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de ChangeMemberStatus]
-<ChangeMemberStatus clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<memberId> ZZZZ </memberId>
-	<status> ZZZZ </status>
+\begin{lstlisting}[language=XML,caption={Mensaje de ChangeMemberStatus},label={lst:mensaje_changememberstatus}]
+<ChangeMemberStatus clientid="0" requestid="X" \\
+		 responseid="Y"> 
+	<memberId> Z </memberId>
+	<status> Z </status>
 </ChangeMemberStatus>
 \end{lstlisting}
 
@@ -296,9 +298,9 @@ El status puede tomar cualquier valor de la operación definida en \ref{GetMembe
 
 Este mensaje se utiliza ya sea para pedir una lista de archivos a un cliente con su respectivo checksum o para solicitar una lista de archivo que debería tener un cliente en su caché con su respectivo checksum. La estructura de este mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de GetListOfFiles]
-<GetListOfFiles clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<clientId> ZZZZ </clientId>
+\begin{lstlisting}[language=XML,caption={Mensaje de GetListOfFiles},label={lst:mensaje_getlistoffiles}]
+<GetListOfFiles clientid="0" requestid="X" responseid="Y"> 
+	<clientId> Z </clientId>
 </GetListOfFiles>
 \end{lstlisting}
 
@@ -306,11 +308,11 @@ Este mensaje se utiliza ya sea para pedir una lista de archivos a un cliente con
 \item[Respuesta] La Respuesta esperada por parte del cliente es:
 \end{description}
 
-\begin{lstlisting}[language=XML,caption=Mensaje de Respuesta de GetListOfFiles]
-<response clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<file objectId="ZZZZ" checksum="ZZZZ"> </file>
-	<file objectId="ZZZZ" checksum="ZZZZ"> </file>
-	<file objectId="ZZZZ" checksum="ZZZZ"> </file>
+\begin{lstlisting}[language=XML,caption={Mensaje de Respuesta de GetListOfFiles},label={lst:respuesta_getlistoffiles}]
+<response clientid="0" requestid="X" responseid="Y"> 
+	<file objectId="Z" checksum="Z"> </file>
+	<file objectId="Z" checksum="Z"> </file>
+	<file objectId="Z" checksum="Z"> </file>
 </response>
 \end{lstlisting}
 
@@ -319,9 +321,9 @@ Se espera un ACK por parte de quien recibe la lista de archivos.
 \subsection{GetStats}
 Se ejecuta por parte del servidor, para obtener las estadísticas de una de las cachés, la estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de GetStats]
-<GetStats clientid="XXXX" requestid="-1" responseid="YYYY"> 
-	<clientId> ZZZZ </clientId>
+\begin{lstlisting}[language=XML,caption={Mensaje de GetStats},label={lst:mensaje_getstats}]
+<GetStats clientid="X" requestid="-1" responseid="Y"> 
+	<clientId> Z </clientId>
 </GetStats>
 \end{lstlisting}
 
@@ -331,12 +333,12 @@ Se ejecuta por parte del servidor, para obtener las estadísticas de una de las 
 \item[Respuesta] La Respuesta esperada por parte del cliente es:
 \end{description}
 
-\begin{lstlisting}[language=XML,caption=Mensaje de Respuesta de GetStats]
-<response clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<maxupload> ZZZZ </maxupload>
-	<minupload> ZZZZ </minupload>
-	<maxclients> ZZZZ </maxclients>
-	<currentclients> ZZZZ </currentclients>
+\begin{lstlisting}[language=XML,caption={Mensaje de Respuesta de GetStats},label={lst:respuesta_getstats}]
+<response clientid="0" requestid="X" responseid="Y"> 
+	<maxupload> Z </maxupload>
+	<minupload> Z </minupload>
+	<maxclients> Z </maxclients>
+	<currentclients> Z </currentclients>
 </response>
 \end{lstlisting}
 
@@ -348,12 +350,12 @@ Se espera un ACK por parte de quien recibe las estadísticas.
 
 En algunos casos las estadísticas son enviadas por el mismo cliente, en este caso la estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de SendStats]
-<SendStats clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<maxupload> ZZZZ </maxupload>
-	<minupload> ZZZZ </minupload>
-	<maxclients> ZZZZ </maxclients>
-	<currentclients> ZZZZ </currentclients>
+\begin{lstlisting}[language=XML,caption={Mensaje de SendStats},label={lst:mensaje_sendstats}]
+<SendStats clientid="0" requestid="X" responseid="Y"> 
+	<maxupload> Z </maxupload>
+	<minupload> Z </minupload>
+	<maxclients> Z </maxclients>
+	<currentclients> Z </currentclients>
 </SendStats>
 \end{lstlisting}
 
@@ -365,9 +367,10 @@ En algunos casos las estadísticas son enviadas por el mismo cliente, en este ca
 
 Este mensaje es enviado por los clientes, para solicitar el top de cachés que pueden servir un objeto. El formato del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de GetTopCachesbyObject]
-<GetTopCachesbyObject clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<objectId> ZZZZ </objectId>
+\begin{lstlisting}[language=XML,caption={Mensaje de GetTopCachesbyObject},label={lst:mensaje_gettopcaches}]
+<GetTopCachesbyObject clientid="0" requestid="X" \\
+		 responseid="Y"> 
+	<objectId> Z </objectId>
 </GetTopCachesbyObject>
 \end{lstlisting}
 
@@ -376,11 +379,11 @@ Este mensaje es enviado por los clientes, para solicitar el top de cachés que p
 \item[Respuesta] La Respuesta esperada por parte del servidor es:
 \end{description}
 
-\begin{lstlisting}[language=XML,caption=Mensaje de Respuesta de GetTopCachesbyObject]
-<response clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<cache clientId="ZZZZ" URL="ZZZZ"> </cache>
-	<cache clientId="ZZZZ" URL="ZZZZ"> </cache>
-	<cache clientId="ZZZZ" URL="ZZZZ"> </cache>
+\begin{lstlisting}[language=XML,caption={Mensaje de Respuesta de GetTopCachesbyObject},label={lst:respuesta_gettopcaches}]
+<response clientid="0" requestid="X" responseid="Y"> 
+	<cache clientId="Z" URL="Z"> </cache>
+	<cache clientId="Z" URL="Z"> </cache>
+	<cache clientId="Z" URL="Z"> </cache>
 </response>
 \end{lstlisting}
 
@@ -390,8 +393,8 @@ Se espera un ACK por parte del cliente que recibió esta lista.
 \subsection{GetConfParams}
 Este también es únicamente ejecutado por el cliente, se utiliza para tomar la configuración del sistema, hay varios parámetros que pueden cambiar, este mensaje se utiliza para obtener estos cambios. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de GetConfParams]
-<GetConfParams clientid="0" requestid="XXXX" responseid="YYYY"> 
+\begin{lstlisting}[language=XML,caption={Mensaje de GetConfParams},label={lst:mensaje_getconfparams}]
+<GetConfParams clientid="0" requestid="X" responseid="Y"> 
 </GetConfParams>
 \end{lstlisting}
 
@@ -400,11 +403,11 @@ Este también es únicamente ejecutado por el cliente, se utiliza para tomar la 
 \item[Respuesta] La Respuesta esperada por parte del servidor es:
 \end{description}
 
-\begin{lstlisting}[language=XML,caption=Mensaje de Respuesta de GetConfParams]
-<response clientid="0" requestid="XXXX" responseid="YYYY"> 
-	<param paramId="ZZZZ"> </param>
-	<param paramId="ZZZZ"> </param>
-	<param paramId="ZZZZ"> </param>
+\begin{lstlisting}[language=XML,caption={Mensaje de Respuesta de GetConfParams},label={lst:respuesta_getconfparams}]
+<response clientid="0" requestid="X" responseid="Y"> 
+	<param paramId="Z"> </param>
+	<param paramId="Z"> </param>
+	<param paramId="Z"> </param>
 </response>
 \end{lstlisting}
 
@@ -415,8 +418,8 @@ Se espera un ACK por parte de quien recibe la lista de parámetros.
 
 Este mensaje se utiliza para saber si algún miembro del sistema está vivo. La estructura del mensaje es:
 
-\begin{lstlisting}[language=XML,caption=Mensaje de IsAlive]
-<IsAlive clientid="XXXX" requestid="-1" responseid="YYYY"> 
+\begin{lstlisting}[language=XML,caption={Mensaje de IsAlive},label={lst:mensaje_isalive}]
+<IsAlive clientid="X" requestid="-1" responseid="Y"> 
 </IsAlive>
 \end{lstlisting}
 
