@@ -54,11 +54,11 @@ La idea de la Comunidad Web Caché nace a partir de las siguientes premisas:
 \item Así como existen comunidades en Internet que se conforman por un interés común, por ejemplo hacer amigos, deportes, entre otros. ¿Porqué no crear una comunidad alrededor de un sitio web?.
 \end{enumerate}
 
-La propuesta que se quiere implementar es dejar de lado el modelo tradicional de servir archivos mediante HTTP e implementar un nuevo modelo de Web Caché distinto al tradicional, utilizando las ventajas de ambos, combinado con la creación de comunidades de virtuales y la utilización de los recursos de los miembros de éstas comunidades; es posible utilizar un protocolo de transferencia distribuida de contenido, en este caso P2P, para servir archivos desde diferentes localizaciones.
+La propuesta que se quiere implementar es dejar de lado el modelo tradicional de servir archivos mediante HTTP e implementar un nuevo modelo de Web Caché distinto al tradicional, utilizando las ventajas de ambos, combinado con la creación de comunidades virtuales y la utilización de los recursos de los miembros de éstas comunidades; es posible utilizar un protocolo de transferencia distribuida de contenido, en este caso P2P, para servir archivos desde diferentes localizaciones.
 
 Basado en la figura \ref{conexionvideo} se supondrá el siguiente ejemplo: se cuenta con el sitio www.cwc.org que sirve archivos de video de más de 30Mb, con un modelo tradicional HTTP (cliente-servidor) un cliente obtendría el archivo desde un único servidor. Ahora bien, si se tienen 1000 clientes realizando esta misma operación, serían muchas solicitudes para el servidor (en el caso que éste tuviera recursos limitados), por lo tanto es necesario analizar el aumento de los recursos del servidor, entre otras cosas. 
 
-El presente proyecto consiste en crear una comunidad alrededor de sitio anteriormente mencionado. En caso que al menos 30 de esos 1000 clientes formaran parte de la comunidad y que éstos tienen los recursos suficientes para servir archivos, entonces es posible servir los archivos en cuestión desde 31 lugares diferentes, en lugar que desde un único punto. Es evidente las ventajas que se pueden dar con un modelo como este. Ahora ¿Qué pasa si miembros de la comunidad no tienen suficientes recursos? En lugar de servir todo el archivo desde una sola localización, ese archivo se puede partir y servir desde múltiples ubicaciones, osea, que en lugar de servir archivos grandes de 30MB o más, se pueden servir sólo una porción de éstos. Esto siguiendo el concepto de una comunidad donde cada miembro aporta lo que puede, en beneficio de todos. 
+El presente proyecto consiste en crear una comunidad alrededor del sitio anteriormente mencionado. En caso que al menos 30 de esos 1000 clientes formaran parte de la comunidad y que éstos tienen los recursos suficientes para servir archivos, entonces es posible servir los archivos en cuestión desde 31 lugares diferentes, en lugar que desde un único punto. Es evidente las ventajas que se pueden dar con un modelo como este. Ahora ¿Qué pasa si miembros de la comunidad no tienen suficientes recursos? En lugar de servir todo el archivo desde una sola localización, ese archivo se puede partir y servir desde múltiples ubicaciones, osea, que en lugar de servir archivos grandes de 30MB o más, se pueden servir sólo una porción de éstos. Esto siguiendo el concepto de una comunidad donde cada miembro aporta lo que puede, en beneficio de todos. 
 
 \begin{figure}[h]
   \centering
@@ -93,7 +93,7 @@ Europa & 46.3\% &	66.6\% & 74.8\% \\
 \label{tab:crecimiento_internet}
 \end{table}
 
-Como se puede ver en la tabla \ref{tab:crecimiento_internet}, en casi diez años se ha duplicado o más la cantidad de usuarios de Internet, lo cual implica que se dará una mayor demanda sobre los sitios web, esto se traduce en que el dueño de un sitio web que presta un servicio deberá hacer una inversión en más recursos computacionales, como por ejemplo poder procesamiento y ancho de banda para poder servir a sus usuarios de la mejor manera posible.
+Como se puede ver en la tabla \ref{tab:crecimiento_internet}, en casi diez años se ha duplicado o más la cantidad de usuarios de Internet, lo cual implica que se dará una mayor demanda sobre los sitios web, esto se traduce en que el dueño de un sitio web que presta un servicio deberá hacer una inversión en más recursos computacionales, como por ejemplo poder de procesamiento y ancho de banda para poder servir a sus usuarios de la mejor manera posible.
 
 Esto quiere decir que la publicación de un sitio web con contenido de calidad no es tan trivial (se hablará en términos de contenido de calidad, ya que el contenido justificará la cantidad de usuarios que recibirá un sitio web, o sea entre mayor sea la calidad del contenido ofrecido por un sitio web para un grupo de usuarios en particular, así será la cantidad de usuarios que recibirá) ya que se deberán tomar en cuenta aspectos de crecimiento en el número de usuarios que visiten el sitio web y los requerimientos computacionales necesarios para poder prestar un servicio de calidad, acorde con los contenidos publicados.
 
@@ -154,7 +154,7 @@ Uno de los puntos focales del CWC es precisamente la parte comunitaria y es por 
 \begin{enumerate}
 \item Aporte de recursos o participación libre: Los miembros de la comunidad decidirán qué cantidad de recursos computacionales aportaran.
 \item Adhesión abierta: Puedo decidir formar parte de la comunidad o no.
-\item Respeto por los contenidos privados: Se respeta el Copyright, quien publica los contenidos de calidad podrá decidir si estos pueden ser mantenidos por la comunidad o no.
+\item Respeto por los contenidos privados: Se respeta el Copyright. Quien publica estos contenidos, podrá decidir si pueden ser mantenidos por la comunidad o no.
 \item Bien común: los contenidos deben ser servidos de manera rápida y eficiente.
 \item Apoyo: Si alguno de los miembros de la comunidad falla otro podrá tomar su lugar (tolerancia a fallos).
 \end{enumerate}
@@ -167,13 +167,13 @@ Por otro lado, uno de los modelos más parecidos a CWC son los Proxy Federados, 
 \subsection{Impacto}
 
 
-El proyecto en impactará tanto al publicador de contenido de calidad en Internet, así como a los usuarios, en los siguientes aspectos:
+El proyecto impactará tanto al publicador de contenido de calidad en Internet, así como a los usuarios, en los siguientes aspectos:
 
 \paragraph{Publicador}
 
 
 \begin{itemize}
-\item Conforme el número de miembros de la comunidad crezca, se podrá experimentar menos carga en el los servidores, por consiguiente se podrán servir muchos más usuarios.
+\item Conforme el número de miembros de la comunidad crezca, se podrá experimentar menos carga en los servidores, por consiguiente se podrán servir muchos más usuarios.
 \end{itemize}
  
 

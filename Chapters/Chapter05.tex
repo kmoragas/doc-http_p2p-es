@@ -1,6 +1,6 @@
 % Chapter X
 
-\chapter{Modelos de Cosistencia} % Chapter title
+\chapter{Modelos de Consistencia} % Chapter title
 
 \label{ch:modelos_consistencia} % For referencing the chapter elsewhere, use \autoref{ch:name}
 
@@ -38,12 +38,12 @@ Según Reynal M. \cite{raynal:1995}, en un sistema se da consistencia causal si 
 
 Este modelo es aun más débil que la consistencia secuencial \cite{ahamad:1991}, la cual requiere que todos sitios vean las escrituras en el mismo orden.
 
-Cuando un sitio realiza una lectura seguida de una escritura, aun en diferentes objetos concurrentes, se dice que la primera operación esta causalmente ordenada antes que la segunda, debido a que el valor almacenado por la escritura puede haber sido dependiente del resultado de la lectura. De manera similar una operación de lectura puede estar causalmente ordenada después de una escritura previa en el mismo objeto concurrente que almacena lo que fue leído. De la misma manera dos operaciones de escritura en el mismo sitio se encuentran causalmente ordenadas en el mismo orden que fueron realizadas. 
+Cuando un sitio realiza una lectura seguida de una escritura, aun en diferentes objetos concurrentes, se dice que la primera operación está causalmente ordenada antes que la segunda, debido a que el valor almacenado por la escritura puede haber sido dependiente del resultado de la lectura. De manera similar una operación de lectura puede estar causalmente ordenada después de una escritura previa en el mismo objeto concurrente que almacena lo que fue leído. De la misma manera dos operaciones de escritura en el mismo sitio se encuentran causalmente ordenadas en el mismo orden que fueron realizadas. 
 
 Si existen operaciones que no están causalmente relacionadas se dice que son concurrentes.
 
 \item[Consistencia PRAM: ]
-Lipton y Sandberg \cite{lipton:1988} definieron el modelo de cosistencia Pipelined RAM (PRAM) y comúnmente conocido como Consistencia FIFO. Este modelo es aun más débil que la consistencia causal, esta consiste en eliminar el requisito de que las operaciones relacionadas se vean en orden por parte de todos los sitios en un sistema. Para esto las escrituras por un sitio son recibidas por otros procesos en el orden en que son realizadas, pero las escrituras de sitios diferentes pueden verse en un orden distinto en sitios diferentes \cite{mosberger:1993}.
+Lipton y Sandberg \cite{lipton:1988} definieron el modelo de consistencia Pipelined RAM (PRAM) y comúnmente conocido como Consistencia FIFO. Este modelo es aun más débil que la consistencia causal, esta consiste en eliminar el requisito de que las operaciones relacionadas se vean en orden por parte de todos los sitios en un sistema. Para esto las escrituras por un sitio son recibidas por otros procesos en el orden en que son realizadas, pero las escrituras de sitios diferentes pueden verse en un orden distinto en sitios diferentes \cite{mosberger:1993}.
 
 Este tipo de consistencia es fácil de implementar, ya que no existe garantía del orden en que los diferentes sitios vean las escrituras, más que dos o más escrituras por parte de un proceso llegan en orden, como si estuvieran entubadas. Remontándonos a la definición de consistencia causal, podemos decir que en consistencia FIFO todas las escrituras y lecturas locales (realizadas en el mismo sitio) están causalmente relacionadas, mientras que todas las que suceden en sitios diferentes son concurrentes \cite{mosberger:1993}.
 

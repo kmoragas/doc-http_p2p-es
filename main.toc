@@ -89,13 +89,13 @@
 \contentsline {subsection}{\numberline {9.3.8}GetMemberStatus}{67}{subsection.9.3.8}
 \contentsline {subsection}{\numberline {9.3.9}ChangeMemberStatus}{68}{subsection.9.3.9}
 \contentsline {subsection}{\numberline {9.3.10}GetListOfFiles}{68}{subsection.9.3.10}
-\contentsline {subsection}{\numberline {9.3.11}GetStats}{68}{subsection.9.3.11}
+\contentsline {subsection}{\numberline {9.3.11}GetStats}{69}{subsection.9.3.11}
 \contentsline {subsection}{\numberline {9.3.12}SendStats}{69}{subsection.9.3.12}
-\contentsline {subsection}{\numberline {9.3.13}GetTopCachesbyObject}{69}{subsection.9.3.13}
+\contentsline {subsection}{\numberline {9.3.13}GetTopCachesbyObject}{70}{subsection.9.3.13}
 \contentsline {subsection}{\numberline {9.3.14}GetConfParams}{70}{subsection.9.3.14}
-\contentsline {subsection}{\numberline {9.3.15}IsAlive}{70}{subsection.9.3.15}
+\contentsline {subsection}{\numberline {9.3.15}IsAlive}{71}{subsection.9.3.15}
 \contentsline {section}{\numberline {9.4}Seguimiento de los miembros conectados}{71}{section.9.4}
-\contentsline {section}{\numberline {9.5}Recuperaci\IeC {\'o}n de fallas}{71}{section.9.5}
+\contentsline {section}{\numberline {9.5}Recuperaci\IeC {\'o}n de fallas}{72}{section.9.5}
 \contentsline {subsection}{\numberline {9.5.1}\IeC {\textquestiondown }C\IeC {\'o}mo descubrir una falla?}{72}{subsection.9.5.1}
 \contentsline {subsection}{\numberline {9.5.2}Falla del Servidor}{72}{subsection.9.5.2}
 \contentsline {subsection}{\numberline {9.5.3}Falla un Cliente}{73}{subsection.9.5.3}

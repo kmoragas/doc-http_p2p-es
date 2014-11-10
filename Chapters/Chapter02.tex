@@ -39,7 +39,7 @@ En conexiones más complejas pueden intervenir uno o más intermediarios, como l
 \begin{description}
 \item[Tipos de Mensajes:] 
 
-Los tipos de mensajes HTTP son de petición de un cliente hacia el servidor y de respuesta de un servidor hacia el cliente.
+Los tipos de mensajes HTTP son de petición de un cliente hacia el servidor y de respuesta de un servidor hacia el cliente. El listado \ref{lst:mensajes_http} muestra la definición de un mensaje HTTP del RFC 2616. 
 
 \begin{lstlisting}[caption={Tipos de mensajes HTTP},label={lst:mensajes_http}]
 "HTTP-message = Request | Response ; HTTP/1.1 messages"
@@ -74,7 +74,8 @@ El transfer-length de un mensaje es el largo del cuerpo del mensaje a como este 
 \end{description}
 
 \section{Petición}
-Un mensaje de petición de un cliente hacia un servidor incluye, en la primera línea de ese mensaje, el método a ser aplicado al recurso, el identificador del recurso y la versión del protocolo en uso \cite{rfc2616}.
+Un mensaje de petición de un cliente hacia un servidor incluye, en la primera línea de ese mensaje, el método a ser aplicado al recurso, el identificador del recurso y la versión del protocolo en uso \cite{rfc2616}. El listado \ref{lst:mensajes_peticion} muestra la definición de un mensaje de petición de un cliente hacia un servidor. 
+
 
 \begin{lstlisting}[caption={Mensaje de petición},label={lst:mensajes_peticion}]
 "Request = Request-Line * (( general-header |  \\
@@ -85,7 +86,7 @@ Un mensaje de petición de un cliente hacia un servidor incluye, en la primera l
 
 \begin{description}
 \item [Línea de Petición: ]
-La línea de petición inicia con un token de método, seguido por la URI que se está pidiendo y la versión del protocolo y terminando con CRLF (retorno de carro y cambio de línea). Los elementos son separados por caracteres SP \cite{rfc2616}.
+La línea de petición inicia con un token de método, seguido por la URI que se está pidiendo y la versión del protocolo y terminando con CRLF (retorno de carro y cambio de línea). Los elementos son separados por caracteres SP \cite{rfc2616}. El listado \ref{lst:linea_peticion} muestra la definición de un mensaje de petición de la línea de petición.
 
 \begin{lstlisting}[caption={Línea de petición},label={lst:linea_peticion}]
 "Request-Line = Method SP Request-URI SP \\ 
@@ -114,7 +115,7 @@ extension-method & Definidos por alguna aplicación. \\
 \end{table}
 
 \item[URI-Solicitada]
-La URI-Solicitada es un identificador uniforme de recurso (URI) e identifica el recurso sobre el cual se va a aplicar el mensaje de petición.
+La URI-Solicitada es un identificador uniforme de recurso (URI) e identifica el recurso sobre el cual se va a aplicar el mensaje de petición. El listado \ref{lst:uri_solicitada} muestra la definición de la URI-Solicitada.
 
 \begin{lstlisting}[caption={URI-Solicitada},label={lst:uri_solicitada}]
 "Request-URI = "*" | absoluteURI | abs_path | authority"
@@ -162,7 +163,7 @@ Server & Información sobre el servidor web. \\
 \end{description}
 
 \section{Respuesta}
-Después de recibir el interpretar un mensaje de petición, el servidor responde con un mensaje de respuesta HTTP.
+Después de recibir el interpretar un mensaje de petición, el servidor responde con un mensaje de respuesta HTTP. El listado \ref{lst:respuesta_http} muestra la definición de la URI-Solicitada.
 
 \begin{lstlisting}[caption={Mensaje de respuesta HTTP},label={lst:respuesta_http}]
 "Response = Status-Line *(( general-header |  \\
@@ -174,7 +175,7 @@ CRLF
 \begin{description}
 
 \item[Línea de Estado: ]
-La primera línea de un mensaje de respuesta es Status-Line, la cual se encuentra conformada por una versión de protocolo seguida por un código numérico de estatus y su frase de texto asociada, con cada elemento separado por caracteres SP \cite{rfc2616}.
+La primera línea de un mensaje de respuesta es Status-Line, la cual se encuentra conformada por una versión de protocolo seguida por un código numérico de estatus y su frase de texto asociada, con cada elemento separado por caracteres SP \cite{rfc2616}. El listado \ref{lst:linea_estado} muestra la definición de la línea de estado.
 
 \begin{lstlisting}[caption={Línea de Estado},label={lst:linea_estado}]
 "Status-Line = HTTP-Version SP Status-Code \\ 
