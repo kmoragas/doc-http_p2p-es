@@ -25,10 +25,10 @@ El CWC Server es una aplicación que se Integra con el servidor web, su función
 
 \subsection{Administración de Objetos en la Caché local}
 
-En un servidor web existen gran cantidad de objetos, que van desde los documentos HTML y CSS más comunes hasta lo que hoy conocemos como multimedia, que incluye un gran número de archivos de gran tamaño como video y música. Además también existen de aplicaciones de tiempo real como video conferencias y streaming de video y audio. La administración de Objetos en la caché local se refiere a como identificar cuales objetos se pueden agregar a la caché del CWC y cuales no. Cada objeto contará con los siguientes atributos:
+En un servidor web existen gran cantidad de objetos, que van desde los documentos HTML y CSS más comunes hasta lo que hoy conocemos como multimedia, que incluye un gran número de archivos de gran tamaño como video y música. Además también existen de aplicaciones de tiempo real como videoconferencias y streaming de video y audio. La administración de Objetos en la caché local se refiere a cómo identificar cuáles objetos se pueden agregar a la caché del CWC y cuales no. Cada objeto contará con los siguientes atributos:
 
 \begin{itemize}
-\item \textit{Checksum}: Esto con el objetivo de saber si el archivo esta corrupto. No nos preocuparemos por el cálculo del Checksum.
+\item \textit{Checksum}: Esto con el objetivo de saber si el archivo esta corrupto. No se hablará del cálculo del Checksum.
 \item \textit{Id}: El archivo tendrá su identificador único, generado automáticamente.
 \item \textit{Localización}: URI relativo al URL del sitio web.
 \item \textit{Cachés}: Cuáles clientes CWC poseen una copia de este objeto. 
@@ -46,7 +46,7 @@ A continuación se presentan las acciones presentes en la Administración de Obj
 
 \item [Modificar un Objeto] Existen dos tipos de modificaciones: 
 	\begin{description}
-	\item[Soft] Una modificación soft no implica que la caché tenga que volver a obtener el objeto, una modificación soft es cambiar la localización del archivo, cambiar las cachés del archivo, cambiar el estado de Cachéable, cambiar su tiempo de expiración.
+	\item[Soft] Una modificación soft no implica que la caché tenga que volver a obtener el objeto, una modificación soft es cambiar la localización del archivo, cambiar las cachés del archivo, cambiar el estado de Cacheable, cambiar su tiempo de expiración.
 	\item [Hard] La modificación hard, se refiere al cambio del tamaño del archivo lo cual implica un cambio de su Checksum.
 
 Cada atributo implica diferentes que deben ser tomadas, entre estas se tiene:
@@ -86,7 +86,7 @@ Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a def
 	\item El estado del cliente: online/offline.
 	\end{itemize}
 	
-\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallase, por lo que la información de las cachés se perdería. O bien, que alguna de las cachés fallara y se perdiera la conexión con el servidor. Esto último implicaría que la caché quedase en un estado offline, o se desactivara. Para agregar una caché existente sería necesario:
+\item [Agregar un miembro existente] Se puede haber dado el caso que el servidor fallase, por lo que la información de las cachés se perdería. O bien, que alguna de las cachés fallara y se perdiera la conexión con el servidor. Esto último implicaría que la caché quedase en un estado offline, o se desactivará. Para agregar una caché existente sería necesario:
 
 	\begin{enumerate}
 	\item La caché se comunica con el servidor, ya sea porque se recuperó de alguna falla o se activó de nuevo o porque el servidor fue el que falló y ya se encuentra en línea de nuevo.
@@ -121,7 +121,7 @@ Cuando el CWC Server se inicia por primera vez, posee una caché que vamos a def
 
 En una comunidad al igual que en cualquiera, hay diversidad de miembros, algunos cuentan con muchos recursos, otros con pocos o algunos fallan bajo presión. La idea con las estadísticas, es que una vez que se solicita un objeto, enviar la lista de cachés que lo tienen disponible, ordenada de tal manera que se presenten los que históricamente tiene mejores referencias de primero. 
 
-Esto no quiere decir que a los que tienen un bajo historial se dejarán fuera, si no que cuando se deba atender una petición tendrán menor trabajo que el resto. Tampoco quiere decir que se quedarán haciendo el peor trabajo siempre, sino más bien, se pretende implementar un sistema de puntos en el cual, presente la oportunidad de crecer en confianza y convertirse en una de las cachés más altas en el ranking.
+Esto no quiere decir que a los que tienen un bajo historial se dejarán fuera, sino que cuando se deba atender una petición tendrán menor trabajo que el resto. Tampoco quiere decir que se quedarán haciendo el peor trabajo siempre, sino más bien, se pretende implementar un sistema de puntos en el cual, presente la oportunidad de crecer en confianza y convertirse en una de las cachés más altas en el ranking.
 
 Entre las estadísticas que se van a recolectar son:
 
@@ -157,7 +157,7 @@ Entre las estadísticas que se van a recolectar son:
 		\item El miembro de la caché que haya transmitido el mayor número de veces el  objeto solicitado, recibirá un bono de 10 puntos.
 		\end{itemize}
 
-	\item[Cálculo total] A continuación se detallan las reglas que dictan como se realizará el cálculo total de los puntos acumulados: 
+	\item[Cálculo total] A continuación se detallan las reglas que dictan cómo se realizará el cálculo total de los puntos acumulados: 
 	
 		\begin{enumerate}
 		\item Con las reglas y bonificaciones anteriormente mencionadas, se calcula el top de miembros de la caché.
@@ -209,7 +209,7 @@ Existen dos formas diferentes para formar parte de la comunidad:
 
 La diferencia radica en que si el usuario se convierte en miembro de manera voluntaria, la administración de la caché será realizada por el servidor. En todo caso, si la membresía es activa se puede cambiar a contribuyente.
 
-Se puede dar el caso de que no desee formar parte de la comunidad de algún sitio en especifico, entonces se puede configurar CWC Client de manera que ignore los sitios de una lista negra.
+Se puede dar el caso de que no desee formar parte de la comunidad de algún sitio en específico, entonces se puede configurar CWC Client de manera que ignore los sitios de una lista negra.
 
 Para dejar de ser un miembro de la caché, se debe:
 
@@ -228,14 +228,14 @@ La administración de la caché se puede dar de 3 formas, atendida por el client
 \begin{description}
 \item[Desatendida] En este caso, cuando la caché está llena, la misma caché escoge el archivo menos solicitado y lo borra, así sucesivamente hasta que se libera suficiente espacio como para almacenar el archivo. 
 \item[Atendida] El usuario puede borrar archivos de la caché a su gusto. Para ello tendrá una interfaz de selección de archivos que se encuentren en la caché.
-\item[Manejada por el Servidor] El servidor por si solo decidirá cuales archivos deben estar en caché y cuáles no, sus decisiones serán transmitidas a la caché mediante el envió de mensajes. 
+\item[Manejada por el Servidor] El servidor por si solo decidirá cuáles archivos deben estar en caché y cuáles no, sus decisiones serán transmitidas a la caché mediante el envío de mensajes. 
 \end{description}
 
 
 \subsection{Otras Funciones de Administración}
 Otras funciones de administración que posee el CWC Client son las siguientes:
 \begin{description}
-\item[Invalidar contenido] Si se recibe un mensaje de que el contenido esta inválido, automáticamente se borra el objeto y se descarga.
+\item[Invalidar contenido] Si se recibe un mensaje de que el contenido está inválido, automáticamente se borra el objeto y se descarga.
 
 \item [Revisión de Consistencia] Periódicamente se verifica si los contenidos de la caché son correctos, se le solicita al servidor el Checksum para los archivos que se encuentran en la caché y se comparan. Si están bien perfecto si no se procede a hacer una invalidación de contenido.
 

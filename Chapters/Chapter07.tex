@@ -14,7 +14,7 @@ A continuación se detallará la lista de Actores que interactuarán con CWC.
 \item[Servidor Web] El servidor web es el encargado de servir los archivos que son solicitados por el usuario a través de un Agente Cliente (en el RFC de HTTP \cite{rfc2616} un Agente Cliente se define como cualquier navegador web utilizado por el usuario), en este caso el sistema interaccionará con el servidor web de manera que las solicitudes que si pueden utilizar el protocolo CWC (Community Web Caching) sean servidas de manera distribuida. En el caso de que una solicitud no pueda utilizar CWC se utilizará el modelo tradicional, uno a uno.
 \item[Agente Cliente] El agente cliente es un navegador web, el cual cuando se hace una petición por parte de éste, se verifica si el servidor web puede utilizar el protocolo CWC, si es así entonces al realizar el GET HTTP en lugar de obtener un archivo de una sola localización de obtendrá de múltiples localizaciones o cachés.
 \item[Usuario] Entre las actividades que tendrá el usuario tendrá: la instalación del cliente, establecer la velocidad de conexión, iniciar o detener el cliente y administrar los parámetros de la caché local. 
-\item[Administrador del sitio web] Entre las actividades que tendrá el administrador: la instalación del cliente, establecer la velocidad de conexión, configurar todos los parámetros del modulo del Servidor Web y Administrara el modulo mediante la consola de administración.
+\item[Administrador del sitio web] Entre las actividades que tendrá el administrador: la instalación del cliente, establecer la velocidad de conexión, configurar todos los parámetros del módulo del Servidor Web y Administrara el módulo mediante la consola de administración.
 \end{description}
 
 \section{Requerimientos Funcionales del Protocolo}
@@ -51,10 +51,10 @@ Cuando se hace alusión al contenido, se refiere a cualquier objeto que pueda se
 
 \item [Modificar contenido] Este tipo de interacción puede suceder cuando se cambie la fecha de expiración, que se modifique el objeto, sea necesario generar de nuevo el checksum o que se habilite/deshabilite el contenido. Cuando se modifica algún objeto se debe enviar la notificación a las cachés para que lo deshabiliten y lo vuelvan a solicitar.
 
-\item [Expirar contenido] Cada uno de los objetos de contenido tiene asociado un tiempo de expiración, el modulo deberá estar revisando cada cierto tiempo este tiempo de expiración para deshabilitar el contenido que ya no pueda ser servido. Las implicaciones cuando un contenido se expira son: 1) Esperar a que los clientes que estaban tomando el contenido expirado terminen, 2) Deshabilitar el contenido en la caché, marcándolo como expirado y 3) Enviar el aviso a las cachés que tienen el contenido para que lo deshabiliten y lo borren.
+\item [Expirar contenido] Cada uno de los objetos de contenido tiene asociado un tiempo de expiración, el módulo deberá estar revisando cada cierto tiempo este tiempo de expiración para deshabilitar el contenido que ya no pueda ser servido. Las implicaciones cuando un contenido se expira son: 1) Esperar a que los clientes que estaban tomando el contenido expirado terminen, 2) Deshabilitar el contenido en la caché, marcándolo como expirado y 3) Enviar el aviso a las cachés que tienen el contenido para que lo deshabiliten y lo borren.
 Si CWC recibe alguna notificación de alguna de las cachés de que se ha borrado algún objeto, deberá de actualizar el objeto indicando que esa caché no tiene una copia del objeto.
 
-\item[Estadísticas de los Contenidos] Se deberá llevar estadísticas de cuantas veces se ha servido un objeto, desde donde se ha solicitado y cuales cachés lo han proporcionado.
+\item[Estadísticas de los Contenidos] Se deberá llevar estadísticas de cuántas veces se ha servido un objeto, desde donde se ha solicitado y cuales cachés lo han proporcionado.
 \end{description}
 
 \subsection{Administración de Miembros de la Comunidad }

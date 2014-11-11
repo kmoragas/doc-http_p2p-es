@@ -72,7 +72,7 @@ Cualquier mensaje que se envíe siempre tendrá tres componentes, que servirán 
 En la figura \ref{EstructuraMensajeCWC} se observan los componentes del mensaje, los cuales son:
 
 \begin{enumerate}
-\item El identificador único del cliente en el sistema, este es generado cuando un cliente entra a formar parte de la comunidad, en el caso del servidor su identificador único es 0. En algunos mensajes se utilizará un identificador por defecto (-1) este significará que hay un nuevo cliente que desea convertirse en un miembro de la comunidad pero aun no tiene su identificador único.
+\item El identificador único del cliente en el sistema, este es generado cuando un cliente entra a formar parte de la comunidad, en el caso del servidor su identificador único es 0. En algunos mensajes se utilizará un identificador por defecto (-1) este significará que hay un nuevo cliente que desea convertirse en un miembro de la comunidad pero aún no tiene su identificador único.
 
 \item Request Message Id: Este es el número del mensaje al que se esté respondiendo, cuando se encuentre el caso que no se esté respondiendo a ningún mensaje se introducirá un número negativo lo cual indicará que se está iniciando una comunicación.
 
@@ -111,7 +111,7 @@ Este mensaje se utiliza cuando un nuevo CWCClient quiere formar parte de la comu
 \end{lstlisting}
 
 
-Como se puede observar el clientId es -1 ya que es un cliente nuevo, el requestId es -1 ya que no se está respondiendo a nadie y el responseid es un numero aleatorio entre 1 y 10000. 
+Como se puede observar el clientId es -1 ya que es un cliente nuevo, el requestId es -1 ya que no se está respondiendo a nadie y el responseid es un número aleatorio entre 1 y 10000. 
 
 \begin{description}
 \item[Respuesta] La Respuesta esperada por parte del servidor se muestra en el listado \ref{lst:respuesta_getclientid}.
@@ -230,7 +230,7 @@ En este caso el mensaje se utiliza para habilitar o deshabilitar un objeto que s
 </EnableObject>
 \end{lstlisting}
 
-Se envía el identificador del objeto, si el objeto esta Enable se cambia a Disable o viceversa  y se espera un ACK de parte de la otra parte.
+Se envía el identificador del objeto, si el objeto está Enable se cambia a Disable o viceversa  y se espera un ACK de parte de la otra parte.
 
 \begin{description}
 \item[Respuesta] La respuesta esperada por parte del cliente o servidor, según corresponda, es un ACK.
@@ -342,7 +342,7 @@ Se ejecuta por parte del servidor, para obtener las estadísticas de una de las 
 </response>
 \end{lstlisting}
 
-Se envía la máxima velocidad de transferencia, la mínima velocidad de trasferencia, máxima cantidad de clientes simultaneemos y clientes actuales.
+Se envía la máxima velocidad de transferencia, la mínima velocidad de transferencia, máxima cantidad de clientes simultáneos y clientes actuales.
 
 Se espera un ACK por parte de quien recibe las estadísticas.
 
