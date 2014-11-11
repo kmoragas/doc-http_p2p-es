@@ -454,32 +454,32 @@ Para descubrir una falla se deben de dar las siguientes condiciones:
 \end{enumerate}
 
 \subsection{Falla del Servidor}
-Una falla se puede dar por muchas razones, no es nuestro objetivo estudiarlas, el caso es que se pueden dar de dos tipos:
+Una falla se puede dar por muchas razones, no es el objetivo de este proyecto estudiarlas, pero en cualquier caso se pueden clasificar en dos tipos:
 
 \begin{itemize}
-\item Se pierda información volátil: Esto quiere decir que el servidor por ejemplo se apague, lo cual hace que la información que estaba en memoria y no se había enviado a disco o a base de datos mediante un flush, se perdió.
-\item Que no se pierda información volátil: Por ejemplo que se pierda la conexión a Internet o que se apague voluntariamente el servidor entonces se cortan las funciones de red.
+\item Perder información volátil: Esto quiere decir que el servidor, por ejemplo se apaga. Esta acción produce que la información que estaba en memoria y no se había enviado a disco, o a base de datos mediante un flush, se pierda.
+\item Información volátil intacta: Por ejemplo, se pierde la conexión a Internet o se apaga voluntariamente el servidor, por consiguiente se cortan las funciones de red.
 \end{itemize}
 
-En cualquier caso este es el protocolo:
+En cualquiera de los casos anteriormente mencionados, este es el protocolo ejecuta el algoritmo definido a continuación:
 
 \begin{enumerate}
 \item Si es sin pérdida de información volátil: Se debe hacer un flush inmediatamente.
-\item Una vez que nos hallamos recuperado de la falla, en este caso nos damos cuenta de que fue así ya que tenemos comunicación con las cachés y con Internet, dejamos a todas las caché en un estado desactivadas.
-\item Cargamos la información a memoria.
-\item Esperamos la petición por estado, cuando el estado es desactivado se procede a revisar la consistencia.
-\item Esperamos que recibir los mensajes por parte de las cachés, que ante esta eventualidad, enviarán mensajes GetListOfFiles.
-\item Esperamos hasta que las cachés envíen un cambio (ChangeStatus) de estado a en línea.
-\item Esperamos que se repita esto las veces que sean necesarias.
-\item Después de que las cachés estén en línea, retomarán los mensajes donde habían quedado (recordemos se guarda el último mensaje enviado, si no se recibe respuesta se declara que está abajo el servidor hasta que responda y se retoma la comunicación en el último mensaje enviado)
+\item Una vez que se haya recuperado de la falla, la detección consiste en comprobar que existe comunicación entre las cachés e Internet, se establecen todas las caché en un estado inactivo.
+\item Cargar la información a memoria.
+\item Esperar a la petición por estado, cuando el estado es inactivo se procede a revisar la consistencia.
+\item Esperar a recibir los mensajes por parte de las cachés, que ante esta eventualidad, enviarán mensajes GetListOfFiles.
+\item Esperar hasta que las cachés envíen un cambio (ChangeStatus) de estado a: en línea.
+\item Esperar que se repita las veces que sean necesarias.
+\item Después que las cachés se encuentren en línea, se retomarán los mensajes donde habían quedado (es necesario recordar, que en el caso que el último mensaje enviado, no se haya recibido respuesta, se declara que el servidor está fuera de línea hasta que éste responda y se retoma la comunicación en el último mensaje enviado).
 \end{enumerate}
 
 \subsection{Falla un Cliente}
-En este caso la caché por alguna razón perdió comunicación y el servidor la marco como inactiva, cuando se recupera la comunicación lo primero que se solicita es el estado de la caché, este recibirá un desactivada entonces pedirá los archivos para revisar la consistencia, cuando todo esté correcto solicitará volver a estar en estado en línea y seguirá la comunicación como estaba anteriormente.
+En este caso, la caché por alguna razón perdió comunicación y el servidor la marcó como inactiva. Cuando se recupera la comunicación, lo primero que se solicita es el estado de la caché. Éste recibirá un mensaje de desactivación, por lo que pedirá los archivos para revisar la consistencia. Cuando todo esté correcto, se solicitará volver al estado \textit{en línea} y seguirá la comunicación como se encontraba anteriormente.
 Para reconstruir el DGET, el cliente deberá evaluar la cantidad de partes descargadas y solicitar la lista de cachés disponibles al servidor para retomar la descarga.
 
 \section{Implementación del Modelo de Consistencia}
-Como se mencionó anteriormente el modelo de consistencia no es tan complejo debido a que solo un actor es el que modifica los objetos que se incluyen en la caché, este actor es el CWCServer, el modelo de consistencia bastará con:
+Como se mencionó anteriormente, el modelo de consistencia no es tan complejo, debido a que solo un actor es el que modifica los objetos que se incluyen en la caché, este actor es el CWCServer. El modelo de consistencia bastará con:
 
 \begin{itemize}
 \item Si se modifica un objeto en el servidor, este ejecutará un ModifyObject hacia todas las cachés que tienen copias de este objeto, si es un cambio de archivo tamaño, entre otros. Decidirá si es necesario eliminar el archivo y volver a solicitarlo.

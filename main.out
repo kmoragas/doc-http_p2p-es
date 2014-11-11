@@ -123,7 +123,7 @@
 \BOOKMARK [2][-]{subsection.11.1.4}{11.1.4 JMeter}{section.11.1}% 123
 \BOOKMARK [1][-]{section.11.2}{11.2 Par\341metros de las pruebas}{chapter.11}% 124
 \BOOKMARK [2][-]{subsection.11.2.1}{11.2.1 Servidor Web y Servidor Cach\351}{section.11.2}% 125
-\BOOKMARK [2][-]{subsection.11.2.2}{11.2.2 Archivos para Realizar la Prueba}{section.11.2}% 126
+\BOOKMARK [2][-]{subsection.11.2.2}{11.2.2 Tipos de archivos de prueba}{section.11.2}% 126
 \BOOKMARK [2][-]{subsection.11.2.3}{11.2.3 Estrategia de las pruebas}{section.11.2}% 127
 \BOOKMARK [1][-]{section.11.3}{11.3 Escenarios}{chapter.11}% 128
 \BOOKMARK [0][]{chapter.12}{12 An\341lisis y Resultados}{part.4}% 129
@@ -132,10 +132,11 @@
 \BOOKMARK [1][-]{section.12.3}{12.3 An\341lisis de rendimiento de velocidad del entorno de CWC}{chapter.12}% 132
 \BOOKMARK [1][-]{section.12.4}{12.4 Resultados de Costo}{chapter.12}% 133
 \BOOKMARK [1][-]{section.12.5}{12.5 An\341lisis de costos del Entorno de CW}{chapter.12}% 134
-\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 135
-\BOOKMARK [0][]{chapter.13}{13 Conclusiones y Trabajo Futuro}{part.5}% 136
-\BOOKMARK [1][-]{section.13.1}{13.1 Conclusiones}{chapter.13}% 137
-\BOOKMARK [1][-]{section.13.2}{13.2 Trabajo Futuro}{chapter.13}% 138
-\BOOKMARK [1][-]{section.13.3}{13.3 Exclusiones}{chapter.13}% 139
-\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.5}% 140
-\BOOKMARK [0][]{colophon.0}{Colophon}{part.5}% 141
+\BOOKMARK [1][-]{section.12.6}{12.6 An\341lisis de continuidad de negocio y transparencia}{chapter.12}% 135
+\BOOKMARK [-1][]{part.5}{Conclusiones}{}% 136
+\BOOKMARK [0][]{chapter.13}{13 Conclusiones y Trabajo Futuro}{part.5}% 137
+\BOOKMARK [1][-]{section.13.1}{13.1 Conclusiones}{chapter.13}% 138
+\BOOKMARK [1][-]{section.13.2}{13.2 Trabajo Futuro}{chapter.13}% 139
+\BOOKMARK [1][-]{section.13.3}{13.3 Exclusiones}{chapter.13}% 140
+\BOOKMARK [0][]{dummy.7}{Bibliograf\355a}{part.5}% 141
+\BOOKMARK [0][]{colophon.0}{Colophon}{part.5}% 142

@@ -1,4 +1,4 @@
-\begin{thebibliography}{30}
+\begin{thebibliography}{34}
 \providecommand{\natexlab}[1]{#1}
 \providecommand{\url}[1]{\texttt{#1}}
 \expandafter\ifx\csname urlstyle\endcsname\relax
@@ -15,6 +15,34 @@ Julio~Cabero Almerana.
 \newblock Comunidades virtuales para el aprendizaje. su utilizaci{\'o}n en la
   educaci{\'o}n.
 \newblock Technical report, Universidad de Sevilla.
+
+\bibitem[Amazon(2014{\natexlab{a}})]{amazon:cpu}
+Amazon.
+\newblock Intel core i3-4160 processor 3.60 ghz, 2-core lga1150 socket,
+  hyper-threading (bx80646i34160), Octubre 2014{\natexlab{a}}.
+\newblock URL
+  \url{http://www.amazon.com/Intel-I3-4160-Processor-Hyper-Threading-BX80646I34160/dp/B00LV8U0VE/}.
+
+\bibitem[Amazon(2014{\natexlab{b}})]{amazon:hd}
+Amazon.
+\newblock Wd blue 1 tb desktop hard drive: 3.5 inch, 7200 rpm, sata 6 gb/s, 64
+  mb cache - wd10ezex, Octubre 2014{\natexlab{b}}.
+\newblock URL
+  \url{http://www.amazon.com/WD-Blue-Desktop-Hard-Drive/dp/B0088PUEPK/}.
+
+\bibitem[Amazon(2014{\natexlab{c}})]{amazon:memoria}
+Amazon.
+\newblock Kingston value ram 4gb 1333mhz pc3-10600 ddr3 non-ecc cl9 dimm sr x8
+  desktop memory, Octubre 2014{\natexlab{c}}.
+\newblock URL
+  \url{http://www.amazon.com/Kingston-1333MHz-PC3-10600-Non-ECC-KVR13N9S8/dp/B008CP5Q7M}.
+
+\bibitem[Amazon(2014{\natexlab{d}})]{amazon:network}
+Amazon.
+\newblock Trendnet 10/100/1000 mbps 32-bit gigabit pci adapter card,
+  teg-pcitxr, Octubre 2014{\natexlab{d}}.
+\newblock URL
+  \url{http://www.amazon.com/TRENDnet-32-Bit-Gigabit-Adapter-TEG-PCITXR/dp/B00023433U}.
 
 \bibitem[Berners-Lee et~al.(1996)Berners-Lee, Fielding, and Frystyk]{rfc1945}
 T.~Berners-Lee, R.~Fielding, and H.~Frystyk.

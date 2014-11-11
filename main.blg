@@ -5,7 +5,6 @@ A level-1 auxiliary file: FrontBackMatter/Titlepage.aux
 A level-1 auxiliary file: FrontBackMatter/Titleback.aux
 A level-1 auxiliary file: FrontBackMatter/Dedication.aux
 A level-1 auxiliary file: FrontBackMatter/Abstract.aux
-A level-1 auxiliary file: FrontBackMatter/Publication.aux
 A level-1 auxiliary file: FrontBackMatter/Acknowledgments.aux
 A level-1 auxiliary file: FrontBackMatter/Contents.aux
 A level-1 auxiliary file: Chapters/Chapter01.aux
@@ -15,28 +14,36 @@ A level-1 auxiliary file: Chapters/Chapter04.aux
 A level-1 auxiliary file: Chapters/Chapter05.aux
 A level-1 auxiliary file: Chapters/Chapter06.aux
 A level-1 auxiliary file: Chapters/Chapter07.aux
-A level-1 auxiliary file: Chapters/Chapter08.aux
 A level-1 auxiliary file: Chapters/Chapter09.aux
+A level-1 auxiliary file: Chapters/Chapter08.aux
 A level-1 auxiliary file: Chapters/Chapter10.aux
 A level-1 auxiliary file: Chapters/Chapter11.aux
-A level-1 auxiliary file: Chapters/Chapter0A.aux
+A level-1 auxiliary file: Chapters/Chapter12.aux
+A level-1 auxiliary file: Chapters/Chapter13.aux
 A level-1 auxiliary file: FrontBackMatter/Bibliography.aux
 The style file: plainnat.bst
 A level-1 auxiliary file: FrontBackMatter/Colophon.aux
-A level-1 auxiliary file: FrontBackMatter/Declaration.aux
 Database file #1: Bibliography.bib
+Warning--entry type for "amazon:cpu" isn't style-file defined
+--line 73 of file Bibliography.bib
+Warning--entry type for "amazon:hd" isn't style-file defined
+--line 84 of file Bibliography.bib
+Warning--entry type for "amazon:memoria" isn't style-file defined
+--line 95 of file Bibliography.bib
+Warning--entry type for "amazon:network" isn't style-file defined
+--line 106 of file Bibliography.bib
 Warning--entry type for "itu:2014" isn't style-file defined
---line 359 of file Bibliography.bib
+--line 402 of file Bibliography.bib
 Warning--entry type for "rfc4981" isn't style-file defined
---line 552 of file Bibliography.bib
+--line 595 of file Bibliography.bib
 Warning--entry type for "wiki_cacheweb" isn't style-file defined
---line 858 of file Bibliography.bib
+--line 901 of file Bibliography.bib
 Warning--entry type for "wiki_cdn" isn't style-file defined
---line 869 of file Bibliography.bib
+--line 912 of file Bibliography.bib
 Warning--entry type for "wiki_nlb" isn't style-file defined
---line 880 of file Bibliography.bib
+--line 923 of file Bibliography.bib
 Warning--entry type for "wiki_p2p" isn't style-file defined
---line 891 of file Bibliography.bib
+--line 934 of file Bibliography.bib
 Warning--empty year in cabero
 Warning--empty year in cabero
 Warning--empty year in herlihy
@@ -44,45 +51,45 @@ Warning--empty year in herlihy
 Warning--empty booktitle in salinas:2003
 Warning--empty year in sanghi
 Warning--empty year in sanghi
-You've used 30 entries,
+You've used 34 entries,
             2773 wiz_defined-function locations,
-            787 strings with 10102 characters,
-and the built_in function-call counts, 11310 in all, are:
-= -- 1000
-> -- 640
-< -- 30
-+ -- 225
-- -- 192
-* -- 810
-:= -- 1821
-add.period$ -- 98
-call.type$ -- 30
-change.case$ -- 155
-chr.to.int$ -- 27
-cite$ -- 67
-duplicate$ -- 540
-empty$ -- 908
-format.name$ -- 238
-if$ -- 2336
-int.to.chr$ -- 4
+            800 strings with 10766 characters,
+and the built_in function-call counts, 12514 in all, are:
+= -- 1104
+> -- 680
+< -- 34
++ -- 244
+- -- 204
+* -- 886
+:= -- 1999
+add.period$ -- 110
+call.type$ -- 34
+change.case$ -- 171
+chr.to.int$ -- 28
+cite$ -- 75
+duplicate$ -- 600
+empty$ -- 1036
+format.name$ -- 254
+if$ -- 2592
+int.to.chr$ -- 7
 int.to.str$ -- 1
 missing$ -- 15
-newline$ -- 166
-num.names$ -- 120
-pop$ -- 328
+newline$ -- 186
+num.names$ -- 136
+pop$ -- 376
 preamble$ -- 1
-purify$ -- 124
+purify$ -- 136
 quote$ -- 0
-skip$ -- 418
+skip$ -- 465
 stack$ -- 0
-substring$ -- 138
-swap$ -- 53
+substring$ -- 146
+swap$ -- 65
 text.length$ -- 9
 text.prefix$ -- 0
 top$ -- 0
-type$ -- 315
+type$ -- 359
 warning$ -- 7
-while$ -- 97
+while$ -- 109
 width$ -- 0
-write$ -- 397
-(There were 13 warnings)
+write$ -- 445
+(There were 17 warnings)

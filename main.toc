@@ -115,24 +115,25 @@
 \contentsline {chapter}{\numberline {11}\spacedlowsmallcaps {Rendimiento}}{83}{chapter.11}
 \contentsline {section}{\numberline {11.1}Herrramientas}{83}{section.11.1}
 \contentsline {subsection}{\numberline {11.1.1}httperf}{83}{subsection.11.1.1}
-\contentsline {subsection}{\numberline {11.1.2}OpenWebLoad}{83}{subsection.11.1.2}
+\contentsline {subsection}{\numberline {11.1.2}OpenWebLoad}{84}{subsection.11.1.2}
 \contentsline {subsection}{\numberline {11.1.3}Time}{84}{subsection.11.1.3}
-\contentsline {subsection}{\numberline {11.1.4}JMeter}{84}{subsection.11.1.4}
+\contentsline {subsection}{\numberline {11.1.4}JMeter}{85}{subsection.11.1.4}
 \contentsline {section}{\numberline {11.2}Par\IeC {\'a}metros de las pruebas}{85}{section.11.2}
 \contentsline {subsection}{\numberline {11.2.1}Servidor Web y Servidor Cach\IeC {\'e}}{85}{subsection.11.2.1}
-\contentsline {subsection}{\numberline {11.2.2}Archivos para Realizar la Prueba}{85}{subsection.11.2.2}
+\contentsline {subsection}{\numberline {11.2.2}Tipos de archivos de prueba}{86}{subsection.11.2.2}
 \contentsline {subsection}{\numberline {11.2.3}Estrategia de las pruebas}{86}{subsection.11.2.3}
 \contentsline {section}{\numberline {11.3}Escenarios}{86}{section.11.3}
-\contentsline {chapter}{\numberline {12}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{87}{chapter.12}
-\contentsline {section}{\numberline {12.1}Prototipo CWC}{87}{section.12.1}
-\contentsline {section}{\numberline {12.2}Resultados de Rendimiento}{87}{section.12.2}
-\contentsline {section}{\numberline {12.3}An\IeC {\'a}lisis de rendimiento de velocidad del entorno de CWC}{87}{section.12.3}
-\contentsline {section}{\numberline {12.4}Resultados de Costo}{88}{section.12.4}
-\contentsline {section}{\numberline {12.5}An\IeC {\'a}lisis de costos del Entorno de CW}{88}{section.12.5}
-\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{89}{part.5}
-\contentsline {chapter}{\numberline {13}\spacedlowsmallcaps {Conclusiones y Trabajo Futuro}}{91}{chapter.13}
-\contentsline {section}{\numberline {13.1}Conclusiones}{91}{section.13.1}
-\contentsline {section}{\numberline {13.2}Trabajo Futuro}{92}{section.13.2}
-\contentsline {section}{\numberline {13.3}Exclusiones}{92}{section.13.3}
+\contentsline {chapter}{\numberline {12}\spacedlowsmallcaps {An\IeC {\'a}lisis y Resultados}}{89}{chapter.12}
+\contentsline {section}{\numberline {12.1}Prototipo CWC}{89}{section.12.1}
+\contentsline {section}{\numberline {12.2}Resultados de Rendimiento}{90}{section.12.2}
+\contentsline {section}{\numberline {12.3}An\IeC {\'a}lisis de rendimiento de velocidad del entorno de CWC}{90}{section.12.3}
+\contentsline {section}{\numberline {12.4}Resultados de Costo}{93}{section.12.4}
+\contentsline {section}{\numberline {12.5}An\IeC {\'a}lisis de costos del Entorno de CW}{93}{section.12.5}
+\contentsline {section}{\numberline {12.6}An\IeC {\'a}lisis de continuidad de negocio y transparencia}{94}{section.12.6}
+\contentsline {part}{v\hspace {1em}\spacedlowsmallcaps {Conclusiones}}{97}{part.5}
+\contentsline {chapter}{\numberline {13}\spacedlowsmallcaps {Conclusiones y Trabajo Futuro}}{99}{chapter.13}
+\contentsline {section}{\numberline {13.1}Conclusiones}{99}{section.13.1}
+\contentsline {section}{\numberline {13.2}Trabajo Futuro}{100}{section.13.2}
+\contentsline {section}{\numberline {13.3}Exclusiones}{101}{section.13.3}
 \vspace {\beforebibskip }
-\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{93}{dummy.7}
+\contentsline {chapter}{\spacedlowsmallcaps {Bibliograf\'{\i }a}}{103}{dummy.7}
