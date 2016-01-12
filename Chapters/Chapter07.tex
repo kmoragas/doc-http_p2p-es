@@ -14,7 +14,7 @@ A continuación se detallará la lista de Actores que interactuarán con CWC.
 \item[Servidor Web] El servidor web es el encargado de servir los archivos que son solicitados por el usuario a través de un Agente Cliente (en el RFC de HTTP \cite{rfc2616} un Agente Cliente se define como cualquier navegador web utilizado por el usuario), en este caso el sistema interaccionará con el servidor web de manera que las solicitudes que si pueden utilizar el protocolo CWC (Community Web Caching) sean servidas de manera distribuida. En el caso de que una solicitud no pueda utilizar CWC se utilizará el modelo tradicional, uno a uno.
 \item[Agente Cliente] El agente cliente es un navegador web, el cual cuando se hace una petición por parte de éste, se verifica si el servidor web puede utilizar el protocolo CWC, si es así entonces al realizar el GET HTTP en lugar de obtener un archivo de una sola localización de obtendrá de múltiples localizaciones o cachés.
 \item[Usuario] Entre las actividades que tendrá el usuario tendrá: la instalación del cliente, establecer la velocidad de conexión, iniciar o detener el cliente y administrar los parámetros de la caché local. 
-\item[Administrador del sitio web] Entre las actividades que tendrá el administrador: la instalación del cliente, establecer la velocidad de conexión, configurar todos los parámetros del módulo del Servidor Web y Administrara el módulo mediante la consola de administración.
+\item[Administrador del sitio web] Entre las actividades que tendrá el administrador: la instalación del cliente, establecer la velocidad de conexión, configurar todos los parámetros del módulo del Servidor Web y Administrará el módulo mediante la consola de administración.
 \end{description}
 
 \section{Requerimientos Funcionales del Protocolo}
@@ -77,7 +77,7 @@ También se podrá agregar cachés desde una consola de administración de la CW
 
 
 \subsection{Implementación de Modelo de Consistencia}
-El modelo de consistencia es bastante simple, por la naturaleza del HTTP, solo se modifica el contenido por parte del servidor y no por los miembros de la caché, lo que provocaría que las escrituras solo se hagan en un lugar. En este caso la consistencia se limitará a que los miembros de la comunidad revisen, que los objetos que tienen, se encuentren actualizados en relación al servidor, esto con el fin de evitar que los objetos hayan sido dañados por alguna situación externa. Estas situaciones pueden ser un software malicioso, que el mismo sistema operativo allá quedado en un estado inconsistente, entre otras.
+El modelo de consistencia es bastante simple, por la naturaleza del HTTP, solo se modifica el contenido por parte del servidor y no por los miembros de la caché, lo que provocaría que las escrituras solo se hagan en un lugar. En este caso la consistencia se limitará a que los miembros de la comunidad revisen, que los objetos que tienen, se encuentren actualizados en relación al servidor, esto con el fin de evitar que los objetos hayan sido dañados por alguna situación externa. Estas situaciones pueden ser un software malicioso, que el mismo sistema operativo haya quedado en un estado inconsistente, entre otras.
 
 Cuando se modifique un objeto, en este caso cuando el objeto propiamente se cambie, se deberá notificar a todos los miembros de la caché, para que éstos invaliden sus copias y vuelvan a solicitarlas. 
 

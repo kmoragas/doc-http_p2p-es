@@ -143,7 +143,7 @@ La arquitectura del CWC Client es muy similar al de CWC Server. En la figura \re
 En esta capa se implementará toda la lógica para el acceso a datos, en este caso solo se realizarán accesos a disco, por lo mencionado anteriormente, pues no cuenta con una base de datos del lado del cliente y además porque la principal funcionalidad de ésta es realizar la transmisión de archivos a disco. 
 
 \subsection{CWC Data Management}
-Esta capa también como en el CWC Server, funciona como una caché de los datos, esto para reducir los accesos a disco que son sumamente costos.
+Esta capa también como en el CWC Server, funciona como una caché de los datos, esto para reducir los accesos a disco que son sumamente costosos.
 En caso que un archivo sea leído desde múltiples localizaciones, este acceso se agilizará a través un la memoria de acceso aleatoria (RAM).
 
 \subsection{CWC Client Core}
